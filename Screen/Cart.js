@@ -21,7 +21,7 @@ const Cart = () => {
 
       <View style={{marginLeft: -10}}>
         <Image
-          source={require('../assets/img_cart/cart1.png')}
+          source={require('../assets/images/cart/cart1.png')}
           style={styles.imgStyle}
         />
       </View>

@@ -10,16 +10,16 @@ import React from 'react';
 
 const Images = [
   {
-    images: require('../assets/img_offer/offer7.png'),
+    images: require('../assets/images/offer/offer7.png'),
   },
   {
-    images: require('../assets/img_offer/offer7.png'),
+    images: require('../assets/images/offer/offer7.png'),
   },
   {
-    images: require('../assets/img_offer/offer7.png'),
+    images: require('../assets/images/offer/offer7.png'),
   },
   {
-    images: require('../assets/img_offer/offer7.png'),
+    images: require('../assets/images/offer/offer7.png'),
   },
 ];
 

@@ -9,7 +9,7 @@ const Profile = () => {
     <View>
       <TouchableOpacity onPress={() => navigation.navigate('Drawer_main')}>
         <Image
-          source={require('../assets/img_profile/meditron.png')}
+          source={require('../assets/images/profile/meditron.png')}
           style={styles.imgStyle}
         />
       </TouchableOpacity>

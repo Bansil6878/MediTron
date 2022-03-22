@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-
+import auth from '@react-native-firebase/auth';
 const Drawer_main = () => {
   const navigation = useNavigation();
 
@@ -19,7 +19,7 @@ const Drawer_main = () => {
       <View style={{flexDirection: 'row'}}>
         <View>
           <Image
-            source={require('../assets/img_profile/meditron.png')}
+            source={require('../assets/images/profile/meditron.png')}
             style={styles.imgStyle}
           />
         </View>
@@ -86,7 +86,12 @@ const Drawer_main = () => {
 
       <View style={{flexDirection: 'row', margin: 20}}>
         {/* <AntDesign name="logout" size={24} color='black' /> */}
-        <Text style={{margin: 3, marginLeft: 7}} onPress={()=>{navigation.navigate('Register')}}>Logout</Text>
+        <Text style={{margin: 3, marginLeft: 7}} onPress={ async() => {
+         await auth()
+          .signOut()
+          .then(() => console.log('User signed out!'),
+          navigation.navigate('Login'));
+        }}>Logout</Text>
       </View>
 
    

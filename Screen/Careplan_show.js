@@ -21,7 +21,7 @@ const Careplan_show = () => {
 
       <View style={{marginLeft: -10}}>
         <Image
-          source={require('../assets/img_careplan/careplan2.png')}
+          source={require('../assets/images/careplan/careplan2.png')}
           style={styles.imgStyle}
         />
       </View>

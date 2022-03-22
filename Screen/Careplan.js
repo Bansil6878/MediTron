@@ -20,7 +20,7 @@ const Careplan = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Careplan_details1')}>
           <ImageBackground
-            source={require('../assets/img_family/family1.png')}
+            source={require('../assets/images/family/family1.png')}
             style={styles.imgStyle}>
             <TouchableOpacity
               style={{
@@ -39,7 +39,7 @@ const Careplan = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Careplan_details2')}>
           <ImageBackground
-            source={require('../assets/img_family/family2.png')}
+            source={require('../assets/images/family/family2.png')}
             style={styles.imgStyle}>
             <TouchableOpacity
               style={{
@@ -58,7 +58,7 @@ const Careplan = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Careplan_details3')}>
           <ImageBackground
-            source={require('../assets/img_family/family3.png')}
+            source={require('../assets/images/family/family3.png')}
             style={styles.imgStyle}>
             <TouchableOpacity
               style={{

@@ -7,10 +7,10 @@ import {
   ImageBackground,
   Image,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
-import { useEffect } from 'react/cjs/react.production.min';
+
 
 const Register = () => {
   const navigation = useNavigation();
@@ -24,22 +24,31 @@ const Register = () => {
       .then(
         alert('Data Added'),
         console.log('User Login '),
-        navigation.navigate('Login'),
+        navigation.replace('Login'),
       )
       .catch(e => alert(e));
   };
+
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged ( user => {
+      if (user) {
+        navigation.replace('Home')
+      }
+    })
+    return unsubscribe;
+  },[]);
 
 
 
   return (
     <View>
       <ImageBackground
-        source={require('../assets/img_register/register_Back.png')}
+        source={require('../assets/images/register/register_Back.png')}
         style={styles.image}
       />
 
       <Image
-        source={require('../assets/img_register/register.png')}
+        source={require('../assets/images/register/register.png')}
         style={styles.imgStyle}
       />
 

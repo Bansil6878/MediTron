@@ -8,7 +8,7 @@ import {
   Image,
   ScrollView
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 
@@ -29,16 +29,25 @@ const Login = () => {
       .catch(e => alert(e));
   };
 
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged ( user => {
+      if (user) {
+        navigation.replace('Home')
+      }
+    })
+    return unsubscribe;
+  },[]);
+
   return (
     <View>
       <ImageBackground
-        source={require('../assets/img_register/register_Back.png')}
+        source={require('../assets/images/register/register_Back.png')}
         style={styles.image}
         />
 
         <ScrollView>
       <Image
-        source={require('../assets/img_register/register.png')}
+        source={require('../assets/images/register/register.png')}
         style={styles.imgStyle}
       />
 

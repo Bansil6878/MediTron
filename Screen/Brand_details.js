@@ -11,7 +11,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/bournvita.png')}
+              source={require('../assets/images/brand/bournvita.png')}
             />
           </View>
         </TouchableOpacity>
@@ -20,7 +20,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/cadila.png')}
+              source={require('../assets/images/brand/cadila.png')}
             />
           </View>
         </TouchableOpacity>
@@ -29,7 +29,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/himalaya.png')}
+              source={require('../assets/images/brand/himalaya.png')}
             />
           </View>
         </TouchableOpacity>
@@ -38,7 +38,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/mamaearth.png')}
+              source={require('../assets/images/brand/mamaearth.png')}
             />
           </View>
         </TouchableOpacity>
@@ -47,7 +47,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/dabur.png')}
+              source={require('../assets/images/brand/dabur.png')}
             />
           </View>
         </TouchableOpacity>
@@ -56,7 +56,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/horlicks.png')}
+              source={require('../assets/images/brand/horlicks.png')}
             />
           </View>
         </TouchableOpacity>
@@ -65,7 +65,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/vaseline.png')}
+              source={require('../assets/images/brand/vaseline.png')}
             />
           </View>
         </TouchableOpacity>
@@ -74,7 +74,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/cipla.png')}
+              source={require('../assets/images/brand/cipla.png')}
             />
           </View>
         </TouchableOpacity>
@@ -83,7 +83,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/cetaphil.png')}
+              source={require('../assets/images/brand/cetaphil.png')}
             />
           </View>
         </TouchableOpacity>
@@ -92,7 +92,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/zandu.png')}
+              source={require('../assets/images/brand/zandu.png')}
             />
           </View>
         </TouchableOpacity>
@@ -101,7 +101,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/reddy.png')}
+              source={require('../assets/images/brand/reddy.png')}
             />
           </View>
         </TouchableOpacity>
@@ -110,7 +110,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/himalaya.png')}
+              source={require('../assets/images/brand/himalaya.png')}
             />
           </View>
         </TouchableOpacity>
@@ -119,7 +119,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/zydus.png')}
+              source={require('../assets/images/brand/zydus.png')}
             />
           </View>
         </TouchableOpacity>
@@ -128,7 +128,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/nivea.png')}
+              source={require('../assets/images/brand/nivea.png')}
             />
           </View>
         </TouchableOpacity>
@@ -137,7 +137,7 @@ const Brand_details = () => {
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_brand/complan.png')}
+              source={require('../assets/images/brand/complan.png')}
             />
           </View>
         </TouchableOpacity>

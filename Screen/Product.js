@@ -12,66 +12,67 @@ const product = [
   {
     id: 1,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 2,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 3,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 4,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 5,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 6,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 7,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 8,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 9,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
   {
     id: 10,
     name: 'BP moniters',
-    images: require('../assets/img_product/product.png'),
+    images: require('../assets/images/product/product.png'),
     MRP: 999,
   },
 ];
 
 const Product = () => {
+  
   const pro = ({item}) => {
     return (
       <View

@@ -22,7 +22,7 @@ const Careplan_details2 = () => {
           </View>
 
           <Image
-            source={require('../assets/img_family/family4.png')}
+            source={require('../assets/images/family/family4.png')}
             style={styles.imgStyle}
           />
           <View style={{flexDirection: 'row'}}>

@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <View>
       <ImageBackground
-        source={require('../assets/img_profile/background.png')}
+        source={require('../assets/images/profile/background.png')}
         style={styles.imgStyle}>
 
       <View style={{marginVertical:200,marginHorizontal:100}}>

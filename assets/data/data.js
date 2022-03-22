@@ -1,22 +1,22 @@
 const data = [
   {
     // id='1',
-    img: require('../img_medicine/medicine.png'),
+    img: require('../images/medicine/medicine.png'),
     name: 'Medicine',
   },
   {
     // id='1',
-    img: require('../img_doctor/doctor.png'),
+    img: require('../images/doctor/doctor.png'),
     name: 'doctor',
   },
   {
     // id='1',
-    img: require('../img_lab/lab.png'),
+    img: require('../images/lab/lab.png'),
     name: 'Lab Test',
   },
   {
     // id='1',
-    img: require('../img_product/product.png'),
+    img: require('../images/product/product.png'),
     name: 'Product',
   },
 ];
@@ -25,7 +25,7 @@ const medicine = [
   {
     id: 1,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4.5,
     rupees: 50,
@@ -34,7 +34,7 @@ const medicine = [
   {
     id: 2,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4,
     rupees: 50,
@@ -43,7 +43,7 @@ const medicine = [
   {
     id: 3,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4.3,
     rupees: 50,
@@ -52,7 +52,7 @@ const medicine = [
   {
     id: 4,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4.5,
     rupees: 50,
@@ -61,7 +61,7 @@ const medicine = [
   {
     id: 5,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4,
     rupees: 50,
@@ -70,7 +70,7 @@ const medicine = [
   {
     id: 6,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4,
     rupees: 50,
@@ -79,7 +79,7 @@ const medicine = [
   {
     id: 7,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4,
     rupees: 50,
@@ -88,7 +88,7 @@ const medicine = [
   {
     id: 8,
     name: 'Dolo 650',
-    images: require('../img_medicine/medicine.png'),
+    images: require('../images/medicine/medicine.png'),
     Quantity: 10,
     star: 4,
     rupees: 50,

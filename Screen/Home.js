@@ -28,7 +28,7 @@ const Home = () => {
           <TouchableOpacity onPress={() => navigation.navigate('Medicine')}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_medicine/medicine.png')}
+              source={require('../assets/images/medicine/medicine.png')}
             />
             <Text style={{textAlign: 'center', marginTop: -7}}>Medicine</Text>
           </TouchableOpacity>
@@ -36,7 +36,7 @@ const Home = () => {
           <TouchableOpacity onPress={() => navigation.navigate('Doctor')}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_doctor/doctor.png')}
+              source={require('../assets/images/doctor/doctor.png')}
             />
             <Text style={{textAlign: 'center', marginTop: -7}}>Doctor</Text>
           </TouchableOpacity>
@@ -44,7 +44,7 @@ const Home = () => {
           <TouchableOpacity onPress={() => navigation.navigate('Lab')}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_lab/lab.png')}
+              source={require('../assets/images/lab/lab.png')}
             />
             <Text style={{textAlign: 'center', marginTop: -7}}>Lab Test</Text>
           </TouchableOpacity>
@@ -52,7 +52,7 @@ const Home = () => {
           <TouchableOpacity onPress={() => navigation.navigate('Product')}>
             <Image
               style={styles.imgStyle}
-              source={require('../assets/img_product/product.png')}
+              source={require('../assets/images/product/product.png')}
             />
             <Text style={{textAlign: 'center', marginTop: -7}}>Product</Text>
           </TouchableOpacity>
