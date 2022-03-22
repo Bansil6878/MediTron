@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "88738920967",
+    "project_id": "meditron-3e179",
+    "storage_bucket": "meditron-3e179.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88738920967:android:a06e2eab6e6f92298ec8a2",
+        "android_client_info": {
+          "package_name": "com.meditron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88738920967-gsa52ncvpgpj94p51gvc57bhcbcnnc6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5KwfifpZxXN52HPiHstckvMXXWg3e_us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88738920967-gsa52ncvpgpj94p51gvc57bhcbcnnc6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
