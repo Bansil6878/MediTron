@@ -7,6 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 
 const lab = [
   {
@@ -72,6 +75,9 @@ const lab = [
 ];
 
 const Lab = () => {
+
+const navigation = useNavigation();
+
   const labo = ({item}) => {
     return (
       <View
@@ -119,6 +125,15 @@ const Lab = () => {
   return (
     <View>
       <View style={{marginTop: 4, flexDirection: 'row'}}>
+    
+      <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7}}
+          onPress={() => navigation.navigate('Home')}
+        />
+
         <Text
           style={{
             fontSize: 20,

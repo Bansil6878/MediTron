@@ -20,6 +20,7 @@ import Contact from '../Screen/Contact';
 import Register from '../Screen/Register';
 import Login from '../Screen/Login';
 import Divider from '../Components/Divider';
+import Contact_details from '../Screen/Contact_details';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +46,8 @@ const Nav_Stack = () => {
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name='Contact' component={Contact} />
       <Stack.Screen name='Divider' component={Divider} />
+      <Stack.Screen name='Contact_details' component={Contact_details} />
+
       
       
     </Stack.Navigator>

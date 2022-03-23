@@ -7,62 +7,76 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import {medicine} from '../assets/data/data';
+import medicine from '../assets/medicine/medicine_data';
 import {useNavigation} from '@react-navigation/native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Medicine = () => {
   const navigation = useNavigation();
 
-  const med = ({item}) => {
+  const med = ({item, index}) => {
     return (
       <>
-        <View
-          style={{
-            flexDirection: 'row',
-            backgroundColor: '#fff',
-            width: '100%',
-            marginVertical: 9,
-            padding: 12,
-            height: 126,
-          }}>
-          <TouchableOpacity onPress={() => navigation.navigate('Med_details')}>
-            <Image source={item.images} style={styles.imgStyle} />
-          </TouchableOpacity>
+        <TouchableOpacity>
+          <View
+            style={{
+              flexDirection: 'row',
+              backgroundColor: '#fff',
+              marginVertical: 9,
+              padding: 12,
+              marginHorizontal: 15,
+              shadowColor: '#000',
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.25,
+              shadowRadius: 3.84,
+              elevation: 5,
+              padding: 10,
+            }}
+            key={index}>
+            <TouchableOpacity>
+              <Image source={item.images} style={styles.imgStyle} />
+            </TouchableOpacity>
 
-          <View style={{marginHorizontal: 40, justifyContent: 'center'}}>
-            <Text
+            <View
               style={{
-                fontSize: 19,
-                fontWeight: 'bold',
-              }}>
-              {item.name}
-            </Text>
-            <Text>Quantity: {item.Quantity}</Text>
-            <Text>Rating: {item.star}</Text>
-            <Text>₹: {item.rupees}</Text>
-            <TouchableOpacity
-              style={{
-                backgroundColor: '#c3deb4',
-                borderRadius: 4,
+                justifyContent: 'flex-end',
+                alignItems: 'flex-start',
+                marginLeft: 35,
               }}>
               <Text
                 style={{
-                  color: 'purple',
-                  padding: 6,
+                  fontSize: 19,
                   fontWeight: 'bold',
                 }}>
-                Add To Cart
+                {item.name}
               </Text>
-            </TouchableOpacity>
+              <Text style={styles.textStyle}>Quantity: {item.Quantity}</Text>
+              <Text style={styles.textStyle}>Rating: {item.star}</Text>
+              <Text style={styles.textStyle}>₹: {item.rupees}</Text>
+              <TouchableOpacity>
+                <Text style={styles.btnStyle}>See more!</Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
+        </TouchableOpacity>
       </>
     );
   };
 
   return (
-    <View>
+    <View style={{marginBottom: 60}}>
       <View style={{marginTop: 4, flexDirection: 'row'}}>
+        <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7}}
+          onPress={() => navigation.navigate('Home')}
+        />
+
         <Text
           style={{
             fontSize: 20,
@@ -82,7 +96,17 @@ const styles = StyleSheet.create({
   imgStyle: {
     resizeMode: 'contain',
     width: 150,
-    height: 100,
+    height: 130,
+  },
+  btnStyle: {
+    padding: 7,
+    width: 90,
+    height: 30,
+    textAlign: 'center',
+    marginTop: 10,
+    backgroundColor: '#c3deb4',
+    borderRadius: 4,
+    color: 'purple',
   },
 });
 

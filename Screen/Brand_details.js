@@ -1,12 +1,29 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Brand_details = () => {
+
+const navigation = useNavigation();
+
+
   return (
-    <View
-      style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 650}}>
+    <View style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 650}}>
+      <View style={{marginTop: 4, flexDirection: 'row'}}>
+      <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 12}}
+          onPress={() => navigation.navigate('Home')}
+          />
       <Text style={styles.txtStyle}>Featured brand</Text>
+      </View>
+
       <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
+
         <TouchableOpacity>
           <View style={styles.poster}>
             <Image

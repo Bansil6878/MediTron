@@ -7,6 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
+
 
 const product = [
   {
@@ -72,6 +75,8 @@ const product = [
 ];
 
 const Product = () => {
+
+  const navigation = useNavigation();
   
   const pro = ({item}) => {
     return (
@@ -129,6 +134,13 @@ const Product = () => {
   return (
     <View>
       <View style={{marginTop: 4, flexDirection: 'row'}}>
+      <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7}}
+          onPress={() => navigation.navigate('Home')}
+        />
         <Text
           style={{
             fontSize: 20,
@@ -136,7 +148,7 @@ const Product = () => {
             marginLeft: 5,
             marginTop: 5,
           }}>
-          Doctor
+          Product
         </Text>
       </View>
       <FlatList data={product} renderItem={pro} />

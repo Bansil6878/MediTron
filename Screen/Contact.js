@@ -11,6 +11,7 @@ import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
 import Divider from '../Components/Divider';
 
+
 const Contact = () => {
   const navigation = useNavigation();
 
@@ -76,7 +77,7 @@ const Contact = () => {
         </TouchableOpacity>
       
         </View>
-      
+       
       </ImageBackground>
     </View>
   );

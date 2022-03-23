@@ -1,6 +1,10 @@
 import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+
 
 const Careplan_details2 = () => {
   const navigation = useNavigation();
@@ -9,7 +13,7 @@ const Careplan_details2 = () => {
       <ScrollView>
         <View style={{marginTop: -15}}>
           <View style={{marginTop: 15, flexDirection: 'row'}}>
-            {/* <AntDesign name="arrowleft"  size={24} color='gray' style={{marginTop:12}} onPress={()=>navigation.navigate("Home")}/> */}
+            <AntDesign name="arrowleft"  size={24} color='gray' style={{marginTop:12}} onPress={()=>navigation.navigate("Home")}/>
             <Text
               style={{
                 fontSize: 20,
@@ -69,7 +73,7 @@ const Careplan_details2 = () => {
             </Text>
 
             <View style={styles.container}>
-              {/* <AntDesign name="tag" size={24} color='gray'/> */}
+              <AntDesign name="tag" size={24} color='gray'/>
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>
                   Save Extra 4% on every order
@@ -82,7 +86,7 @@ const Careplan_details2 = () => {
             </View>
 
             <View style={styles.container}>
-              {/* <Entypo name="lab-flask" size={24} color='gray' /> */}
+              <Entypo name="lab-flask" size={24} color='gray' />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>Free Three Lab Test</Text>
                 <Text style={styles.txtStyle}>
@@ -93,7 +97,7 @@ const Careplan_details2 = () => {
             </View>
 
             <View style={styles.container}>
-              {/* <Fontisto name="truck" size={24} color='gray' /> */}
+              <Fontisto name="truck" size={24} color='gray' />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>No Shippping Charges</Text>
                 <Text style={styles.txtStyle}>
@@ -105,7 +109,7 @@ const Careplan_details2 = () => {
             </View>
 
             <View style={styles.container}>
-              {/* <Fontisto name="doctor" size={24} color='gray' /> */}
+              <Fontisto name="doctor" size={24} color='gray' />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>
                   Free Five Time Consultation

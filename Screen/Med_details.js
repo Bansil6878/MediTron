@@ -7,53 +7,35 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import {medicine} from '../assets/data/data';
 
-const Med_details = () => {
-  const med = ({item}) => {
-    return (
-      <View
-        style={{
-          flexDirection: 'row',
-          marginVertical: 6,
-          backgroundColor: '#fff',
-          paddingHorizontal: 40,
-        }}>
-        <TouchableOpacity>
-          <Image source={item.images} style={styles.imgStyle} />
-        </TouchableOpacity>
-
-        <View style={styles.txtStyle}>
-          <Text>{item.name}</Text>
-          <Text>Quantity: {item.Quantity}</Text>
-          <Text>Rating: {item.star}</Text>
-          <Text>₹: {item.rupees}</Text>
-
-          <Text>{item.des}</Text>
-
-          <TouchableOpacity>
-            <Text
-              style={{
-                backgroundColor: '#f2f2f2',
-                marginTop: 8,
-                marginRight: 4.5,
-                marginBottom: 10,
-              }}>
-              Add To Cart
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    );
-  };
+const Med_details = ({route}) => {
+  
+  const {item} = route.params;
 
   return (
     <View style={{alignItems: 'center', justifyContent: 'center'}}>
-      <FlatList data={medicine} renderItem={med} />
+      <Image style={styles.imgStyle} source={item.images}/>
+
+<Text style={styles.textStyle}>{item.name}</Text>
+
     </View>
   );
 };
 
 export default Med_details;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  imgStyle: {
+    // resizeMode: 'contain',
+    width: 340,
+    height: 300,
+    marginTop:20
+    
+  },
+  textStyle:{
+    marginTop:20,
+    marginLeft:-240,
+    fontSize:25,
+    fontWeight:'bold'
+  }
+});
