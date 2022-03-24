@@ -165,7 +165,7 @@ const medicine = [
   {
     id: 19,
     name: 'Enzar Forte',
-    images: require('../images/medicine/Enzar Forte.jpg'),
+    images: require('../images/medicine/EnzarForte.jpg'),
     Quantity: 10,
     star: 4.7,
     rupees: 111,
@@ -198,15 +198,15 @@ const medicine = [
     rupees: 44,
     Des: 'Qutipin 25 Tablet is used in the treatment of schizophrenia (a mental disorder that can result in hallucinations or delusions and also adversely affects a person’s ability to think and behave) and mania. It is also used to treat bipolar disorders.',
   },
-  // {
-  //   id: 23,
-  //   name: 'Taxim-O 200',
-  //   images: require('../images/medicine/Taxim.png'),
-  //   Quantity: 10,
-  //   star: 4.5,
-  //   rupees: 80,
-  //   Des: 'Taxim-O 200 Tablet is an antibiotic belonging that is used to treat a variety of bacterial infections.',
-  // },
+  {
+    id: 23,
+    name: 'Taxim-O 200',
+    images: require('../images/medicine/Taxim.jpg'),
+    Quantity: 10,
+    star: 4.5,
+    rupees: 80,
+    Des: 'Taxim-O 200 Tablet is an antibiotic belonging that is used to treat a variety of bacterial infections.',
+  },
   {
     id: 24,
     name: 'Telma 40',
@@ -246,7 +246,7 @@ const medicine = [
   // {
   //   id: 28,
   //   name: 'VSL 3 Capsule',
-  //   images: require('../images/medicine/VSL.jpg'),
+  //   images: require('../images/medicine/Vsl.jpg'),
   //   Quantity: 10,
   //   star: 4.8,
   //   rupees: 318,

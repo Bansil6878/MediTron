@@ -21,6 +21,9 @@ import Register from '../Screen/Register';
 import Login from '../Screen/Login';
 import Divider from '../Components/Divider';
 import Contact_details from '../Screen/Contact_details';
+import Cart from '../Screen/Cart';
+import Cart_details from '../Screen/Cart_details';
+import Doctor_details from '../Screen/Doctor_details';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +50,13 @@ const Nav_Stack = () => {
       <Stack.Screen name='Contact' component={Contact} />
       <Stack.Screen name='Divider' component={Divider} />
       <Stack.Screen name='Contact_details' component={Contact_details} />
+      <Stack.Screen name='Cart_details' component={Cart_details}  />
+      <Stack.Screen name='Doctor_details' component={Doctor_details}  />
+      
+      <Stack.Screen name='Cart' component={Cart} options={{headerShown:true}} />
+
+
+
 
       
       

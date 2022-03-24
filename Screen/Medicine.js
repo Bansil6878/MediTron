@@ -17,7 +17,7 @@ const Medicine = () => {
   const med = ({item, index}) => {
     return (
       <>
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Med_details',{item:item})}>
           <View
             style={{
               flexDirection: 'row',

@@ -3,7 +3,6 @@ import {
   Text,
   View,
   ImageBackground,
-
   TouchableOpacity,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';

@@ -16,6 +16,9 @@ const doctor = [
     name: 'Thomas',
     images: require('../assets/images/doctor/doctor.png'),
     department: 'General',
+    Reg_No:5282,
+    Rating:4.1,
+    years:'17 years of experience',
     location: 'Vastral,Ahmedabad',
   },
   {
@@ -87,7 +90,7 @@ const Doctor = () => {
 
 const navigation = useNavigation();
 
-  const doc = ({item}) => {
+  const doc = ({item,index}) => {
     return (
       <View
         style={{
@@ -97,7 +100,7 @@ const navigation = useNavigation();
           marginVertical: 9,
           padding: 12,
           height: 126,
-        }}>
+        }}  key={index}>
         <TouchableOpacity>
           <Image source={item.images} style={styles.imgStyle} />
         </TouchableOpacity>
@@ -118,14 +121,14 @@ const navigation = useNavigation();
               borderRadius: 4,
               width: 100,
               marginTop: 10,
-            }}>
+            }} onPress={()=>navigation.navigate('Doctor_details',{item:item})}>
             <Text
               style={{
                 color: 'purple',
                 padding: 6,
                 fontWeight: 'bold',
               }}>
-              Add To Cart
+              Book Appointment
             </Text>
           </TouchableOpacity>
         </View>
@@ -159,6 +162,7 @@ const navigation = useNavigation();
 };
 
 export default Doctor;
+export {doctor};
 
 const styles = StyleSheet.create({
   imgStyle: {
