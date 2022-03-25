@@ -10,6 +10,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Divider from '../Components/Divider';
 
 const Drawer_main = () => {
   const navigation = useNavigation();
@@ -29,7 +30,7 @@ const Drawer_main = () => {
        
       </View>
 
-      {/* <Divider style={{ backgroundColor: "blue" }}></Divider> */}
+      <Divider/>
 
       <View style={{flexDirection: 'row', margin: 20}}>
         <AntDesign name="gift" size={24} color='black' />
@@ -72,7 +73,7 @@ const Drawer_main = () => {
         </Text>
       </View>
 
-      {/* <Divider style={{ backgroundColor: "blue" }}></Divider> */}
+      <Divider/>
 
       <View style={{flexDirection: 'row', margin: 20}}>
         <AntDesign name="customerservice" size={24} color='black' />

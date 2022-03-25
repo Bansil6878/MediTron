@@ -2,7 +2,6 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../Screen/Home';
-import Doctor from '../Screen/Doctor';
 import Medicine from '../Screen/Medicine';
 import Product from '../Screen/Product';
 import Lab from '../Screen/Lab';
@@ -23,7 +22,10 @@ import Divider from '../Components/Divider';
 import Contact_details from '../Screen/Contact_details';
 import Cart from '../Screen/Cart';
 import Cart_details from '../Screen/Cart_details';
-import Doctor_details from '../Screen/Doctor_details';
+import Doc from '../Screen/Doc';
+import Doc_details from '../Screen/Doc_details';
+import Dropdown from '../Screen/Dropdown';
+import Trending from '../Screen/Trending';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +35,6 @@ const Nav_Stack = () => {
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Doctor" component={Doctor} />
       <Stack.Screen name="Medicine" component={Medicine} />
       <Stack.Screen name="Med_details" component={Med_details} />
       <Stack.Screen name="Product" component={Product} />
@@ -51,7 +52,11 @@ const Nav_Stack = () => {
       <Stack.Screen name='Divider' component={Divider} />
       <Stack.Screen name='Contact_details' component={Contact_details} />
       <Stack.Screen name='Cart_details' component={Cart_details}  />
-      <Stack.Screen name='Doctor_details' component={Doctor_details}  />
+      <Stack.Screen name='Doc' component={Doc} options={{headerShown:true}} />
+      <Stack.Screen name='Doc_details' component={Doc_details} options={{headerShown:true}} />
+      <Stack.Screen name='Dropdown' component={Dropdown}  />
+      <Stack.Screen name='Trending' component={Trending}  />
+
       
       <Stack.Screen name='Cart' component={Cart} options={{headerShown:true}} />
 

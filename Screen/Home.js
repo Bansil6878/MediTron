@@ -13,6 +13,11 @@ import Brand from './Brand';
 import Careplan from './Careplan';
 import Footer from '../Components/Footer';
 import Profile from './Profile';
+import Divider from '../Components/Divider';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Dropdown from './Dropdown';
+import Trending from './Trending';
+
 
 const Home = () => {
   const navigation = useNavigation();
@@ -20,10 +25,18 @@ const Home = () => {
   return (
     <ScrollView>
       <View>
-        <View>
+        <View style={{flexDirection:'row'}}>
           <Profile/>
+          <Dropdown/>
+          <AntDesign
+          name="shoppingcart"
+          size={24}
+          color="gray"
+          style={{marginTop:42,marginLeft:110}}
+          onPress={() => navigation.navigate('Cart')}
+        />
         </View>
-
+<Divider/>
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity onPress={() => navigation.navigate('Medicine')}>
             <Image
@@ -33,7 +46,7 @@ const Home = () => {
             <Text style={{textAlign: 'center', marginTop: -7}}>Medicine</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Doctor')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Doc')}>
             <Image
               style={styles.imgStyle}
               source={require('../assets/images/doctor/doctor.png')}
@@ -61,6 +74,7 @@ const Home = () => {
         <Carousel />
         <Brand />
         <Careplan />
+        <Trending />
         <Footer />
       </View>
     </ScrollView>
