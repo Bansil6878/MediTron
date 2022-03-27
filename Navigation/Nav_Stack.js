@@ -26,6 +26,13 @@ import Doc from '../Screen/Doc';
 import Doc_details from '../Screen/Doc_details';
 import Dropdown from '../Screen/Dropdown';
 import Trending from '../Screen/Trending';
+import Bournvita from '../Screen/Brand_pages/Bournvita';
+import Cipla from '../Screen/Brand_pages/Cipla';
+import Dabur from '../Screen/Brand_pages/Dabur';
+import Drreaddy from '../Screen/Brand_pages/Drreaddy';
+import Himalaya from '../Screen/Brand_pages/Himalaya';
+import Vaseline from '../Screen/Brand_pages/Vaseline';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -56,9 +63,19 @@ const Nav_Stack = () => {
       <Stack.Screen name='Doc_details' component={Doc_details} options={{headerShown:true}} />
       <Stack.Screen name='Dropdown' component={Dropdown}  />
       <Stack.Screen name='Trending' component={Trending}  />
-
-      
       <Stack.Screen name='Cart' component={Cart} options={{headerShown:true}} />
+      <Stack.Screen name='Bournvita' component={Bournvita}  />
+      <Stack.Screen name='Cipla' component={Cipla}  />
+      <Stack.Screen name='Dabur' component={Dabur}  />
+      <Stack.Screen name='Drreaddy' component={Drreaddy}  />
+      <Stack.Screen name='Himalaya' component={Himalaya}  />
+      <Stack.Screen name='Vaseline' component={Vaseline}  />
+
+
+
+
+
+
 
 
 

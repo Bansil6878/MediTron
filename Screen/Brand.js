@@ -10,7 +10,7 @@ const Brand = () => {
       style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 450}}>
       <Text style={styles.txtStyle}>Featured brand</Text>
       <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Vaseline')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -19,7 +19,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Cipla')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -46,7 +46,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Drreaddy')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -55,7 +55,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Himalaya')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
