@@ -5,7 +5,6 @@ import Home from '../Screen/Home';
 import Medicine from '../Screen/Medicine';
 import Product from '../Screen/Product';
 import Lab from '../Screen/Lab';
-import Carousel from '../Screen/Carousel';
 import Brand from '../Screen/Brand';
 import Brand_details from '../Screen/Brand_details';
 import Careplan from '../Screen/Careplan';
@@ -33,7 +32,9 @@ import Drreaddy from '../Screen/Brand_pages/Drreaddy';
 import Himalaya from '../Screen/Brand_pages/Himalaya';
 import Vaseline from '../Screen/Brand_pages/Vaseline';
 import Trending_details from '../Screen/Trending_details';
-
+import Nav_Tabbar from './Nav_Tabbar';
+import Search from '../Screen/Search';
+import Slider from '../Screen/Slider';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,12 +43,11 @@ const Nav_Stack = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={Nav_Tabbar}/>
       <Stack.Screen name="Medicine" component={Medicine} />
       <Stack.Screen name="Med_details" component={Med_details} />
       <Stack.Screen name="Product" component={Product} />
       <Stack.Screen name="Lab" component={Lab} />
-      <Stack.Screen name="Carousel" component={Carousel} />
       <Stack.Screen name="Brand" component={Brand} />
       <Stack.Screen name="Brand_details" component={Brand_details} />
       <Stack.Screen name="Careplan" component={Careplan} />
@@ -72,6 +72,9 @@ const Nav_Stack = () => {
       <Stack.Screen name='Himalaya' component={Himalaya}  />
       <Stack.Screen name='Vaseline' component={Vaseline}  />
       <Stack.Screen name='Trending_details' component={Trending_details}  />
+      <Stack.Screen name='Search' component={Search}  />
+      <Stack.Screen name='Slider' component={Slider}  />
+     
 
 
 

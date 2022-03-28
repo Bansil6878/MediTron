@@ -3,6 +3,7 @@ import React,{ useState } from 'react'
 import Divider from '../Components/Divider'
 import DropDownPicker from 'react-native-dropdown-picker';
 
+
 const Doc_details = () => {
 
     
@@ -46,7 +47,6 @@ style={styles.dropdown}
 <View style={{marginLeft:10,marginTop:20}}>
   <Text>In consultation Meditron what gave you ?</Text>
 </View>
-
 
 
     <View style={{marginTop:310,backgroundColor:'white'}}> 

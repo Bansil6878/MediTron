@@ -1,29 +1,26 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { useNavigation } from '@react-navigation/native';
-
+import {useNavigation} from '@react-navigation/native';
 
 const Brand_details = () => {
-
-const navigation = useNavigation();
-
+  const navigation = useNavigation();
 
   return (
-    <View style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 650}}>
+    <View
+      style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 650}}>
       <View style={{marginTop: 4, flexDirection: 'row'}}>
-      <AntDesign
+        <AntDesign
           name="arrowleft"
           size={24}
           color="gray"
           style={{marginTop: 12}}
-
-          />
-      <Text style={styles.txtStyle}>Featured brand</Text>
+          onPress={() => navigation.navigate('Home')}
+        />
+        <Text style={styles.txtStyle}>Featured brand</Text>
       </View>
 
       <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-
         <TouchableOpacity onPress={() => navigation.navigate('Bournvita')}>
           <View style={styles.poster}>
             <Image
@@ -60,7 +57,7 @@ const navigation = useNavigation();
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Dabur')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Dabur')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -78,7 +75,7 @@ const navigation = useNavigation();
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Vaseline')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Vaseline')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -87,7 +84,7 @@ const navigation = useNavigation();
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Cipla')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Cipla')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -114,7 +111,7 @@ const navigation = useNavigation();
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Drreaddy')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Drreaddy')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -123,7 +120,7 @@ const navigation = useNavigation();
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Himalaya')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Himalaya')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}

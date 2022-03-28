@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import Carousel from './Carousel';
 import Brand from './Brand';
 import Careplan from './Careplan';
 import Footer from '../Components/Footer';
@@ -17,6 +16,7 @@ import Divider from '../Components/Divider';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Dropdown from './Dropdown';
 import Trending from './Trending';
+import Slider from './Slider';
 
 
 const Home = () => {
@@ -71,7 +71,7 @@ const Home = () => {
           </TouchableOpacity>
         </View>
 
-        <Carousel />
+        <Slider/>
         <Brand />
         <Careplan />
         <Trending />

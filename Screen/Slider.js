@@ -8,22 +8,23 @@ import {
 } from 'react-native';
 import React from 'react';
 
+
 const Images = [
   {
-    images: require('../assets/images/offer/offer7.png'),
+    images: require('../assets/images/offer/1.png'),
   },
   {
-    images: require('../assets/images/offer/offer7.png'),
+    images: require('../assets/images/offer/2.png'),
   },
   {
-    images: require('../assets/images/offer/offer7.png'),
+    images: require('../assets/images/offer/3.png'),
   },
   {
-    images: require('../assets/images/offer/offer7.png'),
+    images: require('../assets/images/offer/4.png'),
   },
 ];
 
-const Carousel = () => {
+const Slider = () => {
   return (
     <FlatList
       data={Images}
@@ -50,7 +51,7 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Slider;
 
 const styles = StyleSheet.create({
   container: {},

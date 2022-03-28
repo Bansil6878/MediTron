@@ -2,7 +2,7 @@ import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import firestore from '@react-native-firebase/firestore';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+
 
 const Cart_details = () => {
   const navigation = useNavigation();
@@ -57,6 +57,8 @@ const Cart_details = () => {
 <TouchableOpacity>
 <Text style={styles.btnStyle}>Remove</Text>
 </TouchableOpacity>
+
+
               
               </View>
             </View>
