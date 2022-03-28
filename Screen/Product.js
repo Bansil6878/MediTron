@@ -80,67 +80,66 @@ const Product = () => {
   
   const pro = ({item}) => {
     return (
-      <View
-        style={{
-          flexDirection: 'row',
-          backgroundColor: '#fff',
-          width: '100%',
-          marginVertical: 9,
-          padding: 12,
-          height: 126,
-        }}>
-        <TouchableOpacity>
-          <Image source={item.images} style={styles.imgStyle} />
-        </TouchableOpacity>
+      <>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Med_details',{item:item})}>
+          <View
+            style={{
+              flexDirection: 'row',
+              backgroundColor: '#fff',
+              marginVertical: 9,
+              padding: 12,
+              marginHorizontal: 15,
+              shadowColor: '#000',
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.25,
+              shadowRadius: 3.84,
+              elevation: 5,
+              padding: 10,
+            }}
+            >
+            <TouchableOpacity>
+              <Image source={item.images} style={styles.imgStyle} />
+            </TouchableOpacity>
 
-        <View
-          style={{
-            marginHorizontal: 10,
-            justifyContent: 'center',
-            marginLeft: 30,
-          }}>
-          <Text
-            style={{
-              fontSize: 19,
-              fontWeight: 'bold',
-            }}>
-            {item.name}
-          </Text>
-          <Text>Quantity: {item.department}</Text>
-          <Text>Rating: {item.location}</Text>
-          <TouchableOpacity
-            style={{
-              backgroundColor: '#c3deb4',
-              borderRadius: 4,
-              width: 100,
-              marginTop: 10,
-            }}>
-            <Text
+            <View
               style={{
-                color: 'purple',
-                padding: 6,
-                fontWeight: 'bold',
-                width: 50,
-                textAlign: 'center',
+                justifyContent: 'flex-end',
+                alignItems: 'flex-start',
+                marginLeft: 35,
               }}>
-              Buy
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+              <Text
+                style={{
+                  fontSize: 19,
+                  fontWeight: 'bold',
+                }}>
+                {item.name}
+              </Text>
+              
+              <Text style={styles.textStyle}>₹: {item.MRP}</Text>
+              <TouchableOpacity>
+                <Text style={styles.btnStyle}>See more!</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </TouchableOpacity>
+      </>
     );
   };
 
   return (
-    <View>
+    <View style={{marginBottom: 60}}>
       <View style={{marginTop: 4, flexDirection: 'row'}}>
-      <AntDesign
+        <AntDesign
           name="arrowleft"
           size={24}
           color="gray"
           style={{marginTop: 7}}
           onPress={() => navigation.navigate('Home')}
         />
+
         <Text
           style={{
             fontSize: 20,
@@ -148,7 +147,7 @@ const Product = () => {
             marginLeft: 5,
             marginTop: 5,
           }}>
-          Product
+          Health Care Devices
         </Text>
       </View>
       <FlatList data={product} renderItem={pro} />
@@ -156,13 +155,22 @@ const Product = () => {
   );
 };
 
-export default Product;
-
 const styles = StyleSheet.create({
   imgStyle: {
     resizeMode: 'contain',
-    width: 150,
-    height: 100,
-    marginLeft: -10,
+    width: 130,
+    height: 110,
+  },
+  btnStyle: {
+    padding: 7,
+    width: 90,
+    height: 30,
+    textAlign: 'center',
+    marginTop: 10,
+    backgroundColor: '#c3deb4',
+    borderRadius: 4,
+    color: 'purple',
   },
 });
+
+export default Product;

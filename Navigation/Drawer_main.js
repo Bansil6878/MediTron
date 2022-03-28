@@ -73,6 +73,8 @@ const Drawer_main = () => {
         </Text>
       </View>
 
+      
+
       <Divider/>
 
       <View style={{flexDirection: 'row', margin: 20}}>
