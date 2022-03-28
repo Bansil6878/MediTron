@@ -32,6 +32,7 @@ import Dabur from '../Screen/Brand_pages/Dabur';
 import Drreaddy from '../Screen/Brand_pages/Drreaddy';
 import Himalaya from '../Screen/Brand_pages/Himalaya';
 import Vaseline from '../Screen/Brand_pages/Vaseline';
+import Trending_details from '../Screen/Trending_details';
 
 
 const Stack = createNativeStackNavigator();
@@ -70,6 +71,8 @@ const Nav_Stack = () => {
       <Stack.Screen name='Drreaddy' component={Drreaddy}  />
       <Stack.Screen name='Himalaya' component={Himalaya}  />
       <Stack.Screen name='Vaseline' component={Vaseline}  />
+      <Stack.Screen name='Trending_details' component={Trending_details}  />
+
 
 
 

@@ -15,7 +15,6 @@ import { useNavigation } from '@react-navigation/native';
 const Doc = () => {
 
 
-    const symptom=createContext();
     const navigation=useNavigation();
 
   return (
@@ -100,7 +99,7 @@ const Doc = () => {
             <Text style={styles.txtStyle}>Dark Patches on Skin</Text>
             <Text style={styles.txtStyle}>Acne/Pimples</Text>
             <Text style={styles.txtStyle}>Missed Period</Text>
-            <Text style={styles.txtStyle} onPress={()=>navigation.navigate('Doc_detials')}>Many More !!</Text>
+            <Text style={styles.txtStyle} onPress={()=>navigation.navigate('Doc_details')}>Many More !!</Text>
           </View>
         </View>
 
@@ -127,7 +126,7 @@ const Doc = () => {
                 fontSize: 22,
                 fontWeight: 'bold',
               }}>
-              {' '}
+            
               200+
             </Text>
             <Text style={{marginTop: 85, marginLeft: -50}}>
@@ -147,7 +146,7 @@ const Doc = () => {
                 fontSize: 22,
                 fontWeight: 'bold',
               }}>
-              {' '}
+              
               220K+
             </Text>
             <Text style={{marginTop: 85, marginLeft: -65}}>
@@ -167,7 +166,7 @@ const Doc = () => {
                 fontSize: 22,
                 fontWeight: 'bold',
               }}>
-              {' '}
+       
               27+
             </Text>
             <Text style={{marginTop: 85, marginLeft: -38}}>Specialities</Text>

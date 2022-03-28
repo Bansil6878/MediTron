@@ -68,7 +68,7 @@ const Drreaddy = () => {
             size={24}
             color="gray"
             style={{marginTop: 7}}
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('Brand_details')}
           />
   
           <Text
