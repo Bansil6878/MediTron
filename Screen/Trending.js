@@ -1,7 +1,6 @@
 import {StyleSheet, Text, View, ScrollView,Image,TouchableOpacity,FlatList} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import medicine from '../assets/medicine/medicine_data';
 
 

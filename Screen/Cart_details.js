@@ -1,110 +1,58 @@
-import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
-import React, {useState, useEffect} from 'react';
-import {useNavigation} from '@react-navigation/native';
-import firestore from '@react-native-firebase/firestore';
+import { StyleSheet, Text, View ,Image,TouchableOpacity} from 'react-native'
+import React,{useState,useEffect} from 'react'
+import { useNavigation } from '@react-navigation/native';
 
 
-const Cart_details = () => {
-  const navigation = useNavigation();
-
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    get();
-  }, []);
-
-  const get = async () => {
-    var list = [];
-
-    const snapShot = await firestore().collection('AddToCart').get();
-
-    snapShot.forEach(doc => {
-      const {Description, Price, ProductName, Quantity, Ratings, Images} =
-        doc.data();
-      list.push({
-        id: doc.id,
-        Description: Description,
-        Price: Price,
-        ProductName: ProductName,
-        Ratings: Ratings,
-        Quantity: Quantity,
-        Images: Images,
-      });
-    });
-    setData(list);
-  };
-
+const CartData = ({item,index,onDelete}) => {
+  
+  const [count,setCount] = useState(1);
+  const [price,setPrice] = useState(item.ProductMrp);
+   
+  
+  
+ 
   return (
     <>
-      {data != null &&
-        data.map((item, index) => {
-          return (
-            <View key={index} style={styles.container}>
+    
+    {/* <View key={index}>
+    <View style={{backgroundColor:'green',flexDirection:'row',margin:6,marginTop:12,flexWrap:'wrap',padding:6}}>
+      <Image source={item.ProductImg} style={{height:90,width:90}}/>
+      <View style={{flexDirection:'column',marginLeft:10}}>
+        <Text style={{fontSize:19,fontWeight:'bold'}}>{item.ProductName}</Text>
+        <Text style={{fontSize:12,fontWeight:'bold'}}>{item.ProductDec.substr(0,40)}</Text> 
+          <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+           <Text style={{fontSize:12,fontWeight:'bold'}}>₹ {item.ProductMrp}</Text>
+        </View> */}
+        <TouchableOpacity style={{
+          backgroundColor:'#f2f2f2',
+          height:30,
+          justifyContent:'center',
+          alignItems:'center',
+          borderRadius:5,
+          marginTop:10
 
-              <View style={{marginTop:20,marginLeft:10}}>
-                <Image source={item.Images} style={styles.imgStyle} />
-              </View>
+        }}
+        onPress={() => onDelete(item.id)}>
+          <Text style={{fontSize:12,fontWeight:'bold',color:'green'}} >Remove</Text>
+        </TouchableOpacity>
+      {/* </View>
+    </View>
 
-              <View style={{flexDirection: 'column',justifyContent:'flex-start',margin:19}}>
-                <Text>Name: {item.ProductName}</Text>
+    </View> */}
 
-                <Text>Rating: {item.Ratings}</Text>
+        
+      </>
+  )
+}
 
-                <Text>Packet: {item.Quantity}</Text>
-
-                <Text>₹: {item.Price}</Text>
-
-<TouchableOpacity>
-<Text style={styles.btnStyle}>Remove</Text>
-</TouchableOpacity>
-
-
-              
-              </View>
-            </View>
-          );
-        })}
-    </>
-  );
-};
-
-export default Cart_details;
+export default CartData;
 
 const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderRadius: 4,
-    width:"97%",
-    marginHorizontal: 5,
-    marginVertical: 15,
-    flexDirection: 'row',
-    height: 'auto',
-    backgroundColor:'white',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-    padding:10
-    
-  },
-
-  imgStyle: {
-    height: 100,
-    width: 100,
-    marginBottom:10
-  },
-  btnStyle: {
-    // backgroundColor: '#99d6ff',
-    width: 100,
-    marginTop: 20,
-    textAlign: 'center',
-    borderRadius: 5,
-    borderColor:'#99d6ff',
-    borderWidth:2
-   
-  },
-});
+  count_btn:{
+    backgroundColor:'#f2f2f2',
+    justifyContent:'center',
+    alignItems:'center',
+    paddingHorizontal:9,
+    color:'black',
+  }
+})
