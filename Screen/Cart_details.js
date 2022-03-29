@@ -29,7 +29,8 @@ const CartData = ({item,index,onDelete}) => {
           justifyContent:'center',
           alignItems:'center',
           borderRadius:5,
-          marginTop:10
+          marginTop:10,
+          width:100
 
         }}
         onPress={() => onDelete(item.id)}>

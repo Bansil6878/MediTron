@@ -1,32 +1,34 @@
-import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  ScrollView,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import firestore from '@react-native-firebase/firestore';
-import Cart_details from '../Screen/Cart_details'
-
+import Cart_details from '../Screen/Cart_details';
 
 const Cart = () => {
-
   const [data, setData] = useState(null);
   const navigation = useNavigation();
 
-  
   const deletepost = ID => {
-    console.log('Data ID IS: ' + ID); 
+    console.log('Data ID IS: ' + ID);
 
-    
     firestore()
-    .collection('AddToCart')
-    .doc(ID)
-    .delete()
-    .then(() => alert('Deleted'))
-    .catch(console.log('Error'));
-};
+      .collection('AddToCart')
+      .doc(ID)
+      .delete()
+      .then(() => alert('Item Remove'))
+      .catch(console.log('Error'));
+  };
 
-
-setTimeout(() => {
-  get();
-}, 1000);
+  setTimeout(() => {
+    get();
+  }, 1000);
 
   useEffect(() => {
     get();
@@ -55,37 +57,59 @@ setTimeout(() => {
 
   return (
     <>
-      {data != null &&
-        data.map((item, index) => {
-          return (
-            <View key={index} style={styles.container}>
-
-              <View style={{marginTop:20,marginLeft:10}}>
-                <Image source={item.Images} style={styles.imgStyle} />
-              </View>
-
-              <View style={{flexDirection: 'column',justifyContent:'flex-start',margin:19}}>
-                <Text>Name: {item.ProductName}</Text>
-
-                <Text>Rating: {item.Ratings}</Text>
-
-                <Text>Packet: {item.Quantity}</Text>
-                <Text>₹: {item.Price}</Text>
-{/* 
-<TouchableOpacity>
-<Text style={styles.btnStyle}>Remove</Text>
-</TouchableOpacity> */}
-
-<Cart_details item={item} onDelete={deletepost}  keyExtractor={item => item.id}/>
-
-                    
-
-
+      <ScrollView>
+        {data != null &&
+          data.map((item, index) => {
+            return (
               
-              </View>
-            </View>
-          );
-        })}
+              <View key={index} style={styles.container}>
+                <View style={{marginTop: 20, marginLeft: 10}}>
+                  <Image source={item.Images} style={styles.imgStyle} />
+                </View>
+
+                <View
+                  style={{
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    margin: 19,
+                  }}>
+                  <Text>Name: {item.ProductName}</Text>
+
+                  <Text>Rating: {item.Ratings}</Text>
+
+                  <Text>Packet: {item.Quantity}</Text>
+                  <Text>₹: {item.Price}</Text>
+
+                  <Cart_details
+                    item={item}
+                    onDelete={deletepost}
+                    keyExtractor={item => item.id}
+                    />
+                </View>  
+                  </View>        
+          
+
+               
+            );
+          })}
+            <View style={{borderRadius:20,backgroundColor:'orange',width:330,marginHorizontal:15}}>
+            <Text style={{color:"white",fontWeight:'bold',fontSize:18,marginLeft:20}}>To be paid</Text>
+            <Text  style={{color:"white",fontWeight:'bold',fontSize:18,marginLeft:20}}>₹ {data.reduce((acc, item) => acc + item.Price, 0)}</Text>
+            
+            
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Payment', {
+                  data: data,
+                })
+              }>
+                
+              <Text style={{marginLeft:190,marginTop:-40,color:"white",fontWeight:'bold',fontSize:18}}>Make Payment</Text>
+              
+      
+            </TouchableOpacity>
+          </View>
+      </ScrollView>
     </>
   );
 };
@@ -96,12 +120,12 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
     borderRadius: 4,
-    width:"97%",
+    width: '97%',
     marginHorizontal: 5,
     marginVertical: 15,
     flexDirection: 'row',
     height: 'auto',
-    backgroundColor:'white',
+    backgroundColor: 'white',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -110,14 +134,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    padding:10
-    
+    padding: 10,
   },
 
   imgStyle: {
     height: 100,
     width: 100,
-    marginBottom:10
+    marginBottom: 10,
   },
   btnStyle: {
     // backgroundColor: '#99d6ff',
@@ -125,8 +148,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     textAlign: 'center',
     borderRadius: 5,
-    borderColor:'#99d6ff',
-    borderWidth:2
-   
+    borderColor: '#99d6ff',
+    borderWidth: 2,
   },
 });

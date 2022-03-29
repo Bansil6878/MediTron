@@ -11,6 +11,8 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import Octicons from 'react-native-vector-icons/Octicons';
 import { useNavigation } from '@react-navigation/native';
 import firestore from '@react-native-firebase/firestore';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 
 
 const Med_details = ({route}) => {
@@ -53,7 +55,15 @@ const Med_details = ({route}) => {
 
 
   return (
+    
     <ScrollView>
+         <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7}}
+          onPress={() => navigation.navigate('Medicine')}
+        />
       <View style={{justifyContent: 'center', marginLeft: 6}}>
         <Image style={styles.imgStyle} source={item.images} />
 

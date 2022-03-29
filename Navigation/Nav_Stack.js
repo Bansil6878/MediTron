@@ -35,6 +35,7 @@ import Trending_details from '../Screen/Trending_details';
 import Nav_Tabbar from './Nav_Tabbar';
 import Search from '../Screen/Search';
 import Slider from '../Screen/Slider';
+import Payment from '../Screen/Payment';
 
 const Stack = createNativeStackNavigator();
 
@@ -74,6 +75,7 @@ const Nav_Stack = () => {
       <Stack.Screen name='Trending_details' component={Trending_details}  />
       <Stack.Screen name='Search' component={Search}  />
       <Stack.Screen name='Slider' component={Slider}  />
+      <Stack.Screen name='Payment' component={Payment}  />
      
 
 
