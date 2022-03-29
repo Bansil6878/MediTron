@@ -11,6 +11,7 @@ import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import firestore from '@react-native-firebase/firestore';
 import Cart_details from '../Screen/Cart_details';
+import Empty_cart from './Empty_cart';
 
 const Cart = () => {
   const [data, setData] = useState(null);
@@ -61,17 +62,7 @@ const Cart = () => {
 <View style={styles.container}>
 
 {data == null ? (
-            <Text
-              style={{
-                fontSize: 20,
-                textAlign: 'center',
-                marginTop: 20,
-                color: 'green',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              Your Cart Empty
-            </Text>
+           <Empty_cart/>
           ) : (
             <>
             <ScrollView>
@@ -92,10 +83,12 @@ const Cart = () => {
            <TouchableOpacity onPress={() => navigation.navigate('Payment',{
              data:data
            })}>
-            <Text style={{marginLeft:200,marginTop:-37,fontWeight:'bold',fontSize:18,color:'white'}}>Make Payment</Text>
+            <Text style={{marginLeft:190,marginTop:-37,fontWeight:'bold',fontSize:18,color:'white'}}>Make Payment</Text>
             </TouchableOpacity>
 
         </View>
+
+       
 
           
       </>
@@ -124,5 +117,17 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
     textTransform: 'uppercase',
+  },
+  imgStyle: {
+    height: 320,
+    width: 340,
+    marginLeft: 20,
+    marginTop: 30,
+  },
+  btnStyle: {
+    backgroundColor: "#99d6ff",
+    width: 160,
+    marginTop: 40,
+    marginHorizontal: 100,
   },
 })

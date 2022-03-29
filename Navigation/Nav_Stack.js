@@ -36,6 +36,7 @@ import Nav_Tabbar from './Nav_Tabbar';
 import Search from '../Screen/Search';
 import Slider from '../Screen/Slider';
 import Payment from '../Screen/Payment';
+import Empty_cart from '../Screen/Empty_cart';
 
 const Stack = createNativeStackNavigator();
 
@@ -76,6 +77,7 @@ const Nav_Stack = () => {
       <Stack.Screen name='Search' component={Search}  />
       <Stack.Screen name='Slider' component={Slider}  />
       <Stack.Screen name='Payment' component={Payment} options={{headerShown:true}}  />
+      <Stack.Screen name='Empty_cart' component={Empty_cart}  />
      
 
 

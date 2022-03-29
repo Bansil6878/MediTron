@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,  ScrollView,} from 'react-native'
 import React,{useState,useEffect} from 'react'
 import firestore from '@react-native-firebase/firestore';
 import Divider from '../Components/Divider';
@@ -31,9 +31,11 @@ const Payment = ({route}) => {
 
   return (
 <>
+<ScrollView>
+
 <View>
 
-<View style={{backgroundColor:'white',marginTop:10}}>
+<View style={{backgroundColor:'white',marginTop:20}}>
   <Text style={{marginLeft:10,fontSize:16,fontWeight:'bold'}}>Deliver to :</Text>
       {value != null && (
         <>
@@ -46,9 +48,9 @@ const Payment = ({route}) => {
 </View>
 
 
-<View style={{backgroundColor:'white',marginTop:10}}>
+<View style={{backgroundColor:'white',marginTop:20}}>
  
-  <Text style={{marginLeft:10,fontSize:16,fontWeight:'bold',marginTop:10}}>Payment method</Text>
+  <Text style={{marginLeft:10,fontSize:16,fontWeight:'bold',marginTop:10}}>We Accepts</Text>
   
 <View style={{flexDirection:'row',}}>
 <Ionicons name='qr-code-outline' size={30} color="black" style={{marginLeft:10,marginTop:10}}/>
@@ -81,7 +83,7 @@ const Payment = ({route}) => {
 
 
 
-   <View  style={{backgroundColor:'white',marginTop:10}}>
+   <View  style={{backgroundColor:'white',marginTop:20}}>
    <Text style={{marginLeft:10,fontSize:16,fontWeight:'bold',marginBottom:10}}>PRICE DETAILS</Text>
    <Divider/>
    <View style={{flexDirection:'row'}}>
@@ -107,7 +109,13 @@ const Payment = ({route}) => {
 
    </View>
   
+  <View style={{flexDirection:'row',width:280,marginTop:30,marginBottom:30}}>
+    <Ionicons name='shield-checkmark-outline' size={30} color="gray" style={{marginLeft:10}}/>
+   <Text style={{marginLeft:10,color:'gray',fontWeight:'bold'}}>Safe and secure payments. Easy returns. 100% Authentic product.</Text>
+   </View>
+
 </View>
+</ScrollView>
 </>  
   )}
 
