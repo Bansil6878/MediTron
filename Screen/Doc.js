@@ -225,7 +225,6 @@ export default Doc;
 
 const styles = StyleSheet.create({
   btnStyle: {
-    
     width: 350,
     textAlign: 'center',
     marginHorizontal: 5,

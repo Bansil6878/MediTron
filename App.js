@@ -1,14 +1,14 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { StyleSheet} from 'react-native'
 import React from 'react'
 import { NavigationContainer  } from '@react-navigation/native';
-import Nav_Stack from '../Meditron/Navigation/Nav_Stack';
 import 'react-native-gesture-handler';
+import Nav_Stack from './Navigation/Nav_Stack';
 
 
 const App = () => {
   return (
    <NavigationContainer>
-     <Nav_Stack />
+     <Nav_Stack/>
    </NavigationContainer>
      
     )
