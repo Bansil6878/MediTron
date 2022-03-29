@@ -75,7 +75,7 @@ const Nav_Stack = () => {
       <Stack.Screen name='Trending_details' component={Trending_details}  />
       <Stack.Screen name='Search' component={Search}  />
       <Stack.Screen name='Slider' component={Slider}  />
-      <Stack.Screen name='Payment' component={Payment}  />
+      <Stack.Screen name='Payment' component={Payment} options={{headerShown:true}}  />
      
 
 

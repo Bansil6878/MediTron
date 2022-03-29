@@ -24,7 +24,7 @@ const Login = () => {
       .then(userdetails => {
         const user = userdetails.user;
         console.log(user.email);
-        navigation.replace('Home');
+        navigation.replace('Contact');
       })
       .catch(e => alert(e));
   };
@@ -32,7 +32,7 @@ const Login = () => {
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged ( user => {
       if (user) {
-        navigation.replace('Home')
+        navigation.replace('Contact')
       }
     })
     return unsubscribe;
