@@ -13,6 +13,7 @@ import firestore from '@react-native-firebase/firestore';
 import Cart_details from '../Screen/Cart_details';
 import Empty_cart from './Empty_cart';
 
+
 const Cart = () => {
   const [data, setData] = useState(null);
   const navigation = useNavigation();
@@ -36,6 +37,8 @@ const Cart = () => {
     get();
   }, []);
 
+
+
   const get = async () => {
     var list = [];
 
@@ -55,6 +58,21 @@ const Cart = () => {
       });
     });
     setData(list);
+  };
+
+  const add = async () => {
+    await firestore()
+      .collection('AllProducts')
+      .doc()
+      .set({
+        data:data
+       
+      })
+      .then(
+        alert('Data Added'),
+        // console.log(data),
+        navigation.navigate('Shipping'),
+      );
   };
 
   return (
@@ -83,7 +101,7 @@ const Cart = () => {
            <TouchableOpacity onPress={() => navigation.navigate('Payment',{
              data:data
            })}>
-            <Text style={{marginLeft:190,marginTop:-37,fontWeight:'bold',fontSize:18,color:'white'}}>Make Payment</Text>
+            <Text style={{marginLeft:190,marginTop:-37,fontWeight:'bold',fontSize:18,color:'white'}} onPress={add}>MakePayment </Text>
             </TouchableOpacity>
 
         </View>

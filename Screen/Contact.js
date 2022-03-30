@@ -10,6 +10,7 @@ import React, {useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
 import Divider from '../Components/Divider';
+import { Checkbox } from 'react-native-paper';
 
 
 const Contact = () => {
@@ -19,6 +20,9 @@ const Contact = () => {
   const [address, setAddress] = useState('');
   const [pincode, setPincode] = useState('');
   const [contact, setContact] = useState('');
+  const [checked, setChecked] = useState(false);
+
+
 
   const add = async () => {
     await firestore()
@@ -29,6 +33,8 @@ const Contact = () => {
         Address: address,
         Pincode: pincode,
         Contact: contact,
+       
+
       })
       .then(
         alert('Data Added'),
@@ -75,7 +81,10 @@ const Contact = () => {
         <TouchableOpacity>
           <Text onPress={add} style={styles.btnStyle}>Submit</Text>
         </TouchableOpacity>
-      
+  
+        
+        
+        
         </View>
        
       </ImageBackground>

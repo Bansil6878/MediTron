@@ -43,6 +43,7 @@ const navigation = useNavigation();
               <Text style={styles.textStyle}>Address: {data.Address}</Text>
               <Text style={styles.textStyle}>Pincode :{data.Pincode}</Text>
               <Text style={styles.textStyle}>Contact: {data.Contact}</Text>
+              <Text style={styles.textStyle}>Symptoms: {data.Value}</Text>
               <TouchableOpacity>
                 <Text style={styles.btnStyle} onPress={()=>navigation.navigate('Contact')}>Edit details</Text>
               </TouchableOpacity>

@@ -6,13 +6,28 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import React from 'react';
+import React,{useState} from 'react';
 import medicine from '../assets/medicine/medicine_data';
 import {useNavigation} from '@react-navigation/native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { Searchbar } from 'react-native-paper';
 
 const Medicine = () => {
   const navigation = useNavigation();
+
+
+  
+  const [data,setData] = useState(medicine);
+
+  const searchdata = (text) => {
+      if(text == ''){
+          setData(medicine);
+      }else{
+          const newdata = medicine.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
+          setData(newdata);
+      }
+  }
+
 
   const med = ({item, index}) => {
     return (
@@ -87,7 +102,19 @@ const Medicine = () => {
           Medicine
         </Text>
       </View>
-      <FlatList data={medicine} renderItem={med} />
+
+  
+      <Searchbar
+                placeholder="Search"
+                onChangeText={(txt)=> {
+                    searchdata(txt)
+                }}
+                placeholderTextColor='black'
+                style={styles.searchbar}
+                />
+
+      <FlatList data={data} renderItem={med} />
+
     </View>
   );
 };
@@ -108,6 +135,11 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     color: 'purple',
   },
+  searchbar:{
+    marginTop:10,
+    width:330,
+    marginHorizontal:15
+  }
 });
 
 export default Medicine;
