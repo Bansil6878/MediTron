@@ -5,6 +5,7 @@ import 'react-native-gesture-handler';
 import Nav_Stack from './Navigation/Nav_Stack';
 
 
+
 const App = () => {
   return (
    <NavigationContainer>

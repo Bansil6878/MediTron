@@ -6,7 +6,7 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import React,{createContext} from 'react';
+import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -68,7 +68,7 @@ const Doc = () => {
           </View>
         </View>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Doc_details')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Videocall')}>
           <Text style={styles.btnStyle}>Consult now</Text>
         </TouchableOpacity>
 

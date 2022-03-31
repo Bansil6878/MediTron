@@ -5,8 +5,9 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  Modal,
 } from 'react-native';
-import React from 'react';
+import React,{useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Brand from './Brand';
 import Careplan from './Careplan';
@@ -17,6 +18,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Dropdown from './Dropdown';
 import Trending from './Trending';
 import Slider from './Slider';
+import Modals from './Modals';
 
 
 const Home = () => {
@@ -24,6 +26,8 @@ const Home = () => {
 
   return (
     <ScrollView>
+   
+
       <View>
         <View style={{flexDirection:'row'}}>
           <Profile/>
@@ -36,7 +40,7 @@ const Home = () => {
           onPress={() => navigation.navigate('Cart')}
         />
         </View>
-<Divider/>
+      <Divider/>
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity onPress={() => navigation.navigate('Medicine')}>
             <Image
@@ -70,6 +74,8 @@ const Home = () => {
             <Text style={{textAlign: 'center', marginTop: -7}}>Product</Text>
           </TouchableOpacity>
         </View>
+
+       
 
         <Slider/>
         <Brand />

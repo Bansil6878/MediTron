@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 const Nav_Tabbar = () => {
   return (
-    <Tab.Navigator  screenOptions={{headerShown:!true}}> 
+    <Tab.Navigator  initialRouteName='Home' screenOptions={{headerShown:!true}}> 
         <Tab.Screen name="Home" component={Home}  options={{tabBarIcon: ({color}) => <AntDesign name="home" size={24} color={color} /> }}/>
         <Tab.Screen name="Profile" component={Drawer_main}  options={{tabBarIcon: ({color}) => <AntDesign name="user" size={24} color={color} /> }}/>
         <Tab.Screen name="Serch" component={Search}  options={{tabBarIcon: ({color}) => <AntDesign name="search1" size={24} color={color} /> }}/>

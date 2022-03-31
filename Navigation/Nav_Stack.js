@@ -38,6 +38,7 @@ import Slider from '../Screen/Slider';
 import Payment from '../Screen/Payment';
 import Empty_cart from '../Screen/Empty_cart';
 import Shipping from '../Screen/Shipping';
+import Videocall from '../Screen/Videocall';
 
 const Stack = createNativeStackNavigator();
 
@@ -80,6 +81,7 @@ const Nav_Stack = () => {
       <Stack.Screen name='Payment' component={Payment} options={{headerShown:true}}  />
       <Stack.Screen name='Empty_cart' component={Empty_cart}  />
       <Stack.Screen name='Shipping' component={Shipping}  />
+      <Stack.Screen name='Videocall' component={Videocall}  />
      
 
 
