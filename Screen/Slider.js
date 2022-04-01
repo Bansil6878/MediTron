@@ -5,6 +5,7 @@ import {
   View,
   TouchableOpacity,
   FlatList,
+  Modal
 } from 'react-native';
 import React from 'react';
 

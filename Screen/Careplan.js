@@ -5,10 +5,12 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import React from 'react';
+import React,{useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
 const Careplan = () => {
+
+
   const navigation = useNavigation();
 
   return (
@@ -18,7 +20,7 @@ const Careplan = () => {
         style={{margin: 10}}
         showsHorizontalScrollIndicator={!true}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Careplan_details1')}>
+          onPress={() => navigation.navigate('Careplan_details1')} >
           <ImageBackground
             source={require('../assets/images/family/family1.png')}
             style={styles.imgStyle}>
@@ -30,9 +32,11 @@ const Careplan = () => {
                 marginTop: 210,
                 marginLeft: 30,
                 padding: 6,
+              
               }}>
               <Text style={{color: '#fff', textAlign: 'center'}}>Join Now</Text>
             </TouchableOpacity>
+           
           </ImageBackground>
         </TouchableOpacity>
 

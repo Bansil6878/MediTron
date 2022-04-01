@@ -156,9 +156,11 @@ const styles = StyleSheet.create({
   },
   btnStyle: {
     backgroundColor: '#b3e6ff',
-    width: 140,
-    marginHorizontal: 100,
+    width: 120,
+    marginHorizontal: 110,
     marginTop: 35,
     borderRadius: 10,
+    textAlign: 'center',
+    marginBottom: 10,
   },
 });

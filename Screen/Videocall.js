@@ -11,7 +11,7 @@ const Videocall = () => {
     };
     const callbacks = {
       EndCall: () => setVideoCall(false),
-    };``
+    };
     return videoCall ? (
       <AgoraUIKit rtcProps={rtcProps} callbacks={callbacks} />
     ) : (
