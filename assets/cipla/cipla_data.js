@@ -2,7 +2,7 @@ const cipla_data=[
 {
       id: 1,
       name: "Ciplar-LA 20",
-      images: require('../images/Cipla/Ciplar-LA.jpg'),
+      images: require('../images/cipla/Ciplar-LA.jpg'),
       Quantity:10,
       star: 4.3,
       rupees:38,
@@ -11,7 +11,7 @@ const cipla_data=[
       {
       id: 2,
       name: "Cipladine Ointment",
-      images: require('../images/Cipla/CipladineOintment.jpg'),
+      images: require('../images/cipla/CipladineOintment.jpg'),
       Quantity:1,
       star: 4.5,
       rupees:22,
@@ -20,7 +20,7 @@ const cipla_data=[
       {
       id: 3,
       name: "Ciplactin",
-      images: require('../images/Cipla/Ciplactin.jpg'),
+      images: require('../images/cipla/Ciplactin.jpg'),
       Quantity:10,
       star: 4.6,
       rupees:36,
@@ -29,7 +29,7 @@ const cipla_data=[
       {
       id: 4,
       name: "Ciplactin Syrup",
-      images: require('../images/Cipla/CiplactinSyrup.png'),
+      images: require('../images/cipla/CiplactinSyrup.png'),
       Quantity:1,
       star: 4.5,
       rupees:98,
@@ -38,7 +38,7 @@ const cipla_data=[
       {
       id: 5,
       name: "Dytor 10 ",
-      images: require('../images/Cipla/Dytor.jpg'),
+      images: require('../images/cipla/Dytor.jpg'),
       Quantity:10,
       star:4.8 ,
       rupees:63,
@@ -47,7 +47,7 @@ const cipla_data=[
       {
       id: 6,
       name: "Dytor Plus 10",
-      images: require('../images/Cipla/Dytorplus.jpg'),
+      images: require('../images/cipla/Dytorplus.jpg'),
       Quantity:10,
       star: 4.7,
       rupees:66,
@@ -56,7 +56,7 @@ const cipla_data=[
       {
       id: 7,
       name: "Urimax D",
-      images: require('../images/Cipla/UrimaxD.jpg'),
+      images: require('../images/cipla/UrimaxD.jpg'),
       Quantity:10,
       star:4.6 ,
       rupees:394,
@@ -65,7 +65,7 @@ const cipla_data=[
       {
       id: 8,
       name: "Montair 10",
-      images: require('../images/Cipla/Montair-LC.jpg'),
+      images: require('../images/cipla/Montair-LC.jpg'),
       Quantity:10,
       star: 4.6,
       rupees:238,
@@ -74,7 +74,7 @@ const cipla_data=[
       {
       id: 9,
       name: "Cheston Cold ",
-      images: require('../images/Cipla/Cheston.jpg'),
+      images: require('../images/cipla/Cheston.jpg'),
       Quantity:10,
       star: 4.7,
       rupees:35,
@@ -83,7 +83,7 @@ const cipla_data=[
       {
       id: 10,
       name: "Foracort Inhaler",
-      images: require('../images/Cipla/Foracort.jpg'),
+      images: require('../images/cipla/Foracort.jpg'),
       Quantity:1,
       star: 3.9,
       rupees:270,
@@ -92,7 +92,7 @@ const cipla_data=[
       {
       id: 11,
       name: "Azee 500 ",
-      images: require('../images/Cipla/Azee.jpg'),
+      images: require('../images/cipla/Azee.jpg'),
       Quantity:10,
       star:4.6 ,
       rupees:89,
@@ -101,7 +101,7 @@ const cipla_data=[
       {
       id: 12,
       name: "Metolar XR 50 ",
-      images: require('../images/Cipla/MetolarXR.png'),
+      images: require('../images/cipla/MetolarXR.png'),
       Quantity:10,
       star: 4.8,
       rupees:72,
@@ -110,7 +110,7 @@ const cipla_data=[
       {
       id: 13,
       name: "Pantosec D SR ",
-      images: require('../images/Cipla/Pantosec.jpg'),
+      images: require('../images/cipla/Pantosec.jpg'),
       Quantity:10,
       star: 4.7,
       rupees:85,
@@ -119,7 +119,7 @@ const cipla_data=[
       {
       id: 14,
       name: "Duolin Inhaler",
-      images: require('../images/Cipla/Duolin.jpg'),
+      images: require('../images/cipla/Duolin.jpg'),
       Quantity:1,
       star:4. ,
       rupees:255,
@@ -128,7 +128,7 @@ const cipla_data=[
       {
       id: 15,
       name: "Amlip 5",
-      images: require('../images/Cipla/Amlip.jpg'),
+      images: require('../images/cipla/Amlip.jpg'),
       Quantity:10,
       star:4.7 ,
       rupees:21,

@@ -30,7 +30,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Cadila')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -39,7 +39,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Jiva')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -48,7 +48,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('mamaearth')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -66,7 +66,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Horlicks')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -93,7 +93,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Cetaphil')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -102,7 +102,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Zandu')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -129,7 +129,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Zydus')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -138,7 +138,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Nivea')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -147,7 +147,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Complan')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}

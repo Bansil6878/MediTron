@@ -2,7 +2,7 @@ const dabur_data = [
   {
     id: 1,
     name: 'Dabur Honey Squeezy',
-    images: require('../images/Dabur/HoneySqueezy.png'),
+    images: require('../images/dabur/HoneySqueezy.png'),
     Quantity: 10,
     star: 4.4,
     rupees: 176,
@@ -11,7 +11,7 @@ const dabur_data = [
   {
     id: 2,
     name: 'Dabur Honitus Hot Sip Ayurvedic Kaadha',
-    images: require('../images/Dabur/AyurvedicKaadha.png'),
+    images: require('../images/dabur/AyurvedicKaadha.png'),
     Quantity: 10,
     star: 4.5,
     rupees: 240,
@@ -20,7 +20,7 @@ const dabur_data = [
   {
     id: 3,
     name: 'Dabur Chyawanprash Awaleha',
-    images: require('../images/Dabur/ChyawanprashAwaleha.png'),
+    images: require('../images/dabur/ChyawanprashAwaleha.png'),
     Quantity: 10,
     star: 4.7,
     rupees: 612,
@@ -29,7 +29,7 @@ const dabur_data = [
   {
     id: 4,
     name: 'Dabur Honey ',
-    images: require('../images/Dabur/Honey.png'),
+    images: require('../images/dabur/Honey.png'),
     Quantity: 10,
     star: 4.6,
     rupees: 378,
@@ -38,7 +38,7 @@ const dabur_data = [
   {
     id: 5,
     name: 'Dabur Himalayan Apple Cider',
-    images: require('../images/Dabur/AppleCiderVinegar.png'),
+    images: require('../images/dabur/AppleCiderVinegar.png'),
     Quantity: 10,
     star: 4.4,
     rupees: 235,
@@ -47,7 +47,7 @@ const dabur_data = [
   {
     id: 6,
     name: 'Dabur Chyawanprakash Sugarfree',
-    images: require('../images/Dabur/ChyawanprakashSugarfree.jpg'),
+    images: require('../images/dabur/ChyawanprakashSugarfree.jpg'),
     Quantity: 10,
     star: 4.7,
     rupees: 200,
@@ -56,7 +56,7 @@ const dabur_data = [
   {
     id: 7,
     name: 'Dabur Honitus Herbal Cough Remedy',
-    images: require('../images/Dabur/HerbalCoughRemedy.jpg'),
+    images: require('../images/dabur/HerbalCoughRemedy.jpg'),
     Quantity: 10,
     star: 4.7,
     rupees: 159,
@@ -65,7 +65,7 @@ const dabur_data = [
   {
     id: 8,
     name: 'Dabur Organic Honey',
-    images: require('../images/Dabur/OrganicHoney.png'),
+    images: require('../images/dabur/OrganicHoney.png'),
     Quantity: 10,
     star: 4.7,
     rupees: 224,
@@ -74,7 +74,7 @@ const dabur_data = [
   {
     id: 9,
     name: 'Dabur Chyawanprash Awaleha Sharangdhar Samhita',
-    images: require('../images/Dabur/Sharangdhar.png'),
+    images: require('../images/dabur/Sharangdhar.png'),
     Quantity: 10,
     star: 4.5,
     rupees: 820,
@@ -84,7 +84,7 @@ const dabur_data = [
   {
     id: 10,
     name: 'Dabur Shilajit Gold ',
-    images: require('../images/Dabur/ShilajitGold.png'),
+    images: require('../images/dabur/ShilajitGold.png'),
     Quantity: 10,
     star: 3.8,
     rupees: 342,

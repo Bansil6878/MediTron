@@ -39,6 +39,16 @@ import Payment from '../Screen/Payment';
 import Empty_cart from '../Screen/Empty_cart';
 import Shipping from '../Screen/Shipping';
 import Videocall from '../Screen/Videocall';
+import Cadila from '../Screen/Brand_pages/Cadila';
+import Complan from '../Screen/Brand_pages/Complan';
+import Cetaphil from '../Screen/Brand_pages/Cetaphil';
+import Horlicks from '../Screen/Brand_pages/Horlicks';
+import Jiva from '../Screen/Brand_pages/Jiva';
+import Nivea from '../Screen/Brand_pages/Nivea';
+import Zandu from '../Screen/Brand_pages/Zandu';
+import Zydus from '../Screen/Brand_pages/Zydus';
+import Mamaearth  from '../Screen/Brand_pages/Mamaearth'
+
 
 const Stack = createNativeStackNavigator();
 
@@ -81,11 +91,21 @@ const Nav_Stack = () => {
       <Stack.Screen name='Payment' component={Payment} options={{headerShown:true}}  />
       <Stack.Screen name='Empty_cart' component={Empty_cart}  />
       <Stack.Screen name='Shipping' component={Shipping}  />
-      <Stack.Screen name='Videocall' component={Videocall}  />
+      <Stack.Screen name='Cadila' component={Cadila}  />
+<Stack.Screen name='Cetaphil' component={Cetaphil}  />
+   <Stack.Screen name='Complan' component={Complan}  />
+     <Stack.Screen name='Horlicks' component={Horlicks}  />
+     <Stack.Screen name='Jiva' component={Jiva}  />
+    <Stack.Screen name='Mamaearth ' component={Mamaearth}/>
+      <Stack.Screen name='Nivea' component={Nivea}  />
+      <Stack.Screen name='Zandu' component={Zandu}  />
+      <Stack.Screen name='Zydus' component={Zydus}  />
+
+
      
 
 
-
+ 
 
 
 

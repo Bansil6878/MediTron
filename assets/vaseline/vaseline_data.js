@@ -2,7 +2,7 @@ const vaseline_data=[
 {
 id: 1,
 name: "Vaseline Original Skin Protecting Jelly",
-images: require('../images/Vaseline/SkinProtectingJelly.png'),
+images: require('../images/vaseline/SkinProtectingJelly.png'),
 Quantity:1,
 star: 4.6,
 rupees:79,
@@ -12,7 +12,7 @@ Des: "Vaseline Blueseal Pure Petroleum Jelly contains 100% Triple-purified pure 
 {
 id: 2,
 name: "Vaseline Intensive Care Body Deep Moisture Lotion",
-images: require('../images/Vaseline/MoistureLotion.jpg'),
+images: require('../images/vaseline/MoistureLotion.jpg'),
 Quantity:1,
 star: 4.7,
 rupees:322,
@@ -22,7 +22,7 @@ Des: "Vaseline Intensive Care Body Deep Moisture Lotion is designed to penetrate
 {
 id: 3,
 name: "Vaseline Lip Care",
-images: require('../images/Vaseline/LipCare.jpg'),
+images: require('../images/vaseline/LipCare.jpg'),
 Quantity:1,
 star:4.3 ,
 rupees:49,
@@ -32,7 +32,7 @@ Des: "Vaseline Lip Care formulated with the goodness of pure petroleum jelly, it
 {
 id: 4,
 name: "Vaseline Glow Lotion",
-images: require('../images/Vaseline/GlowLotion.png'),
+images: require('../images/vaseline/GlowLotion.png'),
 Quantity:1,
 star: 4.4,
 rupees:387,
@@ -42,7 +42,7 @@ Des: "Vaseline Intensive Care Body Cocoa Glow Lotion helps to keep your skin loo
 {
 id: 5,
 name: "Aloe Fresh Lotion",
-images: require('../images/Vaseline/AloeFreshLotion.png'),
+images: require('../images/vaseline/AloeFreshLotion.png'),
 Quantity:1,
 star: 4.4,
 rupees:373,
@@ -52,7 +52,7 @@ Des: "Vaseline Intensive Care Body Aloe Fresh Lotion contains 100% pure aloe ver
 {
 id: 6,
 name: "Derma Care Body Lotion",
-images: require('../images/Vaseline/DermaCareBodyLotion.png'),
+images: require('../images/vaseline/DermaCareBodyLotion.png'),
 Quantity:1,
 star: 4.8,
 rupees:444,
@@ -62,7 +62,7 @@ Des: "Vaseline Advanced Repair Derma Care Body Lotion helps to heal the skin."
 {
 id: 7,
 name: "Daily Brightening Healthy Bright Even Tone Lotion",
-images: require('../images/Vaseline/EvenToneLotion.png'),
+images: require('../images/vaseline/EvenToneLotion.png'),
 Quantity:1,
 star: 4.3,
 rupees:380,
@@ -72,7 +72,7 @@ Des: "Vaseline Daily Brightening Healthy Bright Even Tone Lotion is an advanced 
 {
 id: 8,
 name: "Vaseline 10 Body Lotion",
-images: require('../images/Vaseline/10BodyLotion.jpg'),
+images: require('../images/vaseline/10BodyLotion.jpg'),
 Quantity:1,
 star: 4.7,
 rupees:130,
@@ -83,7 +83,7 @@ Des: "A lotion with Vitamin B3, AHA, Pro-Retinol which provides 10 in 1 skin bri
 {
 id: 9,
 name: "Lip care Therapy",
-images: require('../images/Vaseline/LipTherapy.png'),
+images: require('../images/vaseline/LipTherapy.png'),
 Quantity:1,
 star: 4.3,
 rupees:1227,
@@ -94,7 +94,7 @@ Des: "Vaseline Daily Brightening Healthy Bright Even Tone Lotion is an advanced 
 {
     id: 11,
     name: "Intense Moisturising Lotion",
-    images: require('../images/Vaseline/IntenseMoisturisingLotion.png'),
+    images: require('../images/vaseline/IntenseMoisturisingLotion.png'),
     Quantity:1,
     star: 4.4,
     rupees:249,
@@ -106,7 +106,7 @@ Des: "Vaseline Daily Brightening Healthy Bright Even Tone Lotion is an advanced 
 // {
 //     id: 12,
 //     name: "Lip Therapy Aleo",
-//     images: require('../images/Vaseline/LipCareTherapyAloe.png'),
+//     images: require('../images/vaseline/LipCareTherapyAloe.png'),
 //     Quantity:1,
 //     star: 4.4,
 //     rupees:249,

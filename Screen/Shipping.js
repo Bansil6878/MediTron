@@ -1,9 +1,13 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import firestore from '@react-native-firebase/firestore';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/native';
+
+
 
 const Shipping = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const [data, setData] = useState(null);
 
@@ -67,9 +71,18 @@ const Shipping = () => {
   return (
     <>
       <View>
+        <View style={{flexDirection:'row'}}>
+              <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7}}
+          onPress={() => navigation.navigate('Home')}
+        />
         <Text style={{marginHorizontal: 90, marginTop: 10,fontSize:20}}>
           DELIVERY STATUS
         </Text>
+        </View>
 
         <View style={{marginTop: 10,backgroundColor: '#e6e6e6'}}>
           <Text style={{marginLeft:10,width:330,fontSize:16}}>Your Order {data} has been successfully Recevied</Text>

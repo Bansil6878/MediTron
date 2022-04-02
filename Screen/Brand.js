@@ -26,9 +26,9 @@ const Brand = () => {
               source={require('../assets/images/brand/cipla.png')}
             />
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity >
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Cetaphil')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -37,7 +37,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Zandu')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -64,7 +64,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Zydus')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -73,7 +73,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Nivea')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -82,7 +82,7 @@ const Brand = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Complan')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}

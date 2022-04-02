@@ -2,7 +2,7 @@ const himalaya_data=[
 {
 id: 1,
 name: "Himalaya Liv. 52 DS",
-images: require('../images/Himalaya/Liv.52DS.jpg'),
+images: require('../images/himalaya/Liv.52DS.jpg'),
 Quantity:10,
 star: 4.7,
 rupees:129,
@@ -11,7 +11,7 @@ Des: "It is used to protect the liver against toxins and lower the risk of infec
 {
 id: 2,
 name: "Himalaya Wellness Pure Herbs Neem",
-images: require('../images/Himalaya/HerbsNeem.png'),
+images: require('../images/himalaya/HerbsNeem.png'),
 Quantity:10,
 star: 4.5,
 rupees:94,
@@ -20,7 +20,7 @@ Des: "Himalaya Neem Syrup contains Azadirachta indica, also known as Nimba."
 {
 id: 3,
 name: "Himalaya Herbals Purifying Neem Face Wash",
-images: require('../images/Himalaya/NeemFaceWash.jpg'),
+images: require('../images/himalaya/NeemFaceWash.jpg'),
 Quantity:10,
 star: 4.7,
 rupees:108,
@@ -29,7 +29,7 @@ Des: "Himalaya Herbals Purifying Neem Face Wash is a soap-free, herbal formulati
 {
 id: 4,
 name: "Himalaya Tentex Royal",
-images: require('../images/Himalaya/TentexRoyal.jpg'),
+images: require('../images/himalaya/TentexRoyal.jpg'),
 Quantity:10,
 star: 4.8,
 rupees:190,
@@ -38,7 +38,7 @@ Des: "It is used to treat sexual dysfunction in men. It is recommended for use i
 {
 id: 5,
 name: "Himalaya Tentex Forte",
-images: require('../images/Himalaya/TentexForte.jpg'),
+images: require('../images/himalaya/TentexForte.jpg'),
 Quantity:10,
 star: 3.7,
 rupees:68,
@@ -47,7 +47,7 @@ Des: "It helps treat sexual dysfunction in men and erectile dysfunction (impoten
 {
 id: 6,
 name: "Himalaya Men Pimple Clear Neem Face Wash",
-images: require('../images/Himalaya/MenPimpleClearNeemFaceWash.jpg'),
+images: require('../images/himalaya/MenPimpleClearNeemFaceWash.jpg'),
 Quantity:10,
 star:3.8 ,
 rupees:153,
@@ -56,7 +56,7 @@ Des: "Himalaya Men Pimple Clear Neem Face Wash is specially designed for men’s
 {
 id: 7,
 name: "Himalaya Gasex",
-images: require('../images/Himalaya/Gasex.jpg'),
+images: require('../images/himalaya/Gasex.jpg'),
 Quantity:10,
 star:4.3 ,
 rupees:119,
@@ -65,7 +65,7 @@ Des: "It is used to treat indigestion and its symptoms such as the feeling of fu
 {
 id: 8,
 name: "Himalaya Confido",
-images: require('../images/Himalaya/Confido.jpg'),
+images: require('../images/himalaya/Confido.jpg'),
 Quantity:10,
 star: 3.6,
 rupees:138,
@@ -74,7 +74,7 @@ Des: "It is used to help manage the testosterone levels in the body and boost se
 {
 id: 9,
 name: "Himalaya Septilin ",
-images: require('../images/Himalaya/Septilin.jpg'),
+images: require('../images/himalaya/Septilin.jpg'),
 Quantity:10,
 star: 4.5,
 rupees:125,
@@ -83,7 +83,7 @@ Des: "It is used to boost your immunity and help fight against infections."
 {
 id: 10,
 name: "Himalaya Diabecon DS",
-images: require('../images/Himalaya/DiabeconDS.jpg'),
+images: require('../images/himalaya/DiabeconDS.jpg'),
 Quantity:10,
 star:4.2 ,
 rupees:141,
@@ -92,7 +92,7 @@ Des: "Himalaya Diabecon DS Tablet contains a unique combination of Gymnema (Mesh
 {
 id: 11,
 name: "Himalaya Liv.52 Syrup",
-images: require('../images/Himalaya/Liv.52DSsyrup.jpg'),
+images: require('../images/himalaya/Liv.52DSsyrup.jpg'),
 Quantity:10,
 star:4.4 ,
 rupees:143,
@@ -101,7 +101,7 @@ Des: "Himalaya Liv.52 Syrup contains Caper Bush (Himsra) and Chicory (Kasani)."
 {
 id: 12,
 name: "Himalaya Cystone",
-images: require('../images/Himalaya/Cystone.jpg'),
+images: require('../images/himalaya/Cystone.jpg'),
 Quantity:10,
 star: 4.4,
 rupees:113,
@@ -110,7 +110,7 @@ Des: "Himalaya Cystone Tablet contains ingredients that possess diuretic, demulc
 {
 id: 13,
 name: "Himalaya Speman ",
-images: require('../images/Himalaya/Speman.jpg'),
+images: require('../images/himalaya/Speman.jpg'),
 Quantity:10,
 star: 3.7,
 rupees:125,
@@ -119,7 +119,7 @@ Des: "Himalaya Speman Tablet may enhance spermatogenesis by improving testostero
 {
 id: 14,
 name: "Himalaya Mentat",
-images: require('../images/Himalaya/Mentat.jpg'),
+images: require('../images/himalaya/Mentat.jpg'),
 Quantity:10,
 star: 4.1,
 rupees:124,
@@ -128,7 +128,7 @@ Des: "Himalaya Mentat Tablet channelizes the mental energy."
 {
 id: 15,
 name: "Himalaya Himcolin Gel",
-images: require('../images/Himalaya/Himcolin.jpg'),
+images: require('../images/himalaya/Himcolin.jpg'),
 Quantity:10,
 star: 4.7,
 rupees:148,
