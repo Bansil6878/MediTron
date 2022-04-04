@@ -2,8 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
-import Drawer_main from './Drawer_main';
+import Contact_details from '../Screen/Contact_details'
 import Home from '../Screen/Home';
 import Doc from '../Screen/Doc';
 import Search from '../Screen/Search';
@@ -15,7 +14,7 @@ const Nav_Tabbar = () => {
   return (
     <Tab.Navigator  initialRouteName='Home' screenOptions={{headerShown:!true}}> 
         <Tab.Screen name="Home" component={Home}  options={{tabBarIcon: ({color}) => <AntDesign name="home" size={24} color={color} /> }}/>
-        <Tab.Screen name="Profile" component={Drawer_main}  options={{tabBarIcon: ({color}) => <AntDesign name="user" size={24} color={color} /> }}/>
+        <Tab.Screen name="Profile" component={Contact_details}  options={{tabBarIcon: ({color}) => <AntDesign name="user" size={24} color={color} /> }}/>
         <Tab.Screen name="Serch" component={Search}  options={{tabBarIcon: ({color}) => <AntDesign name="search1" size={24} color={color} /> }}/>
         <Tab.Screen name="Setting" component={Doc}  options={{tabBarIcon: ({color}) => <AntDesign name="setting" size={24} color={color} /> }}/>
         </Tab.Navigator>

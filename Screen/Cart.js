@@ -127,15 +127,7 @@ const styles = StyleSheet.create({
     height:'100%',
     flex:1
   },
-  make_btn: {
-    backgroundColor: 'yellow',
-    padding: 9,
-  },
-  make_txt: {
-    color: 'black',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-  },
+
   imgStyle: {
     height: 320,
     width: 340,

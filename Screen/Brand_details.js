@@ -1,12 +1,16 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image,ScrollView} from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
+import Brand_footer from '../Components/Brand_footer';
+import Footer from '../Components/Footer';
 
 const Brand_details = () => {
   const navigation = useNavigation();
 
   return (
+    <ScrollView>
+
     <View
       style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 650}}>
       <View style={{marginTop: 4, flexDirection: 'row'}}>
@@ -48,7 +52,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('mamaearth')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Mamaearth')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -155,8 +159,12 @@ const Brand_details = () => {
             />
           </View>
         </TouchableOpacity>
+
       </View>
     </View>
+        <Brand_footer/>
+        
+    </ScrollView>
   );
 };
 

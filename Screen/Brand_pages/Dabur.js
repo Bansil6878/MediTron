@@ -10,7 +10,7 @@ const Dabur = () => {
     const dab = ({item, index}) => {
       return (
         <>
-          <TouchableOpacity  onPress={()=>navigation.navigate('',{item:item})}>
+          <TouchableOpacity  onPress={()=>navigation.navigate('Brandpage_details',{item:item})}>
             <View
               style={{
                 flexDirection: 'row',

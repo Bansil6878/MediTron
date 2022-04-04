@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 
 
 
-const Shipping = () => {
+const Myorder = () => {
   const navigation = useNavigation();
 
   const [data, setData] = useState(null);
@@ -139,7 +139,7 @@ const Shipping = () => {
   );
 };
 
-export default Shipping;
+export default Myorder;
 
 const styles = StyleSheet.create({
   imgstyle: {

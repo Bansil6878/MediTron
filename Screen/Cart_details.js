@@ -34,10 +34,10 @@ const CartData = ({item,index,onDelete}) => {
             }}>
       <Image source={item.Images}  style={styles.imgStyle} />
       <View >
-        <Text style={{fontWeight:'bold',fontSize:19}}>{item.ProductName}</Text>
+        <Text style={{fontWeight:'bold',fontSize:19,width:170}}>{item.ProductName}</Text>
         <Text >Rating: {item.Ratings}</Text>
-        <Text >Packet: {item.Quantity}</Text>
-        <Text style={{justifyContent:'flex-start'}}>₹ {item.Price}</Text>
+        <Text >Quantity: {item.Quantity}</Text>
+        <Text style={{justifyContent:'flex-start',fontWeight:'bold'}}>₹ {item.Price}</Text>
       
       
       
@@ -46,6 +46,7 @@ const CartData = ({item,index,onDelete}) => {
         <TouchableOpacity style={{
           backgroundColor:'#f2f2f2',
           height:30,
+          width:110,
           justifyContent:'center',
           alignItems:'center',
           borderRadius:5,

@@ -34,7 +34,9 @@ const Drawer_main = () => {
 
       <View style={{flexDirection: 'row', margin: 20}}>
         <AntDesign name="gift" size={24} color='black' />
-        <Text style={{marginLeft: 10, marginTop: 5}}>MY Orders</Text>
+        <Text style={{marginLeft: 10, marginTop: 5}}
+        onPress={()=>navigation.navigate('Myorder')}>
+        MY Orders</Text>
       </View>
 
       <View style={{flexDirection: 'row', margin: 20}}>

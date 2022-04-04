@@ -11,7 +11,7 @@ const Mamaearth = () => {
   const mam = ({item, index}) => {
     return (
       <>
-        <TouchableOpacity  onPress={()=>navigation.navigate('',{item:item})}>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Brandpage_details',{item:item})}>
           <View
             style={{
               flexDirection: 'row',
@@ -105,4 +105,4 @@ const Mamaearth = () => {
     },
   });
 
-export default Mamaearth 
+export default Mamaearth;

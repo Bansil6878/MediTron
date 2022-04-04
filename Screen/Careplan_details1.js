@@ -1,62 +1,78 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  FlatList,
+  TouchableOpacity
+} from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-
+import firestore from '@react-native-firebase/firestore';
+import {careplan_data1} from '../assets/data/data';
 import {useNavigation} from '@react-navigation/native';
 
-const Careplan_details1 = () => {
-  const navigation = useNavigation();
-  return (
-    <>
-      <ScrollView>
-        <View style={{marginTop: -15}}>
-          <View style={{marginTop: 15, flexDirection: 'row'}}>
-            <AntDesign
-              name="arrowleft"
-              size={24}
-              color="gray"
-              style={{marginTop: 12}}
-              onPress={() => navigation.navigate('Home')}
-            />
-            <Text
-              style={{
-                fontSize: 20,
-                fontWeight: 'bold',
-                marginLeft: 10,
-                marginTop: 10,
-              }}>
-              My Care Plan
-            </Text>
-          </View>
+const Careplan_details1 = ({element}) => {
 
-          <Image
-            source={require('../assets/images/family/family4.png')}
-            style={styles.imgStyle}
-          />
-          <View style={{flexDirection: 'row'}}>
-            <Text
-              style={{
+  const Name = element.name;
+  const Images=element.images;
+  const Benefits=element.benefits;
+  const Price=element.price;
+  const Description=element.des;
+
+
+  const navigation=useNavigation();
+
+  
+  const add = async() => {
+   
+    await firestore()
+    .collection('AddToCart')
+    .doc()
+    .set({
+      CareplanName:Name,
+      Description:Description,
+      Price:Price,
+      Image:Images,
+      Benefits:Benefits,
+    })
+     .then(
+      alert('item added'),
+      console.log('item added'),
+      navigation.navigate('Cart'),
+    )
+    .catch((e)=>alert(e))
+  }
+
+
+
+  const care = ({item}) => {
+    return (
+      <>
+        <View >
+    <Image source={item.image} style={styles.imgStyle} />
+    
+    <View style={{flexDirection:'row',marginTop:20}}>
+       <Text style={{
                 backgroundColor: '#994d00',
                 color: 'white',
                 marginTop: 15,
-                width: 100,
+                width: 150,
                 height: 20,
                 marginLeft: 10,
                 borderBottomRightRadius: 15,
-                textAlign: 'center',
-              }}>
-              Care Plan
-            </Text>
-            <Text style={{marginTop: 15, marginLeft: 20, fontSize: 16}}>
-              Plan starting Rs. 45/month
-            </Text>
-          </View>
+                textAlign: 'left',
+              }}>{item.name}</Text>
+       <Text style={{fontSize:18,fontWeight:'bold',marginTop:10,marginLeft:40}}>{item.price}</Text>
+    </View>    
 
-          <Text
+    
+    <Text
             style={{
-              marginTop: 50,
+              marginTop: 30,
               fontWeight: 'bold',
               fontSize: 26,
               marginLeft: 10,
@@ -66,6 +82,7 @@ const Careplan_details1 = () => {
           <Text style={{marginTop: 20, marginLeft: 10}}>
             Save for thing that makes you happy
           </Text>
+
 
           <View>
             <Text
@@ -125,11 +142,39 @@ const Careplan_details1 = () => {
               </View>
             </View>
 
-            <Text style={styles.btnStyle}>₹ 45/month</Text>
+            <Text style={styles.btnStyle} onPress={add}>
+              ₹ 45/month
+            </Text>
           </View>
         </View>
-      </ScrollView>
-    </>
+        
+      
+      </>
+    );
+  };
+  return (
+    <View style={{marginBottom: 60}}>
+      <View style={{marginTop: 4, flexDirection: 'row'}}>
+        <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7}}
+          onPress={() => navigation.navigate('Home')}
+        />
+
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginLeft: 5,
+            marginTop: 5,
+          }}>
+          Careplan
+        </Text>
+      </View>
+      <FlatList data={careplan_data1} renderItem={care} />
+    </View>
   );
 };
 
