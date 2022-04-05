@@ -7,7 +7,7 @@ import {
   FlatList,
   TouchableOpacity
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -15,28 +15,32 @@ import firestore from '@react-native-firebase/firestore';
 import {careplan_data1} from '../assets/data/data';
 import {useNavigation} from '@react-navigation/native';
 
-const Careplan_details1 = ({element}) => {
+const Careplan_details1 = () => {
+
+const[element,seElement]=useState([]);
 
   const Name = element.name;
   const Images=element.images;
-  const Benefits=element.benefits;
+  const Benefits=element.benifit;
   const Price=element.price;
   const Description=element.des;
 
 
   const navigation=useNavigation();
 
+ 
+
   
   const add = async() => {
-   
+
+    // console.log(Description);
     await firestore()
     .collection('AddToCart')
-    .doc()
-    .set({
+    .add({
       CareplanName:Name,
       Description:Description,
       Price:Price,
-      Image:Images,
+      // Image:Images,
       Benefits:Benefits,
     })
      .then(
@@ -50,6 +54,8 @@ const Careplan_details1 = ({element}) => {
 
 
   const care = ({item}) => {
+
+    seElement(item);
     return (
       <>
         <View >

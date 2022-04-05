@@ -50,6 +50,7 @@ import Zydus from '../Screen/Brand_pages/Zydus';
 import Mamaearth from '../Screen/Brand_pages/Mamaearth';
 import Brand_footer from '../Components/Brand_footer';
 import Brandpage_details from '../Screen/Brandpage_details';
+import History from '../Screen/History';
 
 const Stack = createNativeStackNavigator();
 
@@ -115,6 +116,8 @@ const Nav_Stack = () => {
       <Stack.Screen name='Mamaearth' component={Mamaearth} />
       <Stack.Screen name='Brand_footer' component={Brand_footer} />
       <Stack.Screen name='Brandpage_details' component={Brandpage_details} />
+      <Stack.Screen name='History' component={History} />
+
 
     </Stack.Navigator>
   );

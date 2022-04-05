@@ -67,11 +67,11 @@ const Drawer_main = () => {
       </TouchableOpacity>
 
       <View style={{flexDirection: 'row', margin: 20}}>
-        <AntDesign name="pushpino" size={24} color='black' onPress={()=>navigation.navigate("Notification")}/>
+        <AntDesign name="user" size={24} color='black' onPress={()=>navigation.navigate("Notification")}/>
         <Text
           style={{marginLeft: 10, marginTop: 3}}
-          onPress={() => navigation.navigate('Notification')}>
-          My Notification
+          onPress={() => navigation.navigate('History')}>
+          My History
         </Text>
       </View>
 
