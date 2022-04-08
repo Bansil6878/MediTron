@@ -54,6 +54,44 @@ const careplan_data3=[
   }
 ]
 
+const doctor=[
+{
+  id:1,
+  name:'Thomas',
+  department:'Covid',
+  image:require('../images/doctor/doctor.png'),
+  Ratings:4.5,
+},
+{
+  id:2,
+  name:'Thomas',
+  department:'Headache',
+  image:require('../images/doctor/doctor.png'),
+  Ratings:4.5,
+},
+{
+  id:3,
+  name:'Thomas',
+  department:'Fever',
+  image:require('../images/doctor/doctor.png'),
+  Ratings:4.3,
+},
+{
+  id:4,
+  name:'Thomas',
+  department:'Mental Health',
+  image:require('../images/doctor/doctor.png'),
+  Ratings:4.5,
+},
+{
+  id:5,
+  name:'Thomas',
+  department:'Hairfall',
+  image:require('../images/doctor/doctor.png'),
+  Ratings:4.5,
+}
+]
+
 
 export default data;
-export {careplan_data1,careplan_data2,careplan_data3};
+export {careplan_data1,careplan_data2,careplan_data3,doctor};

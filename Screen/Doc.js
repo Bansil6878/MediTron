@@ -5,12 +5,14 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  FlatList 
 } from 'react-native';
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+
 
 const Doc = () => {
 
@@ -68,7 +70,7 @@ const Doc = () => {
           </View>
         </View>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Videocall')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Doc_details')}>
           <Text style={styles.btnStyle}>Consult now</Text>
         </TouchableOpacity>
 
@@ -102,6 +104,8 @@ const Doc = () => {
             <Text style={styles.txtStyle} onPress={()=>navigation.navigate('Doc_details')}>Many More !!</Text>
           </View>
         </View>
+
+       
 
         <View>
           <Text

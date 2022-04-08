@@ -7,8 +7,10 @@ import {
   ScrollView,
   Modal,
 } from 'react-native';
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import {useNavigation} from '@react-navigation/native';
+import { Badge }  from 'react-native-paper';  
+import { CartContext } from  '../CartContext';
 import Brand from './Brand';
 import Careplan from './Careplan';
 import Footer from '../Components/Footer';
@@ -24,6 +26,9 @@ import Slider from './Slider';
 const Home = () => {
   const navigation = useNavigation();
 
+const {getItemsCount} =useContext(CartContext);
+
+
   return (
     <ScrollView>
    
@@ -34,11 +39,12 @@ const Home = () => {
           <Dropdown/>
           <AntDesign
           name="shoppingcart"
-          size={24}
+          size={30}
           color="gray"
-          style={{marginTop:42,marginLeft:110}}
+          style={{marginTop:42,marginLeft:105}}
           onPress={() => navigation.navigate('MyCart')}
         />
+        <Badge style={{marginLeft:-10,marginBottom:30,marginLeft:-15 }}>{getItemsCount()}</Badge>
         </View>
       <Divider/>
         <View style={{flexDirection: 'row'}}>

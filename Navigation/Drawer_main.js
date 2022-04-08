@@ -11,6 +11,9 @@ import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Divider from '../Components/Divider';
+import MaterialIcons from  "react-native-vector-icons/MaterialIcons";
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 const Drawer_main = () => {
   const navigation = useNavigation();
@@ -19,7 +22,7 @@ const Drawer_main = () => {
     <View>
       <StatusBar />
 
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row',marginTop:-20}}>
         <View>
           <Image
             source={require('../assets/images/profile/meditron.png')}
@@ -60,14 +63,20 @@ const Drawer_main = () => {
     <TouchableOpacity>
       <View style={{flexDirection: 'row', margin: 20}}>
         <AntDesign name="user" size={24} color='black' />
-        <Text style={{marginLeft: 10, marginTop: 3}} onPress={()=>{
-          navigation.navigate('Contact_details')
-        }}>My Account</Text>
+        <Text style={{marginLeft: 10, marginTop: 3}}>My Account</Text>
       </View>
       </TouchableOpacity>
 
+      <TouchableOpacity>
       <View style={{flexDirection: 'row', margin: 20}}>
-        <AntDesign name="user" size={24} color='black' onPress={()=>navigation.navigate("Notification")}/>
+        <Ionicons name="chatbubbles-outline" size={24} color='black' />
+        <Text style={{marginLeft: 10, marginTop: 3}} onPress={()=>navigation.navigate('Consult_details')}>My Consult</Text>
+      </View>
+      </TouchableOpacity>
+
+
+      <View style={{flexDirection: 'row', margin: 20}}>
+        <MaterialIcons name="history" size={24} color='black' onPress={()=>navigation.navigate("History")}/>
         <Text
           style={{marginLeft: 10, marginTop: 3}}
           onPress={() => navigation.navigate('History')}>
@@ -117,5 +126,5 @@ const styles = StyleSheet.create({
     borderRadius: 17,
     marginBottom: 10,
   },
-  txtStyle: {},
+  // txtStyle: {},
 });
