@@ -23,13 +23,12 @@ const Myorder = () => {
   }, []);
 
   const get = async () => {
-    // var list = [];
     {
       console.log(data);
     }
 
     const snapShot = await firestore()
-      .collection('AllProducts')
+      .collection('AddToCart')
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
@@ -85,7 +84,7 @@ const Myorder = () => {
         </View>
 
         <View style={{marginTop: 10,backgroundColor: '#e6e6e6'}}>
-          <Text style={{marginLeft:10,width:330,fontSize:16}}>Your Order {data} has been successfully Recevied</Text>
+          <Text style={{marginLeft:10,width:330,fontSize:16}}>Your Order {data.id} has been successfully Recevied</Text>
         </View>
 
         <View style={styles.Container}>

@@ -46,7 +46,7 @@ const[element,seElement]=useState([]);
      .then(
       alert('item added'),
       console.log('item added'),
-      navigation.navigate('Cart'),
+      navigation.navigate('Payment'),
     )
     .catch((e)=>alert(e))
   }

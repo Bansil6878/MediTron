@@ -1,62 +1,41 @@
+import { useNavigation } from '@react-navigation/native';
+import React, {useEffect, useState, useContext} from 'react';
 import {
+  Text, 
+  Image, 
+  View, 
+  ScrollView, 
+  SafeAreaView, 
+  Button, 
   StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  ScrollView,
-} from 'react-native';
-import React, {useState, useEffect} from 'react';
+  TouchableOpacity
+  } from 'react-native';
+import { getMedicine } from '../assets/medicine/medicine_data';
+import { CartContext } from '../CartContext';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Octicons from 'react-native-vector-icons/Octicons';
-import { useNavigation } from '@react-navigation/native';
-import firestore from '@react-native-firebase/firestore';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 
+export function Details({route}) {
 
+const navigation = useNavigation();
+  const { productId } = route.params;
+  const [product, setProduct] = useState({});
 
-const Med_details = ({route}) => {
-  const navigation = useNavigation();
-  const {item} = route.params;
+  const {addItemToCart} = useContext(CartContext);
 
-  const ProductName = item.name;
-  const Ratings=item.star;
-  const Description=item.Des;
-  const Images=item.images;
+  useEffect(() => {
+    setProduct(getMedicine(productId));
+  });
 
-
-  const [Count, updateCount] = useState(1);
-  const [price ,setPrice] = useState(item.rupees);
-
-  const add = async() => {
-   
-    await firestore()
-    .collection('AddToCart')
-    .doc()
-    .set({
-      ProductName:ProductName,
-      Quantity:Count,
-      Ratings:Ratings,
-      Description:Description,
-      Price:price,
-      Images:Images,
-      
-
-
-    })
-     .then(
-      alert('item added'),
-      console.log('item added'),
-      navigation.navigate('Cart'),
-    )
-    .catch((e)=>alert(e))
+  function onAddToCart() {
+    addItemToCart(product.id);
+  navigation.navigate('MyCart')
   }
 
-
-
   return (
-    
-    <ScrollView>
+    <SafeAreaView>
+      <ScrollView>
          <AntDesign
           name="arrowleft"
           size={24}
@@ -65,23 +44,25 @@ const Med_details = ({route}) => {
           onPress={() => navigation.navigate('Medicine')}
         />
       <View style={{justifyContent: 'center', marginLeft: 6}}>
-        <Image style={styles.imgStyle} source={item.images} />
+        <Image style={styles.imgStyle} source={product.images} />
 
-        <Text style={styles.textStyle}>{item.name}</Text>
-        <Text style={styles.txtStyle}>{item.Des}</Text>
+        <Text style={styles.textStyle}>{product.name}</Text>
+        <Text style={styles.txtStyle}>{product.Des}</Text>
 
         <Text style={{fontWeight: 'bold', marginTop: 20}}>
           <Octicons name="graph" size={24} color="blue" /> 500+ people bought
           this recently
         </Text>
-        <Text style={{marginTop: 30}}>Quantity: {item.Quantity}</Text>
+        <Text style={{marginTop: 30}}>Quantity: {product.Quantity}</Text>
 
         <View style={{flexDirection: 'row'}}>
           <Text style={{marginTop: 20}}>
             <Entypo name="star" size={24} color="gold" />
-            {item.star} (134 ratings)
+            {product.star} (134 ratings)
           </Text>
 
+          <Text>  ₹: {product.rupees}</Text>
+{/* 
           <View
             style={{
               flexDirection: 'row',
@@ -139,7 +120,7 @@ const Med_details = ({route}) => {
                 -
               </Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
 
         <TouchableOpacity
@@ -151,20 +132,55 @@ const Med_details = ({route}) => {
             borderRadius: 5,
             marginHorizontal: 4,
           }}
-          onPress={add}
+          // onPress={add}
           >
-          <Text style={{textAlign: 'center', marginVertical: 6}} >
-            ₹: {price}
+          <Text style={{textAlign: 'center', marginVertical: 6}}
+             onPress={onAddToCart}
+           >
+           AddToCart
           </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
+    </SafeAreaView>
   );
-};
-
-export default Med_details;
-
+}
 const styles = StyleSheet.create({
+  card: {
+    backgroundColor: 'white',
+    borderRadius: 16,
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    shadowColor: 'black',
+    shadowOffset: {
+      height: 0,
+      width: 0,
+    },
+    elevation: 1,
+    marginVertical: 20,
+  },
+  image: {
+    height: 300,
+    width: '100%'
+  },
+  infoContainer: {
+    padding: 16,
+  },
+  name: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  price: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  description: {
+    fontSize: 16,
+    fontWeight: '400',
+    color: '#787878',
+    marginBottom: 16,
+  },
   imgStyle: {
     // resizeMode: 'contain',
     width: 340,

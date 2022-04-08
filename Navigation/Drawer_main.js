@@ -43,7 +43,7 @@ const Drawer_main = () => {
         <AntDesign name="shoppingcart" size={24} color='black'  onPress={()=>navigation.navigate("Cart")}/>
         <Text
           style={{marginLeft: 10, marginTop: 3}}
-          onPress={() => navigation.navigate('Cart')}>
+          onPress={() => navigation.navigate('MyCart')}>
           My Cart
         </Text>
       </View>

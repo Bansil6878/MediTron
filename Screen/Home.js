@@ -18,7 +18,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Dropdown from './Dropdown';
 import Trending from './Trending';
 import Slider from './Slider';
-import Modals from './Modals';
+
 
 
 const Home = () => {
@@ -37,12 +37,12 @@ const Home = () => {
           size={24}
           color="gray"
           style={{marginTop:42,marginLeft:110}}
-          onPress={() => navigation.navigate('Cart')}
+          onPress={() => navigation.navigate('MyCart')}
         />
         </View>
       <Divider/>
         <View style={{flexDirection: 'row'}}>
-          <TouchableOpacity onPress={() => navigation.navigate('Medicine')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Med_details1')}>
             <Image
               style={styles.imgStyle}
               source={require('../assets/images/medicine/medicine.png')}
@@ -77,7 +77,7 @@ const Home = () => {
 
        
 
-        <Slider/>
+ <Slider/>
         <Brand />
         <Careplan />
         <Trending />

@@ -104,6 +104,8 @@ const Cart = () => {
             <Text style={{marginLeft:190,marginTop:-37,fontWeight:'bold',fontSize:18,color:'white'}} onPress={add}>MakePayment </Text>
             </TouchableOpacity>
 
+            
+
         </View>
 
        

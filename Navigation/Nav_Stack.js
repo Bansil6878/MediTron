@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../Screen/Home';
-import Medicine from '../Screen/Medicine';
+// import Medicine from '../Screen/Medicine';
 import Product from '../Screen/Product';
 import Lab from '../Screen/Lab';
 import Brand from '../Screen/Brand';
@@ -12,15 +12,15 @@ import Careplan_details1 from '../Screen/Careplan_details1';
 import Careplan_details2 from '../Screen/Careplan_details2';
 import Careplan_details3 from '../Screen/Careplan_details3';
 import Drawer_main from './Drawer_main';
-import Med_details from '../Screen/Med_details';
+// import Med_details from '../Screen/Med_details';
 import Profile from '../Screen/Profile';
 import Contact from '../Screen/Contact';
 import Register from '../Screen/Register';
 import Login from '../Screen/Login';
 import Divider from '../Components/Divider';
 import Contact_details from '../Screen/Contact_details';
-import Cart from '../Screen/Cart';
-import Cart_details from '../Screen/Cart_details';
+// import Cart from '../Screen/Cart';
+// import Cart_details from '../Screen/Cart_details';
 import Doc from '../Screen/Doc';
 import Doc_details from '../Screen/Doc_details';
 import Dropdown from '../Screen/Dropdown';
@@ -34,11 +34,10 @@ import Vaseline from '../Screen/Brand_pages/Vaseline';
 import Trending_details from '../Screen/Trending_details';
 import Nav_Tabbar from './Nav_Tabbar';
 import Search from '../Screen/Search';
-import Slider from '../Screen/Slider';
+import Slider from '../Screen/Slider'
 import Payment from '../Screen/Payment';
 import Empty_cart from '../Screen/Empty_cart';
 import Myorder from '../Screen/Myorder';
-import Videocall from '../Screen/Videocall';
 import Cadila from '../Screen/Brand_pages/Cadila';
 import Complan from '../Screen/Brand_pages/Complan';
 import Cetaphil from '../Screen/Brand_pages/Cetaphil';
@@ -51,6 +50,11 @@ import Mamaearth from '../Screen/Brand_pages/Mamaearth';
 import Brand_footer from '../Components/Brand_footer';
 import Brandpage_details from '../Screen/Brandpage_details';
 import History from '../Screen/History';
+import { Medicine1 } from '../Screen/Medicine1';
+import { Med_details1 } from '../Screen/Med_details1';
+import { Details } from '../Screen/Details';
+import { MyCart } from '../Screen/MyCart';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -60,8 +64,6 @@ const Nav_Stack = () => {
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Nav_Tabbar} />
-      <Stack.Screen name="Medicine" component={Medicine} />
-      <Stack.Screen name="Med_details" component={Med_details} />
       <Stack.Screen name="Product" component={Product} />
       <Stack.Screen name="Lab" component={Lab} />
       <Stack.Screen name="Brand" component={Brand} />
@@ -75,7 +77,6 @@ const Nav_Stack = () => {
       <Stack.Screen name="Contact" component={Contact} />
       <Stack.Screen name="Divider" component={Divider} />
       <Stack.Screen name="Contact_details" component={Contact_details} />
-      <Stack.Screen name="Cart_details" component={Cart_details} />
       <Stack.Screen name="Doc" component={Doc} options={{headerShown: true}} />
       <Stack.Screen
         name="Doc_details"
@@ -84,11 +85,6 @@ const Nav_Stack = () => {
       />
       <Stack.Screen name="Dropdown" component={Dropdown} />
       <Stack.Screen name="Trending" component={Trending} />
-      <Stack.Screen
-        name="Cart"
-        component={Cart}
-        options={{headerShown: true}}
-      />
       <Stack.Screen name="Bournvita" component={Bournvita} />
       <Stack.Screen name="Cipla" component={Cipla} />
       <Stack.Screen name="Dabur" component={Dabur} />
@@ -116,9 +112,11 @@ const Nav_Stack = () => {
       <Stack.Screen name='Mamaearth' component={Mamaearth} />
       <Stack.Screen name='Brand_footer' component={Brand_footer} />
       <Stack.Screen name='Brandpage_details' component={Brandpage_details} />
-      <Stack.Screen name='History' component={History} />
-
-
+      <Stack.Screen name='History' component={History} options={{headerShown:true}}/>
+      <Stack.Screen name='Med_details1' component={Med_details1} />
+<Stack.Screen name='Medicine1' component={Medicine1} />
+<Stack.Screen name='Details' component={Details}/>
+<Stack.Screen name='MyCart' component={MyCart}/>
     </Stack.Navigator>
   );
 };

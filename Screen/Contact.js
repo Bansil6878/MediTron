@@ -10,7 +10,6 @@ import React, {useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
 import Divider from '../Components/Divider';
-import { Checkbox } from 'react-native-paper';
 
 
 const Contact = () => {
@@ -20,8 +19,8 @@ const Contact = () => {
   const [address, setAddress] = useState('');
   const [pincode, setPincode] = useState('');
   const [contact, setContact] = useState('');
-  const [checked, setChecked] = useState(false);
 
+  const number = Math.floor(Math.random() * 1000);
 
 
   const add = async () => {
@@ -29,16 +28,16 @@ const Contact = () => {
       .collection('Users')
       .doc('Contact_details')
       .set({
+        MediID:number,
         Name: name,
         Address: address,
         Pincode: pincode,
         Contact: contact,
-       
 
       })
       .then(
-        alert('Data Added'),
-        console.log('User Details Added'),
+        alert('your details are added'),
+        console.log('User Added'),
         navigation.navigate('Home'),
       );
   };

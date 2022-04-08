@@ -1,4 +1,4 @@
-const medicine = [
+const MEDICINES = [
   {
     id: 1,
     name: 'Azithral 500',
@@ -272,4 +272,11 @@ const medicine = [
   },
 ];
 
-export default medicine;
+export default MEDICINES;
+
+export function getMedicines() {
+  return MEDICINES;
+}
+export function getMedicine(id) {
+  return MEDICINES.find((medicine) => (medicine.id == id));
+}

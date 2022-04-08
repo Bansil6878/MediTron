@@ -14,6 +14,7 @@ const Contact_details = () => {
 const navigation = useNavigation();
 
   const [data, setData] = useState(null);
+  
 
   useEffect(() => {
     get();
@@ -39,11 +40,11 @@ const navigation = useNavigation();
             source={require('../assets/images/profile/background.png')}
             style={styles.imgStyle}>
             <View style={styles.poster}>
+              <Text style={styles.textStyle}>ID: Medi{data.MediID}</Text>
               <Text style={styles.textStyle}>Name: {data.Name}</Text>
               <Text style={styles.textStyle}>Address: {data.Address}</Text>
               <Text style={styles.textStyle}>Pincode :{data.Pincode}</Text>
               <Text style={styles.textStyle}>Contact: {data.Contact}</Text>
-              <Text style={styles.textStyle}>Symptoms: {data.Value}</Text>
               <TouchableOpacity>
                 <Text style={styles.btnStyle} onPress={()=>navigation.navigate('Contact')}>Edit details</Text>
               </TouchableOpacity>

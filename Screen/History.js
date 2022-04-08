@@ -1,90 +1,93 @@
-import { StyleSheet, Text, View ,ImageBackground,TouchableOpacity,ScrollView,FlatList} from 'react-native'
-import React,{useState,useEffect} from 'react'
-import { useNavigation } from '@react-navigation/native';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 
 
 const History = () => {
-  
-const navigation = useNavigation();
+  const [data, setdata] = useState(null);
 
-const [data, setData] = useState({});
+  useEffect(() => {
+    GetDetails();
+  }, []);
 
-useEffect(() => {
-  get();
-},[]);
+  const GetDetails = async () => {
+    const list = [];
 
-const get = async () => {
-    var list = [];
-    
-    const snapShot = await firestore().collection('AddToCart').get();
-    
-    
-    snapShot.forEach(doc => {
-        const { ProductName,Price,Ratings} = doc.data();
-        list.push({
-            
-            ProductName: ProductName,
-            Price:Price,
-            Ratings:Ratings,
-        });
+    var snapshot = await firestore().collection('AddToCart').get();
+
+    snapshot.forEach(doc => {
+      for (var i = 0; i < doc.data().items.length; i++) {
+        list.push(doc.data().items[i]);
+      }
     });
-    setData(list);
-};
+    setdata(list);
+    console.log(list);
+  };
+
+  const showdata = ({item, index}) => {
+    const product = item.product;
+    {
+      console.log(product);
+    }
+    return (
+      <>
+        <View key={index} style={styles.container}>
+          <Image source={product.images} style={styles.img} />
+
+          <View style={{flexDirection: 'column',marginLeft:30,marginTop:20}}>
+            <Text style={{fontSize:18,fontWeight:'bold'}}>{product.name}</Text>
+            <Text>Quantity: {item.Quantity}</Text>
+            <Text>star: {product.star}</Text>
+            <Text style={{fontWeight:'bold'}}>Price: ₹ {product.rupees}</Text>
+            <Text style={{fontWeight:'bold',marginTop:5}}>{item.date}</Text>
+          </View>
+        </View>
+      </>
+    );
+  };
+
+  return (
+    <View>
+      <FlatList
+        data={data}
+        renderItem={showdata}
+        keyExtractor={index => index.toString()}
+      />
 
 
-return (
-  <>
-    <View style={styles.container}>
-    
-  {console.log(data)}
-
-  
-    <Text>ProductName: {data.ProductName}</Text>
-    {/* <Text>Price: {data}</Text> */}
-    {/* <Text>Ratings: {data}</Text> */}
-
-              
     </View>
-    
-    </>
-    
   );
 };
-export default History
+
+export default History;
 
 const styles = StyleSheet.create({
-    textStyle: {
-        borderWidth: 0.8,
-        borderColor: '#84cfc5',
-        borderRadius: 10,
-        marginTop: 10,
-        marginHorizontal: 10,
-        width: 310,
-        padding: 9,
-        color: 'black',
-        marginTop:20
-      },
-      poster: {
-        width: 340,
-        borderWidth: 2,
-        borderColor: '#84cfc5',
-        alignItems: 'flex-start',
-        marginHorizontal: 8,
-        marginTop: '60%',
-        height: 300,
-      },
-      imgStyle: {
-        height: 700,
-        width: 360,
-      },
-      btnStyle: {
-        borderWidth: 0.8,
-        borderRadius: 5,
-        borderColor: '#84cfc5',
-        width: 100,
-        textAlign: 'center',
-        marginTop:20,
-        marginLeft:110
-      },
-})
+  container: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    marginVertical: 9,
+    padding: 12,
+    marginHorizontal: 15,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    padding: 1,
+  },
+
+  img: {
+    width: 150,
+    height: 150,
+  },
+});
