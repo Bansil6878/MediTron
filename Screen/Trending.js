@@ -13,7 +13,7 @@ const Trending = () => {
         const med = ({item, index}) => {
           return (
             <>
-              <TouchableOpacity  onPress={()=>navigation.navigate('Med_details',{item:item})}>
+              <TouchableOpacity  onPress={()=>navigation.navigate('Med_details1',{item:item})}>
                 <View
                   style={{
                     flexDirection: 'row',

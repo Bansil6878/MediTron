@@ -5,8 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Contact_details from '../Screen/Contact_details'
 import Home from '../Screen/Home';
 import Search from '../Screen/Search';
-import History from '../Screen/History';
-
+import History from '../Screen/History'
 
 const Tab = createBottomTabNavigator();
 

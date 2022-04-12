@@ -62,65 +62,7 @@ const navigation = useNavigation();
           </Text>
 
           <Text>  ₹: {product.rupees}</Text>
-{/* 
-          <View
-            style={{
-              flexDirection: 'row',
-              width: 110,
-              justifyContent: 'space-around',
-              height: 35,
-              marginLeft: 80,
-              marginTop: 25,
-            }}>
-            <TouchableOpacity>
-              <Text
-                style={{
-                  borderWidth: 0.5,
-                  width: 25,
-                  fontSize: 20,
-                  textAlign: 'center',
-                  borderRadius: 4,
-                }}
-                onPress={() => {
-                  if (Count < 10) {
-                    updateCount(Count + 1);
-                    setPrice(price + item.rupees)
-                  } else {
-          
-                      alert('no more'),
-                      updateCount(1)
-                  }
-                }}>
-                +
-              </Text>
-            </TouchableOpacity>
 
-            <Text>{Count}</Text>
-
-            <TouchableOpacity>
-              <Text
-                style={{
-                  borderWidth: 0.5,
-                  width: 25,
-                  fontSize: 20,
-                  textAlign: 'center',
-                  borderRadius: 4,
-                }}
-                onPress={() => {
-                  if (Count > 1) {
-                    updateCount(Count - 1);
-                    setPrice(price - item.rupees)
-
-                  } else {
-                      alert('1 require'),
-                      updateCount(1)
-                   
-                  }
-                }}>
-                -
-              </Text>
-            </TouchableOpacity>
-          </View> */}
         </View>
 
         <TouchableOpacity

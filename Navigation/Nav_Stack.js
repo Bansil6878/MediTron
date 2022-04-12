@@ -38,7 +38,7 @@ import Slider from '../Screen/Slider';
 import Payment from '../Screen/Payment';
 import Empty_cart from '../Screen/Empty_cart';
 import Myorder from '../Screen/Myorder';
-import Cadila from '../Screen/Brand_pages/Cadila';
+// import Cadila from '../Screen/Brand_pages/Cadila';
 import Complan from '../Screen/Brand_pages/Complan';
 import Cetaphil from '../Screen/Brand_pages/Cetaphil';
 import Horlicks from '../Screen/Brand_pages/Horlicks';
@@ -55,6 +55,9 @@ import {Med_details1} from '../Screen/Med_details1';
 import {Details} from '../Screen/Details';
 import {MyCart} from '../Screen/MyCart';
 import Consult_details from '../Screen/Consult_details';
+import Privacy from '../Screen/Privacy';
+// import { Cad_details } from '../Screen/Brand_pages/Cad_details';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -85,7 +88,7 @@ const Nav_Stack = () => {
       />
       <Stack.Screen name="Dropdown" component={Dropdown} />
       <Stack.Screen name="Trending" component={Trending} />
-      <Stack.Screen name="Bournvita" component={Bournvita} />
+      {/* <Stack.Screen name="Bournvita" component={Bournvita} /> */}
       <Stack.Screen name="Cipla" component={Cipla} />
       <Stack.Screen name="Dabur" component={Dabur} />
       <Stack.Screen name="Drreaddy" component={Drreaddy} />
@@ -101,7 +104,7 @@ const Nav_Stack = () => {
       />
       <Stack.Screen name="Empty_cart" component={Empty_cart} />
       <Stack.Screen name="Myorder" component={Myorder} />
-      <Stack.Screen name="Cadila" component={Cadila} />
+      {/* <Stack.Screen name="Cadila" component={Cadila} /> */}
       <Stack.Screen name="Cetaphil" component={Cetaphil} />
       <Stack.Screen name="Complan" component={Complan} />
       <Stack.Screen name="Horlicks" component={Horlicks} />
@@ -126,6 +129,11 @@ const Nav_Stack = () => {
         component={Consult_details}
         options={{headerShown: true}}
       />
+      <Stack.Screen name="Privacy" component={Privacy} />
+      {/* <Stack.Screen name="Bou_details" component={Bou_details} /> */}
+      {/* <Stack.Screen name="Cad_details" component={Cad_details} /> */}
+
+
     </Stack.Navigator>
   );
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-export function Medicine1({name, rupees, images, onPress,Quantity,star}) {
+export function Medicine1({name, rupees, images, onPress,Quantity,star,}) {
   return (
 
     <View>
    
+
+
     <View   style={{
       flexDirection: 'row',
       backgroundColor: '#fff',

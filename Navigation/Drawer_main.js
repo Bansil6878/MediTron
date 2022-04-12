@@ -95,7 +95,9 @@ const Drawer_main = () => {
 
       <View style={{flexDirection: 'row', margin: 20}}>
         <AntDesign name="profile" size={24} color='black' />
-        <Text style={{margin: 3, marginLeft: 7}}>Privacy Policy</Text>
+        <Text style={{margin: 3, marginLeft: 7}}
+         onPress={()=>navigation.navigate('Privacy')}>
+          Privacy Policy</Text>
       </View>
 
       <View style={{flexDirection: 'row', margin: 20}}>

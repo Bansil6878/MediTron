@@ -10,7 +10,7 @@ const Brand = () => {
       style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 450}}>
       <Text style={styles.txtStyle}>Featured brand</Text>
       <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-        <TouchableOpacity onPress={()=>navigation.navigate('Vaseline')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Bournvita')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}

@@ -9,19 +9,22 @@ import { Searchbar } from 'react-native-paper';
 
 export function Med_details1 ({navigation}) {
 
-function renderProduct({item: medicine}) {
-    // consloe.log(medicine)
-    return (
-      <Medicine1 {...medicine} 
-      onPress={() => {
-        navigation.navigate('Details', {
-          productId: medicine.id,
-        });
-      }}
-      />
+  
+  function renderProduct({item: medicine}) {
+  {console.log(medicine.name)}
+
+  return (
+    <Medicine1 {...medicine} 
+    
+    onPress={() => {
+      navigation.navigate('Details', {
+        productId: medicine.id,
+      });
+    }}
+    />
     );
   }
-
+  
   const [products, setProducts] = useState([]);
 
   const [data,setData] = useState(MEDICINES);
@@ -77,7 +80,9 @@ function renderProduct({item: medicine}) {
       style={styles.Med_details}
       contentContainerStyle={styles.productsListContainer}
       keyExtractor={(item) => item.id.toString()}
+      // data={[{category:'medicine'}]}
       data={data}
+
       renderItem={renderProduct}
     />
     </>

@@ -36,6 +36,37 @@ export function CartProvider(props) {
           }
         });
       }
+
+      function increaseItemQuantity(id)
+      {
+         setItems((prevItems) => {
+           return prevItems.map((item) => {
+             if(item.id === id) {
+               item.Quantity++;
+               item.totalPrice += item.product.rupees;
+             }
+             return item;
+           });
+     
+         });
+       }
+
+         function decreaseItemQuantity(id)
+         {
+            setItems((prevItems) => {
+              return prevItems.map((item) => {
+                if(item.id === id) {
+                  item.Quantity--;
+                  item.totalPrice -= item.product.rupees;
+                }
+                return item;
+              });
+        
+            });
+          }
+
+
+      
       function getItemsCount() {
       return items.reduce((sum, item) => (sum + item.Quantity), 0);
   }
@@ -46,7 +77,7 @@ export function CartProvider(props) {
 
   return (
     <CartContext.Provider 
-      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart}}>
+      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, increaseItemQuantity,decreaseItemQuantity}}>
       {props.children}
     </CartContext.Provider>
   );

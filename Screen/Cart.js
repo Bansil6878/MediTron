@@ -112,8 +112,8 @@ const Cart = () => {
                   color: 'white',
                   fontSize: 18,
                 }}>
-                {' '}
-                ₹ {data.reduce((acc, item) => acc + item.Price, 0)}{' '}
+                
+                ₹ {data.reduce((acc, item) => acc + item.Price, 0)}
               </Text>
 
               <TouchableOpacity
@@ -131,7 +131,7 @@ const Cart = () => {
                     color: 'white',
                   }}
                   onPress={add}>
-                  MakePayment{' '}
+                  MakePayment
                 </Text>
               </TouchableOpacity>
             </View>

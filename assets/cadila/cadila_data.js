@@ -1,4 +1,4 @@
-const cadila_data = [
+const CADILA = [
   // {
   //   id: 1,
   //   name: 'Cadila Aciloc 150',
@@ -136,4 +136,11 @@ const cadila_data = [
   },
 ];
 
-export default cadila_data;
+export default CADILA;
+
+export function getCadilas() {
+  return CADILA;
+}
+export function getCadila(id) {
+  return CADILA.find(Cadila => Cadila.id == id);
+}

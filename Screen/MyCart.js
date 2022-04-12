@@ -18,7 +18,19 @@ export function MyCart({navigation}) {
 
   
 
-  const {items, getItemsCount,removeItemToCart, getTotalPrice} = useContext(CartContext);
+
+  const {items, getItemsCount,removeItemToCart, getTotalPrice, increaseItemQuantity,decreaseItemQuantity} = useContext(CartContext);
+
+
+
+  function increase(item){
+    increaseItemQuantity(item.id)
+  }
+   
+  function decrease(item){
+      decreaseItemQuantity(item.id)
+    }
+
 
   function Remove(item){
     removeItemToCart(item.id)
@@ -45,9 +57,13 @@ export function MyCart({navigation}) {
           }),
         );
     };
+    
+    
+
 
     return (
-      
+   
+
       <View
         style={{
           borderRadius: 20,
@@ -57,7 +73,7 @@ export function MyCart({navigation}) {
           // bottom:0,
           marginTop:10,
                 
-          
+         
           
           
         }}>
@@ -96,6 +112,7 @@ export function MyCart({navigation}) {
     
     );
   }
+
   function renderItem({item}) {
     return (
       <View
@@ -127,6 +144,16 @@ export function MyCart({navigation}) {
             ₹ {item.totalPrice}
           </Text>
 
+          <View style={{flexDirection: 'row', marginTop: 10,justifyContent:'space-between',width:'20%',marginLeft:10}}>
+            <TouchableOpacity onPress={() => decrease(item)}>
+            <Text style={{borderWidth:0.5,borderColor:'orange',borderRadius:5,width:20,textAlign:'center'}}>-</Text>
+            </TouchableOpacity>5
+           <Text style={{marginLeft:10,color:'purple'}}>{item.Quantity}</Text>
+           <TouchableOpacity onPress={() => increase(item)}>
+           <Text style={{borderWidth:0.5,borderColor:'orange',borderRadius:5,width:20,textAlign:'center',marginLeft:10}}>+</Text>
+           </TouchableOpacity>
+            </View>
+      
           <TouchableOpacity
             style={{
               backgroundColor: '#f2f2f2',
@@ -145,7 +172,8 @@ export function MyCart({navigation}) {
           </TouchableOpacity>
         </View>
       </View>
-    );
+  
+   );
   }
 
   return (

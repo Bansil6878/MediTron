@@ -34,7 +34,7 @@ const Myorder = () => {
         snapshot.forEach(doc => {
           const data = doc.data();
           console.log(doc.id, data);
-          setData(doc.id);
+          // setData(doc.id);
           setNewData(data);
         });
       })
@@ -84,7 +84,7 @@ const Myorder = () => {
         </View>
 
         <View style={{marginTop: 10,backgroundColor: '#e6e6e6'}}>
-          <Text style={{marginLeft:10,width:330,fontSize:16}}>Your Order {data.id} has been successfully Recevied</Text>
+          <Text style={{marginLeft:10,width:330,fontSize:16}}>Your Order has been successfully Recevied</Text>
         </View>
 
         <View style={styles.Container}>

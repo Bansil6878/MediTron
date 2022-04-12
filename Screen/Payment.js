@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView,ActivityIndicator} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import Divider from '../Components/Divider';
@@ -6,10 +6,30 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useNavigation} from '@react-navigation/native';
+
 
 const Payment = ({route}) => {
+
+const navigation= useNavigation();
+
   const [value, setValue] = useState(null);
   const { total } = route.params;
+
+  const[loading,setLoading] = useState(false);
+
+  const order_cash = () => {
+    setLoading(true);
+
+
+    setTimeout(() => {
+      navigation.navigate('Myorder');
+      setLoading(false);
+    }, 2000);
+  }
+
+
+ 
 
   useEffect(() => {
     get();
@@ -81,7 +101,9 @@ const Payment = ({route}) => {
                 color="black"
                 style={{marginLeft: 10, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}>Upi</Text>
+              <Text style={{margin: 15, marginLeft: 10}}
+              onPress={()=>order_cash()}>
+                Upi</Text>
             </View>
             <Divider />
 
@@ -92,8 +114,9 @@ const Payment = ({route}) => {
                 color="black"
                 style={{marginLeft: 10, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}>
-                Mastercard,Visa,Rupay,Maestro,Amex{' '}
+              <Text style={{margin: 15, marginLeft: 10}}
+              onPress={()=>order_cash()}>
+                Mastercard,Visa,Rupay,Maestro,Amex
               </Text>
             </View>
             <Divider />
@@ -105,7 +128,9 @@ const Payment = ({route}) => {
                 color="blue"
                 style={{marginLeft: 10, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}>Net Banking</Text>
+              <Text style={{margin: 15, marginLeft: 10}}
+                onPress={()=>order_cash()}
+              >Net Banking</Text>
             </View>
             <Divider />
 
@@ -116,7 +141,9 @@ const Payment = ({route}) => {
                 color="green"
                 style={{marginLeft: 6, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}>Cash On Delivery</Text>
+              <Text style={{margin: 15, marginLeft: 10}}
+                onPress={()=>order_cash()}
+              > Cash On Delivery</Text>
             </View>
             <Divider />
           </View>
@@ -177,6 +204,11 @@ const Payment = ({route}) => {
               Safe and secure payments. Easy returns. 100% Authentic product.
             </Text>
           </View>
+
+          <View style={{position:'absolute',alignItems:'center',justifyContent:'center',width:'90%',marginTop:90}}>
+          <ActivityIndicator size="large" color='blue' animating={loading} style={{marginTop:210}}/>
+         </View>
+
         </View>
       </ScrollView>
     </>
