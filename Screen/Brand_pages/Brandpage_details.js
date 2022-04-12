@@ -1,24 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import { Medicine1 } from '../Screen/Medicine1';
-import MEDICINES, { getMedicines } from '../assets/medicine/medicine_data';
+import { Brandpage } from '../Brand_pages/Brandpage';
+import BRAND_DATA, { getBrand_datas } from '../../assets/brand_data/brand_data';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { Searchbar } from 'react-native-paper';
 
 
 
-export function Med_details1 ({navigation}) {
+export function Brandpage_details({navigation}) {
 
   
-  function renderProduct({item: medicine}) {
-  {console.log(medicine.name)}
+  function renderProduct({item: brand_data}) {
+
 
   return (
-    <Medicine1 {...medicine} 
+    <Brandpage {...brand_data} 
     
     onPress={() => {
-      navigation.navigate('Details', {
-        productId: medicine.id,
+      navigation.navigate('Brandpro_details', {
+        productId: brand_data.id,
       });
     }}
     />
@@ -27,20 +27,20 @@ export function Med_details1 ({navigation}) {
   
   const [products, setProducts] = useState([]);
 
-  const [data,setData] = useState(MEDICINES);
+  const [data,setData] = useState(BRAND_DATA);
 
     const searchdata = (text) => {
         if(text == ''){
-            setData(MEDICINES);
+            setData(BRAND_DATA);
         }else{
-            const newdata = MEDICINES.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
+            const newdata = BRAND_DATA.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
             setData(newdata);
         }
     }
   
 
   useEffect(() => {
-    setProducts(getMedicines());
+    setProducts(getBrand_datas());
   });
 
   return (
@@ -80,7 +80,6 @@ export function Med_details1 ({navigation}) {
       style={styles.Med_details}
       contentContainerStyle={styles.productsListContainer}
       keyExtractor={(item) => item.id.toString()}
-    
       data={data}
 
       renderItem={renderProduct}

@@ -25,7 +25,7 @@ const Brand_details = () => {
       </View>
 
       <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-        <TouchableOpacity onPress={() => navigation.navigate('Bournvita')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -34,7 +34,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Cadila')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -43,7 +43,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Jiva')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -52,7 +52,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Mamaearth')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -61,7 +61,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Dabur')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -70,7 +70,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Horlicks')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -79,7 +79,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Vaseline')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -88,7 +88,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Cipla')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -97,7 +97,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Cetaphil')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -106,7 +106,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Zandu')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -115,7 +115,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Drreaddy')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -124,7 +124,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Himalaya')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -133,7 +133,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Zydus')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -142,7 +142,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Nivea')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -151,7 +151,7 @@ const Brand_details = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Complan')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
           <View style={styles.poster}>
             <Image
               style={styles.imgStyle}
@@ -159,6 +159,21 @@ const Brand_details = () => {
             />
           </View>
         </TouchableOpacity>
+
+<TouchableOpacity onPress={() => navigation.navigate('Brandpage_details')}>
+<Text
+            style={{
+              backgroundColor: '#f2f2f2',
+              marginTop: 15,
+              height: 25,
+              width: 320,
+              marginHorizontal: 10,
+              textAlign: 'center',
+              marginBottom:10
+            }}>
+            See All
+          </Text>
+</TouchableOpacity>
 
       </View>
     </View>

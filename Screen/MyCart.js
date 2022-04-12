@@ -132,7 +132,7 @@ export function MyCart({navigation}) {
           elevation: 5,
           padding: 10,
         }}>
-        <Image source={item.product.images} style={styles.imgStyle} />
+        <Image source={item.product.images} style={styles.imgStyle}/>
         <View>
           <Text style={{fontWeight: 'bold', fontSize: 19, width: 170,marginTop:10,marginLeft:10}}>
             {item.product.name}
@@ -147,7 +147,7 @@ export function MyCart({navigation}) {
           <View style={{flexDirection: 'row', marginTop: 10,justifyContent:'space-between',width:'20%',marginLeft:10}}>
             <TouchableOpacity onPress={() => decrease(item)}>
             <Text style={{borderWidth:0.5,borderColor:'orange',borderRadius:5,width:20,textAlign:'center'}}>-</Text>
-            </TouchableOpacity>5
+            </TouchableOpacity>
            <Text style={{marginLeft:10,color:'purple'}}>{item.Quantity}</Text>
            <TouchableOpacity onPress={() => increase(item)}>
            <Text style={{borderWidth:0.5,borderColor:'orange',borderRadius:5,width:20,textAlign:'center',marginLeft:10}}>+</Text>

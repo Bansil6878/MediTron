@@ -1,5 +1,6 @@
 import React, {createContext, useState} from 'react';
 import { getMedicine } from './assets/medicine/medicine_data';
+import {getBrand_data} from './assets/brand_data/brand_data'
 
 export const CartContext = createContext();
 export function CartProvider(props) {
@@ -36,6 +37,31 @@ export function CartProvider(props) {
           }
         });
       }
+
+      function addItemToCart1(id) {
+        const product = getBrand_data(id);
+        setItems((prevItems) => {
+          const item = prevItems.find((item) => (item.id == id));
+          if(!item) {
+            return [...prevItems, {
+                  id: product.id,
+                  Quantity: 1,
+                  product,
+                  totalPrice: product.rupees,
+                  date: new Date().toLocaleDateString()
+                }];
+              }
+              else { 
+                return prevItems.map((item) => {
+                  if(item.id == id) {
+                    item.Quantity++;
+                    item.totalPrice += product.rupees;
+                  }
+                  return item;
+                });
+              }
+            });
+          }
 
       function increaseItemQuantity(id)
       {
@@ -77,7 +103,7 @@ export function CartProvider(props) {
 
   return (
     <CartContext.Provider 
-      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, increaseItemQuantity,decreaseItemQuantity}}>
+      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, increaseItemQuantity,decreaseItemQuantity,addItemToCart1,}}>
       {props.children}
     </CartContext.Provider>
   );

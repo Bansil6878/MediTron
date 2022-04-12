@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-export function Cadila({name, rupees, images, onPress,Quantity,star}) {
+export function Brandpage({name, rupees, images, onPress,Quantity,star,}) {
   return (
 
     <View>
@@ -36,8 +36,9 @@ export function Cadila({name, rupees, images, onPress,Quantity,star}) {
               }}>
               <Text
                 style={{
-                  fontSize: 19,
+                  fontSize: 16,
                   fontWeight: 'bold',
+                  width:115
                 }}>
                 {name}
               </Text>
