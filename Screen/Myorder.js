@@ -129,9 +129,7 @@ const Myorder = () => {
           </View>
         </View>
 
-<View style={styles.footer} >
-<Image source={require('../assets/images/number/tk2.png')} style={{height:200,width:370,marginTop:10}}/>
-</View>
+
 
       </View>
     </>

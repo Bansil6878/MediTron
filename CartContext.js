@@ -1,6 +1,7 @@
 import React, {createContext, useState} from 'react';
 import { getMedicine } from './assets/medicine/medicine_data';
 import {getBrand_data} from './assets/brand_data/brand_data'
+import { getLab_data } from './assets/lab_data/lab_data';
 
 export const CartContext = createContext();
 export function CartProvider(props) {
@@ -63,6 +64,33 @@ export function CartProvider(props) {
             });
           }
 
+
+          function addItemToCart2(id) {
+            const product = getLab_data(id);
+            setItems((prevItems) => {
+              const item = prevItems.find((item) => (item.id == id));
+              if(!item) {
+                return [...prevItems, {
+                      id: product.id,
+                      Quantity: 1,
+                      product,
+                      totalPrice: product.rupees,
+                      date: new Date().toLocaleDateString()
+                    }];
+                  }
+                  else { 
+                    return prevItems.map((item) => {
+                      if(item.id == id) {
+                        item.Quantity++;
+                        item.totalPrice += product.rupees;
+                      }
+                      return item;
+                    });
+                  }
+                });
+              }
+
+
       function increaseItemQuantity(id)
       {
          setItems((prevItems) => {
@@ -103,7 +131,7 @@ export function CartProvider(props) {
 
   return (
     <CartContext.Provider 
-      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, increaseItemQuantity,decreaseItemQuantity,addItemToCart1,}}>
+      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, increaseItemQuantity,decreaseItemQuantity,addItemToCart1, addItemToCart2}}>
       {props.children}
     </CartContext.Provider>
   );

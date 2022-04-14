@@ -206,7 +206,7 @@ const navigation= useNavigation();
           </View>
 
           <View style={{position:'absolute',alignItems:'center',justifyContent:'center',width:'90%',marginTop:90}}>
-          <ActivityIndicator size="large" color='blue' animating={loading} style={{marginTop:210}}/>
+          <ActivityIndicator size="large" color='blue'  animating={loading} style={{marginTop:210}}/>
          </View>
 
         </View>

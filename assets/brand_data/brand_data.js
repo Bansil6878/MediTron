@@ -232,141 +232,141 @@ Des: "Cetaphil® Baby Massage Oil uses a special blend of very beneficial natura
 
 //CIPLA
 
-{
-      id: 26,
-      name: "Ciplar-LA 20",
-      images: require('../images/cipla/Ciplar-LA.jpg'),
-      Quantity:10,
-      star: 4.3,
-      rupees:38,
-      Des: "Ciplar-LA 20 Tablet helps decrease anxiety and relieve tremors."
-},
-      {
-      id: 27,
-      name: "Cipladine Ointment",
-      images: require('../images/cipla/CipladineOintment.jpg'),
-      Quantity:1,
-      star: 4.5,
-      rupees:22,
-      Des: "Cipladine Ointment is an antiseptic and disinfectant agent. "
-},
-      {
-      id: 28,
-      name: "Ciplactin",
-      images: require('../images/cipla/Ciplactin.jpg'),
-      Quantity:10,
-      star: 4.6,
-      rupees:36,
-      Des: "Ciplactin Tablet belongs to a group of medicines called antihistamines."
-},
-      {
-      id: 29,
-      name: "Ciplactin Syrup",
-      images: require('../images/cipla/CiplactinSyrup.png'),
-      Quantity:1,
-      star: 4.5,
-      rupees:98,
-      Des: "Ciplactin Syrup belongs to a group of medicines called antihistamines."
-},
-      {
-      id: 30,
-      name: "Dytor 10 ",
-      images: require('../images/cipla/Dytor.jpg'),
-      Quantity:10,
-      star:4.8 ,
-      rupees:63,
-      Des: "Dytor 10 Tablet belongs to a group of medicines called diuretics or water tablets. "
-},
-      {
-      id: 31,
-      name: "Dytor Plus 10",
-      images: require('../images/cipla/Dytorplus.jpg'),
-      Quantity:10,
-      star: 4.7,
-      rupees:66,
-      Des: "Dytor Plus 10 Tablet is a combination of two medicines used to reduce excess fluid levels in the body while maintaining the potassium balance."
-},
-      {
-      id: 32,
-      name: "Urimax D",
-      images: require('../images/cipla/UrimaxD.jpg'),
-      Quantity:10,
-      star:4.6 ,
-      rupees:394,
-      Des: "Urimax D Tablet MR is a combination of two medicines that work in different ways to treat men with an enlarged prostate gland."
-},
-      {
-      id: 33,
-      name: "Montair 10",
-      images: require('../images/cipla/Montair-LC.jpg'),
-      Quantity:10,
-      star: 4.6,
-      rupees:238,
-      Des: "Montair 10 Tablet is a prescription medicine used for asthma prevention and for the treatment of allergy symptoms such as sneezing and runny nose."
-},
-      {
-      id: 34,
-      name: "Cheston Cold ",
-      images: require('../images/cipla/Cheston.jpg'),
-      Quantity:10,
-      star: 4.7,
-      rupees:35,
-      Des: "Cheston Cold Tablet is used in the treatment of common cold symptoms like runny nose, stuffy nose, sneezing, watery eyes, and congestion or stuffiness."
-},
-      {
-      id: 35,
-      name: "Foracort Inhaler",
-      images: require('../images/cipla/Foracort.jpg'),
-      Quantity:1,
-      star: 3.9,
-      rupees:270,
-      Des: "Foracort Inhaler 200 is a combination of two medicines in one inhaler. It relieves the long-term symptoms of asthma and COPD, making breathing easier. It works by inhibiting the release of certain chemical messengers that cause inflammation (swelling) and relaxes the muscles in the airways. "
-},
-      {
-      id: 36,
-      name: "Azee 500 ",
-      images: require('../images/cipla/Azee.jpg'),
-      Quantity:10,
-      star:4.6 ,
-      rupees:89,
-      Des: "Azee 500 Tablet is an antibiotic used to treat various types of bacterial infections of the respiratory tract, ear, nose, throat, lungs, skin, and eye in adults and children. "
-},
-      {
-      id: 37,
-      name: "Metolar XR 50 ",
-      images: require('../images/cipla/MetolarXR.png'),
-      Quantity:10,
-      star: 4.8,
-      rupees:72,
-      Des: "Metolar XR 50 Capsule belongs to a group of medicines called beta-blockers."
-},
-      {
-      id: 38,
-      name: "Pantosec D SR ",
-      images: require('../images/cipla/Pantosec.jpg'),
-      Quantity:10,
-      star: 4.7,
-      rupees:85,
-      Des: "Pantosec D SR Capsule is a prescription medicine used to treat gastroesophageal reflux disease (Acid reflux) and peptic ulcer disease by relieving the symptoms of acidity such as indigestion, heartburn, stomach pain, or irritation."
-},
-      {
-      id: 39,
-      name: "Duolin Inhaler",
-      images: require('../images/cipla/Duolin.jpg'),
-      Quantity:1,
-      star:4. ,
-      rupees:255,
-      Des: "Duolin Inhaler is used for the treatment of chronic obstructive pulmonary disorder (a lung disorder in which the flow of air to the lungs is blocked). "
-},
-      {
-      id: 40,
-      name: "Amlip 5",
-      images: require('../images/cipla/Amlip.jpg'),
-      Quantity:10,
-      star:4.7 ,
-      rupees:21,
-      Des: "Amlip 5 Tablet belongs to a class of medicines known as calcium channel blockers. "
-      },
+// {
+//       id: 26,
+//       name: "Ciplar-LA 20",
+//       images: require('../images/cipla/Ciplar.jpg'),
+//       Quantity:10,
+//       star: 4.3,
+//       rupees:38,
+//       Des: "Ciplar-LA 20 Tablet helps decrease anxiety and relieve tremors."
+// },
+//       {
+//       id: 27,
+//       name: "Cipladine Ointment",
+//       images: require('../images/cipla/Cipladine.jpg'),
+//       Quantity:1,
+//       star: 4.5,
+//       rupees:22,
+//       Des: "Cipladine Ointment is an antiseptic and disinfectant agent. "
+// },
+//       {
+//       id: 28,
+//       name: "Ciplactin",
+//       images: require('../images/cipla/Ciplatin.jpg'),
+//       Quantity:10,
+//       star: 4.6,
+//       rupees:36,
+//       Des: "Ciplactin Tablet belongs to a group of medicines called antihistamines."
+// },
+//       {
+//       id: 29,
+//       name: "Ciplactin Syrup",
+//       images: require('../images/cipla/CiplactinSyrup.png'),
+//       Quantity:1,
+//       star: 4.5,
+//       rupees:98,
+//       Des: "Ciplactin Syrup belongs to a group of medicines called antihistamines."
+// },
+//       {
+//       id: 30,
+//       name: "Dytor 10 ",
+//       images: require('../images/cipla/Dytor.jpg') ,
+//       Quantity:10,
+//       star:4.8 ,
+//       rupees:63,
+//       Des: "Dytor 10 Tablet belongs to a group of medicines called diuretics or water tablets. "
+// },
+//       {
+//       id: 31,
+//       name: "Dytor Plus 10",
+//       images: require('../images/cipla/Dytorplus.jpg') ,
+//       Quantity:10,
+//       star: 4.7,
+//       rupees:66,
+//       Des: "Dytor Plus 10 Tablet is a combination of two medicines used to reduce excess fluid levels in the body while maintaining the potassium balance."
+// },
+//       {
+//       id: 32,
+//       name: "Urimax D",
+//       images: require('../images/cipla/UrimaxD.jpg'),
+//       Quantity:10,
+//       star:4.6 ,
+//       rupees:394,
+//       Des: "Urimax D Tablet MR is a combination of two medicines that work in different ways to treat men with an enlarged prostate gland."
+// },
+//       {
+//       id: 33,
+//       name: "Montair 10",
+//       images: require('../images/cipla/Montair-LC.jpg') ,
+//       Quantity:10,
+//       star: 4.6,
+//       rupees:238,
+//       Des: "Montair 10 Tablet is a prescription medicine used for asthma prevention and for the treatment of allergy symptoms such as sneezing and runny nose."
+// },
+//       {
+//       id: 34,
+//       name: "Cheston Cold ",
+//       images: require('../images/cipla/Cheston.jpg') ,
+//       Quantity:10,
+//       star: 4.7,
+//       rupees:35,
+//       Des: "Cheston Cold Tablet is used in the treatment of common cold symptoms like runny nose, stuffy nose, sneezing, watery eyes, and congestion or stuffiness."
+// },
+//       {
+//       id: 35,
+//       name: "Foracort Inhaler",
+//       images: require('../images/cipla/Foracort.jpg') ,
+//       Quantity:1,
+//       star: 3.9,
+//       rupees:270,
+//       Des: "Foracort Inhaler 200 is a combination of two medicines in one inhaler. It relieves the long-term symptoms of asthma and COPD, making breathing easier. It works by inhibiting the release of certain chemical messengers that cause inflammation (swelling) and relaxes the muscles in the airways. "
+// },
+//       {
+//       id: 36,
+//       name: "Azee 500 ",
+//       images: require('../images/cipla/Azee.jpg') ,
+//       Quantity:10,
+//       star:4.6 ,
+//       rupees:89,
+//       Des: "Azee 500 Tablet is an antibiotic used to treat various types of bacterial infections of the respiratory tract, ear, nose, throat, lungs, skin, and eye in adults and children. "
+// },
+//       {
+//       id: 37,
+//       name: "Metolar XR 50 ",
+//       images: require('../images/cipla/MetolarXR.png') ,
+//       Quantity:10,
+//       star: 4.8,
+//       rupees:72,
+//       Des: "Metolar XR 50 Capsule belongs to a group of medicines called beta-blockers."
+// },
+//       {
+//       id: 38,
+//       name: "Pantosec D SR ",
+//       images: require('../images/cipla/Pantosec.jpg') ,
+//       Quantity:10,
+//       star: 4.7,
+//       rupees:85,
+//       Des: "Pantosec D SR Capsule is a prescription medicine used to treat gastroesophageal reflux disease (Acid reflux) and peptic ulcer disease by relieving the symptoms of acidity such as indigestion, heartburn, stomach pain, or irritation."
+// },
+//       {
+//       id: 39,
+//       name: "Duolin Inhaler",
+//       images: require('../images/cipla/Duolin.jpg') ,
+//       Quantity:1,
+//       star:4. ,
+//       rupees:255,
+//       Des: "Duolin Inhaler is used for the treatment of chronic obstructive pulmonary disorder (a lung disorder in which the flow of air to the lungs is blocked). "
+// },
+//       {
+//       id: 40,
+//       name: "Amlip 5",
+//       images: require('../images/cipla/Amlip.jpg') ,
+//       Quantity:10,
+//       star:4.7 ,
+//       rupees:21,
+//       Des: "Amlip 5 Tablet belongs to a class of medicines known as calcium channel blockers. "
+//       },
 
 //COMPLAN
 
@@ -466,7 +466,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
 {
     id: 51,
     name: 'Dabur Honey Squeezy',
-    images: require('../images/dabur/HoneySqueezy.png'),
+    images: require('../images/Dabur/HoneySqueezy.png'),
     Quantity: 10,
     star: 4.4,
     rupees: 176,
@@ -475,7 +475,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 52,
     name: 'Dabur Honitus Hot Sip Ayurvedic Kaadha',
-    images: require('../images/dabur/AyurvedicKaadha.png'),
+    images: require('../images/Dabur/AyurvedicKaadha.png'),
     Quantity: 10,
     star: 4.5,
     rupees: 240,
@@ -484,7 +484,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 53,
     name: 'Dabur Chyawanprash Awaleha',
-    images: require('../images/dabur/ChyawanprashAwaleha.png'),
+    images: require('../images/Dabur/ChyawanprashAwaleha.png'),
     Quantity: 10,
     star: 4.7,
     rupees: 612,
@@ -493,7 +493,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 54,
     name: 'Dabur Honey ',
-    images: require('../images/dabur/Honey.png'),
+    images: require('../images/Dabur/Honey.png'),
     Quantity: 10,
     star: 4.6,
     rupees: 378,
@@ -502,7 +502,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 55,
     name: 'Dabur Himalayan Apple Cider',
-    images: require('../images/dabur/AppleCiderVinegar.png'),
+    images: require('../images/Dabur/AppleCiderVinegar.png'),
     Quantity: 10,
     star: 4.4,
     rupees: 235,
@@ -511,7 +511,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 56,
     name: 'Dabur Chyawanprakash Sugarfree',
-    images: require('../images/dabur/ChyawanprakashSugarfree.jpg'),
+    images: require('../images/Dabur/ChyawanprakashSugarfree.jpg'),
     Quantity: 10,
     star: 4.7,
     rupees: 200,
@@ -520,7 +520,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 57,
     name: 'Dabur Honitus Herbal Cough Remedy',
-    images: require('../images/dabur/HerbalCoughRemedy.jpg'),
+    images: require('../images/Dabur/HerbalCoughRemedy.jpg'),
     Quantity: 10,
     star: 4.7,
     rupees: 159,
@@ -529,7 +529,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 58,
     name: 'Dabur Organic Honey',
-    images: require('../images/dabur/OrganicHoney.png'),
+    images: require('../images/Dabur/OrganicHoney.png'),
     Quantity: 10,
     star: 4.7,
     rupees: 224,
@@ -538,7 +538,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 59,
     name: 'Dabur Chyawanprash Awaleha Sharangdhar Samhita',
-    images: require('../images/dabur/Sharangdhar.png'),
+    images: require('../images/Dabur/Sharangdhar.png'),
     Quantity: 10,
     star: 4.5,
     rupees: 820,
@@ -548,7 +548,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
   {
     id: 60,
     name: 'Dabur Shilajit Gold ',
-    images: require('../images/dabur/ShilajitGold.png'),
+    images: require('../images/Dabur/ShilajitGold.png'),
     Quantity: 10,
     star: 3.8,
     rupees: 342,
@@ -560,7 +560,7 @@ Des: "Complan Nutrition and Health Drink Royale Chocolate is a scientifically de
 {
 id: 61,
 name: "Dr. Reddy's CeleHealth",
-images: require('../images/dr.Reddys/CeleHealth.png'),
+images: require('../images/Dr.Reddys/CeleHealth.png'),
 Quantity:1,
 star: 4.8,
 rupees:607,
@@ -569,7 +569,7 @@ Des: "Dr Reddy's Celehealth is a new age nutritional drink for adults to help me
 {
 id: 62,
 name: "Mintop Forte",
-images: require('../images/dr.Reddys/MintopFote.png'),
+images: require('../images/Dr.Reddys/MintopFote.png'),
 Quantity:10,
 star:4.5 ,
 rupees:703,
@@ -578,7 +578,7 @@ Des:"Mintop Forte 5% Solution belongs to a class of drugs known as vasodilators.
 {
 id: 63,
 name: "Stamlo 5 ",
-images: require('../images/dr.Reddys/Stamlo.png'),
+images: require('../images/Dr.Reddys/Stamlo.png'),
 Quantity:10,
 star:4.6 ,
 rupees:65,
@@ -587,7 +587,7 @@ Des:"Stamlo 5 Tablet belongs to a class of medicines known as calcium channel bl
 {
 id: 64,
 name: "Omez",
-images: require('../images/dr.Reddys/Omez.jpg'),
+images: require('../images/Dr.Reddys/Omez.jpg'),
 Quantity:10,
 star:4.6 ,
 rupees:41,
@@ -596,7 +596,7 @@ Des: "Omez Capsule is a medicine that reduces the amount of acid produced in you
 {
 id: 65,
 name: "Atarax 25mg",
-images: require('../images/dr.Reddys/Atarax.jpg'),
+images: require('../images/Dr.Reddys/Atarax.jpg'),
 Quantity:10,
 star:4.3 ,
 rupees:58,
@@ -605,7 +605,7 @@ Des: "Atarax 25mg Tablet is used to treat anxiety and helps to get relaxed befor
 {
 id: 66,
 name: "Ketorol-DT ",
-images: require('../images/dr.Reddys/Ketorol-DT.jpg'),
+images: require('../images/Dr.Reddys/Ketorol-DT.jpg'),
 Quantity:10,
 star: 4.8,
 rupees:100,
@@ -614,7 +614,7 @@ Des: "Ketorol-DT Tablet is used for the short-term treatment of moderate to seve
 {
 id: 67,
 name: "Finax",
-images: require('../images/dr.Reddys/Finax.jpg'),
+images: require('../images/Dr.Reddys/Finax.jpg'),
 Quantity:10,
 star: 4.8,
 rupees:213,
@@ -623,7 +623,7 @@ Des: "Finax Tablet is used to treat hair loss in men."
 {
 id: 68,
 name: "Razo-D Capsule SR",
-images: require('../images/dr.Reddys/Razo.jpg'),
+images: require('../images/Dr.Reddys/Razo.jpg'),
 Quantity:10,
 star: 4.8,
 rupees:210,
@@ -632,7 +632,7 @@ Des: "Razo-D Capsule SR is a combination medicine used to treat gastroesophageal
 {
 id: 69,
 name: "Alfoo 10mg",
-images: require('../images/dr.Reddys/Alfoo.jpg'),
+images: require('../images/Dr.Reddys/Alfoo.jpg'),
 Quantity:10,
 star: 4.5,
 rupees:468,
@@ -641,7 +641,7 @@ Des: "Alfoo 10mg Tablet PR is an alpha-adrenergic antagonist that is used in the
 {
 id: 70,
 name: "Vantej Toothpaste",
-images: require('../images/dr.Reddys/Vantej.png'),
+images: require('../images/Dr.Reddys/Vantej.png'),
 Quantity:1,
 star: 4.7,
 rupees:241,
@@ -650,7 +650,7 @@ Des: "Vantej Toothpaste helps to reduce tooth sensitivity."
 {
 id: 71,
 name: "Venusia Max Intensive Moisturizing Lotion",
-images: require('../images/dr.Reddys/Venusia.png'),
+images: require('../images/Dr.Reddys/Venusia.png'),
 Quantity:1,
 star: 4.8,
 rupees:490,
@@ -659,7 +659,7 @@ Des: "Venusia Max Lotion is an intense moisturizing lotion which provides sustai
 {
 id: 72,
 name: "Xyzal 5mg",
-images: require('../images/dr.Reddys/Xyzal.jpg'),
+images: require('../images/Dr.Reddys/Xyzal.jpg'),
 Quantity:10,
 star: 4.6,
 rupees:123,
@@ -668,7 +668,7 @@ Des: "Xyzal 5mg Tablet belongs to a group of medicines called antihistamines."
 {
 id: 73,
 name: "Reswas Syrup",
-images: require('../images/dr.Reddys/Reswas.jpg'),
+images: require('../images/Dr.Reddys/Reswas.jpg'),
 Quantity:1,
 star: 4.7,
 rupees:80,
@@ -677,7 +677,7 @@ Des: "Reswas Syrup is used in the treatment of dry cough."
 {
 id: 74,
 name: "Econorm 250mg Sachet Probiotic",
-images: require('../images/dr.Reddys/Econorm.png'),
+images: require('../images/Dr.Reddys/Econorm.png'),
 Quantity:10,
 star: 4.8,
 rupees:43,
@@ -686,7 +686,7 @@ Des: "t is used to treat diarrhea, especially in kids."
 {
 id: 75,
 name: "Nise Tablet",
-images: require('../images/dr.Reddys/Nise.jpg'),
+images: require('../images/Dr.Reddys/Nise.jpg'),
 Quantity:10,
 star:4.5 ,
 rupees:73,
@@ -698,7 +698,7 @@ Des: "Nise Tablet is a pain-relieving medicine."
 {
 id: 76,
 name: "Himalaya Liv. 52 DS",
-images: require('../images/himalaya/Liv.52DS.jpg'),
+images: require('../images/Himalaya/Liv.52DS.jpg'),
 Quantity:10,
 star: 4.7,
 rupees:129,
@@ -707,7 +707,7 @@ Des: "It is used to protect the liver against toxins and lower the risk of infec
 {
 id: 77,
 name: "Himalaya Wellness Pure Herbs Neem",
-images: require('../images/himalaya/HerbsNeem.png'),
+images: require('../images/Himalaya/HerbsNeem.png'),
 Quantity:10,
 star: 4.5,
 rupees:94,
@@ -716,7 +716,7 @@ Des: "Himalaya Neem Syrup contains Azadirachta indica, also known as Nimba."
 {
 id: 78,
 name: "Himalaya Herbals Purifying Neem Face Wash",
-images: require('../images/himalaya/NeemFaceWash.jpg'),
+images: require('../images/Himalaya/NeemFaceWash.jpg'),
 Quantity:10,
 star: 4.7,
 rupees:108,
@@ -725,7 +725,7 @@ Des: "Himalaya Herbals Purifying Neem Face Wash is a soap-free, herbal formulati
 {
 id: 79,
 name: "Himalaya Tentex Royal",
-images: require('../images/himalaya/TentexRoyal.jpg'),
+images: require('../images/Himalaya/TentexRoyal.jpg'),
 Quantity:10,
 star: 4.8,
 rupees:190,
@@ -734,7 +734,7 @@ Des: "It is used to treat sexual dysfunction in men. It is recommended for use i
 {
 id: 80,
 name: "Himalaya Tentex Forte",
-images: require('../images/himalaya/TentexForte.jpg'),
+images: require('../images/Himalaya/TentexForte.jpg'),
 Quantity:10,
 star: 3.7,
 rupees:68,
@@ -743,7 +743,7 @@ Des: "It helps treat sexual dysfunction in men and erectile dysfunction (impoten
 {
 id: 81,
 name: "Himalaya Men Pimple Clear Neem Face Wash",
-images: require('../images/himalaya/MenPimpleClearNeemFaceWash.jpg'),
+images: require('../images/Himalaya/MenPimpleClearNeemFaceWash.jpg'),
 Quantity:10,
 star:3.8 ,
 rupees:153,
@@ -752,7 +752,7 @@ Des: "Himalaya Men Pimple Clear Neem Face Wash is specially designed for men’s
 {
 id: 82,
 name: "Himalaya Gasex",
-images: require('../images/himalaya/Gasex.jpg'),
+images: require('../images/Himalaya/Gasex.jpg'),
 Quantity:10,
 star:4.3 ,
 rupees:119,
@@ -761,7 +761,7 @@ Des: "It is used to treat indigestion and its symptoms such as the feeling of fu
 {
 id: 83,
 name: "Himalaya Confido",
-images: require('../images/himalaya/Confido.jpg'),
+images: require('../images/Himalaya/Confido.jpg'),
 Quantity:10,
 star: 3.6,
 rupees:138,
@@ -770,7 +770,7 @@ Des: "It is used to help manage the testosterone levels in the body and boost se
 {
 id: 84,
 name: "Himalaya Septilin ",
-images: require('../images/himalaya/Septilin.jpg'),
+images: require('../images/Himalaya/Septilin.jpg'),
 Quantity:10,
 star: 4.5,
 rupees:125,
@@ -779,7 +779,7 @@ Des: "It is used to boost your immunity and help fight against infections."
 {
 id: 85,
 name: "Himalaya Diabecon DS",
-images: require('../images/himalaya/DiabeconDS.jpg'),
+images: require('../images/Himalaya/DiabeconDS.jpg'),
 Quantity:10,
 star:4.2 ,
 rupees:141,
@@ -788,7 +788,7 @@ Des: "Himalaya Diabecon DS Tablet contains a unique combination of Gymnema (Mesh
 {
 id: 86,
 name: "Himalaya Liv.52 Syrup",
-images: require('../images/himalaya/Liv.52DSsyrup.jpg'),
+images: require('../images/Himalaya/Liv.52DSsyrup.jpg'),
 Quantity:10,
 star:4.4 ,
 rupees:143,
@@ -797,7 +797,7 @@ Des: "Himalaya Liv.52 Syrup contains Caper Bush (Himsra) and Chicory (Kasani)."
 {
 id: 87,
 name: "Himalaya Cystone",
-images: require('../images/himalaya/Cystone.jpg'),
+images: require('../images/Himalaya/Cystone.jpg'),
 Quantity:10,
 star: 4.4,
 rupees:113,
@@ -806,7 +806,7 @@ Des: "Himalaya Cystone Tablet contains ingredients that possess diuretic, demulc
 {
 id: 88,
 name: "Himalaya Speman ",
-images: require('../images/himalaya/Speman.jpg'),
+images: require('../images/Himalaya/Speman.jpg'),
 Quantity:10,
 star: 3.7,
 rupees:125,
@@ -815,7 +815,7 @@ Des: "Himalaya Speman Tablet may enhance spermatogenesis by improving testostero
 {
 id: 89,
 name: "Himalaya Mentat",
-images: require('../images/himalaya/Mentat.jpg'),
+images: require('../images/Himalaya/Mentat.jpg'),
 Quantity:10,
 star: 4.1,
 rupees:124,
@@ -824,7 +824,7 @@ Des: "Himalaya Mentat Tablet channelizes the mental energy."
 {
 id: 90,
 name: "Himalaya Himcolin Gel",
-images: require('../images/himalaya/Himcolin.jpg'),
+images: require('../images/Himalaya/Himcolin.jpg'),
 Quantity:10,
 star: 4.7,
 rupees:148,
@@ -1297,7 +1297,7 @@ Des: "It keeps the skin protected from sun damage. Moreover, it is a light formu
 {
 id: 141,
 name: "Vaseline Original Skin Protecting Jelly",
-images: require('../images/vaseline/SkinProtectingJelly.png'),
+images: require('../images/Vaseline/SkinProtectingJelly.png'),
 Quantity:1,
 star: 4.6,
 rupees:79,
@@ -1307,7 +1307,7 @@ Des: "Vaseline Blueseal Pure Petroleum Jelly contains 100% Triple-purified pure 
 {
 id: 142,
 name: "Vaseline Intensive Care Body Deep Moisture Lotion",
-images: require('../images/vaseline/MoistureLotion.jpg'),
+images: require('../images/Vaseline/MoistureLotion.jpg'),
 Quantity:1,
 star: 4.7,
 rupees:322,
@@ -1317,7 +1317,7 @@ Des: "Vaseline Intensive Care Body Deep Moisture Lotion is designed to penetrate
 {
 id: 143,
 name: "Vaseline Lip Care",
-images: require('../images/vaseline/LipCare.jpg'),
+images: require('../images/Vaseline/LipCare.jpg'),
 Quantity:1,
 star:4.3 ,
 rupees:49,
@@ -1327,7 +1327,7 @@ Des: "Vaseline Lip Care formulated with the goodness of pure petroleum jelly, it
 {
 id: 144,
 name: "Vaseline Glow Lotion",
-images: require('../images/vaseline/GlowLotion.png'),
+images: require('../images/Vaseline/GlowLotion.png'),
 Quantity:1,
 star: 4.4,
 rupees:387,
@@ -1337,7 +1337,7 @@ Des: "Vaseline Intensive Care Body Cocoa Glow Lotion helps to keep your skin loo
 {
 id: 145,
 name: "Aloe Fresh Lotion",
-images: require('../images/vaseline/AloeFreshLotion.png'),
+images: require('../images/Vaseline/AloeFreshLotion.png'),
 Quantity:1,
 star: 4.4,
 rupees:373,
@@ -1347,7 +1347,7 @@ Des: "Vaseline Intensive Care Body Aloe Fresh Lotion contains 100% pure aloe ver
 {
 id: 146,
 name: "Derma Care Body Lotion",
-images: require('../images/vaseline/DermaCareBodyLotion.png'),
+images: require('../images/Vaseline/DermaCareBodyLotion.png'),
 Quantity:1,
 star: 4.8,
 rupees:444,
@@ -1357,7 +1357,7 @@ Des: "Vaseline Advanced Repair Derma Care Body Lotion helps to heal the skin."
 {
 id: 147,
 name: "Daily Brightening Healthy Bright Even Tone Lotion",
-images: require('../images/vaseline/EvenToneLotion.png'),
+images: require('../images/Vaseline/EvenToneLotion.png'),
 Quantity:1,
 star: 4.3,
 rupees:380,
@@ -1367,7 +1367,7 @@ Des: "Vaseline Daily Brightening Healthy Bright Even Tone Lotion is an advanced 
 {
 id: 148,
 name: "Vaseline 10 Body Lotion",
-images: require('../images/vaseline/10BodyLotion.jpg'),
+images: require('../images/Vaseline/10BodyLotion.jpg'),
 Quantity:1,
 star: 4.7,
 rupees:130,
@@ -1378,7 +1378,7 @@ Des: "A lotion with Vitamin B3, AHA, Pro-Retinol which provides 10 in 1 skin bri
 {
 id: 149,
 name: "Lip care Therapy",
-images: require('../images/vaseline/LipTherapy.png'),
+images: require('../images/Vaseline/LipTherapy.png'),
 Quantity:1,
 star: 4.3,
 rupees:1227,
@@ -1389,7 +1389,7 @@ Des: "Vaseline Daily Brightening Healthy Bright Even Tone Lotion is an advanced 
 {
     id: 150,
     name: "Intense Moisturising Lotion",
-    images: require('../images/vaseline/IntenseMoisturisingLotion.png'),
+    images: require('../images/Vaseline/IntenseMoisturisingLotion.png'),
     Quantity:1,
     star: 4.4,
     rupees:249,
@@ -1401,7 +1401,7 @@ Des: "Vaseline Daily Brightening Healthy Bright Even Tone Lotion is an advanced 
 // {
 //     id: 151,
 //     name: "Lip Therapy Aleo",
-//     images: require('../images/vaseline/LipCareTherapyAloe.png'),
+//     images: require('../images/Vaseline/LipCareTherapyAloe.png'),
 //     Quantity:1,
 //     star: 4.4,
 //     rupees:249,
@@ -1689,7 +1689,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
  {
         id: 181,
         name: 'Cadbury Bournvita Health Drink Refill',
-        images: require('../images/bournvita/HealthDrinkRefill.png'),
+        images: require('../images/Bournvita/HealthDrinkRefill.png'),
         Quantity: 10,
         star: 4.5,
         rupees: 752,
@@ -1698,7 +1698,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 182,
         name: 'Cadbury Bournvita Health Drink',
-        images: require('../images/bournvita/HealthDrink.png'),
+        images: require('../images/Bournvita/HealthDrink.png'),
         Quantity: 10,
         star: 4.4,
         rupees: 385,
@@ -1707,7 +1707,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 183,
         name: 'Cadbury Bournvita 5 Star Magic Chocolate',
-        images: require('../images/bournvita/Chocolate.png'),
+        images: require('../images/Bournvita/Chocolate.png'),
         Quantity: 10,
         star: 4.3,
         rupees: 230,
@@ -1716,7 +1716,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 184,
         name: 'Cadbury Bournvita Lil Champs Health Drink 2-5 Years',
-        images: require('../images/bournvita/LilChamps.jpg'),
+        images: require('../images/Bournvita/LilChamps.jpg'),
         Quantity: 10,
         star: 4.4,
         rupees: 295,
@@ -1725,7 +1725,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 185,
         name: 'Cadbury Bournvita 5 Star Magic Health Drink Refill Pack',
-        images: require('../images/bournvita/refilpack.jpg'),
+        images: require('../images/Bournvita/refilpack.jpg'),
         Quantity: 10,
         star: 4.5,
         rupees: 308,
@@ -1734,7 +1734,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 186,
         name: 'Cadbury Bournvita Combo Pack of Health Drink Refill 2kg & Pro-Health Drink Chocolate 200gm',
-        images: require('../images/bournvita/ComboPack.jpg'),
+        images: require('../images/Bournvita/ComboPack.jpg'),
         Quantity: 10,
         star: 4.4,
         rupees: 861,
@@ -1743,7 +1743,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 187,
         name: 'Cadbury Bournvita Combo Pack of 5 Star Magic',
-        images: require('../images/bournvita/ComboPackof5.jpg'),
+        images: require('../images/Bournvita/ComboPackof5.jpg'),
         Quantity: 10,
         star: 4.4,
         rupees: 417,
@@ -1752,7 +1752,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 188,
         name: 'Cadbury Bournvita Combo Pack of Lil Champs',
-        images: require('../images/bournvita/ComboPackofLilChamps.jpg'),
+        images: require('../images/Bournvita/ComboPackofLilChamps.jpg'),
         Quantity: 10,
         star: 4.5,
         rupees: 497,
@@ -1761,7 +1761,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 189,
         name: 'Cadbury Fuse Fit Chocolate Bar',
-        images: require('../images/bournvita/FuseChocolateBar.jpg'),
+        images: require('../images/Bournvita/FuseChocolateBar.jpg'),
         Quantity: 10,
         star: 4.5,
         rupees: 50,
@@ -1770,7 +1770,7 @@ Des: "Cintoda'c /imagesCapsule is a combination medicine used to treat gastroeso
       {
         id: 190,
         name: 'Cadbury Bournvita Combo Pack of Health Drink Chocolate & Lil Champs Health Drink ',
-        images: require('../images/bournvita/Chocolateandlilchamps.jpg'),
+        images: require('../images/Bournvita/Chocolateandlilchamps.jpg'),
         Quantity: 10,
         star: 4,
         rupees: 247,

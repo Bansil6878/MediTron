@@ -2,7 +2,6 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Product from '../Screen/Product';
-import Lab from '../Screen/Lab';
 import Brand from '../Screen/Brand';
 import Brand_details from '../Screen/Brand_details';
 import Careplan from '../Screen/Careplan';
@@ -35,10 +34,13 @@ import {Details} from '../Screen/Details';
 import {MyCart} from '../Screen/MyCart';
 import Consult_details from '../Screen/Consult_details';
 import Privacy from '../Screen/Privacy';
-import { Brandpro_details } from '../Screen/Brand_pages/Brandpro_details';
-import { Brandpage_details } from '../Screen/Brand_pages/Brandpage_details';
-import { Brandpage } from '../Screen/Brand_pages/Brandpage';
-
+import {Brandpro_details} from '../Screen/Brand_pages/Brandpro_details';
+import {Brandpage_details} from '../Screen/Brand_pages/Brandpage_details';
+import {Brandpage} from '../Screen/Brand_pages/Brandpage';
+import {Lab} from '../Screen/Lab/Lab';
+import {Lab_details} from '../Screen/Lab/Lab_details';
+import {Labpro_details} from '../Screen/Lab/Labpro_details';
+import {Labtest_book} from '../Screen/Lab/Labtest_book';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,7 +51,6 @@ const Nav_Stack = () => {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Nav_Tabbar} />
       <Stack.Screen name="Product" component={Product} />
-      <Stack.Screen name="Lab" component={Lab} />
       <Stack.Screen name="Brand" component={Brand} />
       <Stack.Screen name="Brand_details" component={Brand_details} />
       <Stack.Screen name="Careplan" component={Careplan} />
@@ -80,7 +81,7 @@ const Nav_Stack = () => {
       <Stack.Screen name="Empty_cart" component={Empty_cart} />
       <Stack.Screen name="Myorder" component={Myorder} />
       <Stack.Screen name="Brand_footer" component={Brand_footer} />
-  
+
       <Stack.Screen
         name="History"
         component={History}
@@ -96,10 +97,13 @@ const Nav_Stack = () => {
         options={{headerShown: true}}
       />
       <Stack.Screen name="Privacy" component={Privacy} />
-      <Stack.Screen name='Brandpage' component={Brandpage}/>
+      <Stack.Screen name="Brandpage" component={Brandpage} />
       <Stack.Screen name="Brandpage_details" component={Brandpage_details} />
-      <Stack.Screen name='Brandpro_details' component={Brandpro_details} />
-
+      <Stack.Screen name="Brandpro_details" component={Brandpro_details} />
+      <Stack.Screen name="Lab" component={Lab} />
+      <Stack.Screen name="Lab_details" component={Lab_details} />
+      <Stack.Screen name="Labpro_details" component={Labpro_details} />
+      <Stack.Screen name="Labtest_book" component={Labtest_book} />
     </Stack.Navigator>
   );
 };

@@ -42,7 +42,7 @@ const History = () => {
           <Image source={product.images} style={styles.img} />
 
           <View style={{flexDirection: 'column',marginLeft:30,marginTop:20}}>
-            <Text style={{fontSize:18,fontWeight:'bold'}}>{product.name}</Text>
+            <Text style={{fontSize:18,fontWeight:'bold',width:110}}>{product.name}</Text>
             <Text>Quantity: {item.Quantity}</Text>
             <Text>star: {product.star}</Text>
             <Text style={{fontWeight:'bold'}}>Price: ₹ {product.rupees}</Text>
@@ -87,7 +87,8 @@ const styles = StyleSheet.create({
   },
 
   img: {
-    width: 150,
-    height: 150,
+    resizeMode:'contain' ,
+    width: 130,
+    height: 130,
   },
 });

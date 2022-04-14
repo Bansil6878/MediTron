@@ -64,7 +64,7 @@ const {getItemsCount} =useContext(CartContext);
             <Text style={{textAlign: 'center', marginTop: -7}}>Doctor</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Lab')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Lab_details')}>
             <Image
               style={styles.imgStyle}
               source={require('../assets/images/lab/lab.png')}
