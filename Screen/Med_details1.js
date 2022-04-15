@@ -11,8 +11,7 @@ export function Med_details1 ({navigation}) {
 
   
   function renderProduct({item: medicine}) {
-  {console.log(medicine.name)}
-
+ 
   return (
     <Medicine1 {...medicine} 
     

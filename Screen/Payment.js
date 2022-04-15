@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ScrollView,ActivityIndicator} from 'react-native';
+import {StyleSheet, Text, View, ScrollView,ActivityIndicator,TextInput} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import Divider from '../Components/Divider';
@@ -9,11 +9,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 
 
+
 const Payment = ({route}) => {
 
 const navigation= useNavigation();
 
   const [value, setValue] = useState(null);
+ 
+
   const { total } = route.params;
 
   const[loading,setLoading] = useState(false);
@@ -49,7 +52,6 @@ const navigation= useNavigation();
       });
   };
 
-  
 
   return (
     <>
@@ -148,6 +150,12 @@ const navigation= useNavigation();
             <Divider />
           </View>
 
+
+      
+  
+
+
+
           <View style={{backgroundColor: 'white', marginTop: 20}}>
             <Text
               style={{
@@ -159,6 +167,9 @@ const navigation= useNavigation();
               PRICE DETAILS
             </Text>
             <Divider />
+
+
+
             <View style={{flexDirection: 'row'}}>
               <Text style={{fontSize: 16, marginLeft: 10, marginTop: 10}}>
                 Price
@@ -173,11 +184,17 @@ const navigation= useNavigation();
               <Text style={{marginLeft: 176, fontSize: 16, marginTop: 10}}>
                 ₹: 0
               </Text>
-            </View>
+
+                        </View>
+
+       
 
             <Divider />
 
-            <View style={{flexDirection: 'row'}}>
+
+
+
+<View style={{flexDirection: 'row'}}>
               <Text style={{fontSize: 16, marginLeft: 10, marginTop: 10}}>
                 Amount Payable
               </Text>
@@ -185,6 +202,9 @@ const navigation= useNavigation();
                 ₹: {total}
               </Text>
             </View>
+   
+         
+         
           </View>
 
           <View
