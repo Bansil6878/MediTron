@@ -11,15 +11,15 @@ import React,{useState,useContext} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import { Badge }  from 'react-native-paper';  
 import { CartContext } from  '../CartContext';
-import Brand from './Brand';
-import Careplan from './Careplan';
+import Brand from '../Screen/Brand_pages/Brand';
+import Careplan from '../Screen/Careplan/Careplan';
 import Footer from '../Components/Footer';
-import Profile from './Profile';
+import Profile from '../Screen/Profile/Profile';
 import Divider from '../Components/Divider';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Dropdown from './Dropdown';
-import Trending from './Trending';
-import Slider from './Slider';
+import Trending from '../Screen/Trending/Trending';
+import Slider from '../Screen/Slider/Slider';
 
 
 
@@ -48,7 +48,7 @@ const {getItemsCount} =useContext(CartContext);
         </View>
       <Divider/>
         <View style={{flexDirection: 'row'}}>
-          <TouchableOpacity onPress={() => navigation.navigate('Med_details1')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Med_details')}>
             <Image
               style={styles.imgStyle}
               source={require('../assets/images/medicine/medicine.png')}
@@ -72,7 +72,7 @@ const {getItemsCount} =useContext(CartContext);
             <Text style={{textAlign: 'center', marginTop: -7}}>Lab Test</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Product')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Device_details')}>
             <Image
               style={styles.imgStyle}
               source={require('../assets/images/product/product.png')}

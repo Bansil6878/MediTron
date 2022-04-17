@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-export function Lab({name, rupees, images, onPress,Quantity,star,}) {
+export function Device({name, rupees, images, onPress,Quantity,star,}) {
   return (
 
     <View>

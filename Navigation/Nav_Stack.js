@@ -1,39 +1,37 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Product from '../Screen/Product';
-import Brand from '../Screen/Brand';
-import Brand_details from '../Screen/Brand_details';
-import Careplan from '../Screen/Careplan';
-import Careplan_details1 from '../Screen/Careplan_details1';
-import Careplan_details2 from '../Screen/Careplan_details2';
-import Careplan_details3 from '../Screen/Careplan_details3';
+import Brand from '../Screen/Brand_pages/Brand';
+import Brand_details from '../Screen/Brand_pages/Brand_details';
+import Careplan from '../Screen/Careplan/Careplan';
+import Careplan_details1 from '../Screen/Careplan/Careplan_details1';
+import Careplan_details2 from '../Screen/Careplan/Careplan_details2';
+import Careplan_details3 from '../Screen/Careplan/Careplan_details3';
 import Drawer_main from './Drawer_main';
-import Profile from '../Screen/Profile';
-import Contact from '../Screen/Contact';
-import Register from '../Screen/Register';
-import Login from '../Screen/Login';
+import Profile from '../Screen/Profile/Profile';
+import Contact from '../Screen/Login/Contact';
+import Register from '../Screen/Login/Register';
+import Login from '../Screen/Login/Login';
 import Divider from '../Components/Divider';
-import Contact_details from '../Screen/Contact_details';
-import Doc from '../Screen/Doc';
-import Doc_details from '../Screen/Doc_details';
+import Contact_details from '../Screen/Login/Contact_details';
+import Doc from '../Screen/Doctor/Doc';
+import Doc_details from '../Screen/Doctor/Doc_details';
 import Dropdown from '../Screen/Dropdown';
-import Trending from '../Screen/Trending';
-import Trending_details from '../Screen/Trending_details';
+import Trending from '../Screen/Trending/Trending';
+import Trending_details from '../Screen/Trending/Trending_details';
 import Nav_Tabbar from './Nav_Tabbar';
 import Search from '../Screen/Search';
-import Slider from '../Screen/Slider';
-import Payment from '../Screen/Payment';
-import Empty_cart from '../Screen/Empty_cart';
-import Myorder from '../Screen/Myorder';
+import Slider from '../Screen/Slider/Slider';
+import Payment from '../Screen/Order/Payment';
+import Empty_cart from '../Screen/Cart/Empty_cart';
+import Myorder from '../Screen/Order/Myorder';
 import Brand_footer from '../Components/Brand_footer';
-import History from '../Screen/History';
-import {Medicine1} from '../Screen/Medicine1';
-import {Med_details1} from '../Screen/Med_details1';
-import {Details} from '../Screen/Details';
-import {MyCart} from '../Screen/MyCart';
-import Consult_details from '../Screen/Consult_details';
-import Privacy from '../Screen/Privacy';
+import History from '../Screen/Profile/History';
+
+import {Details} from '../Screen/Medicine/Details';
+import {MyCart} from '../Screen/Cart/MyCart';
+import Consult_details from '../Screen/Doctor/Consult_details';
+import Privacy from '../Screen/Profile/Privacy';
 import {Brandpro_details} from '../Screen/Brand_pages/Brandpro_details';
 import {Brandpage_details} from '../Screen/Brand_pages/Brandpage_details';
 import {Brandpage} from '../Screen/Brand_pages/Brandpage';
@@ -41,6 +39,15 @@ import {Lab} from '../Screen/Lab/Lab';
 import {Lab_details} from '../Screen/Lab/Lab_details';
 import {Labpro_details} from '../Screen/Lab/Labpro_details';
 import {Labtest_book} from '../Screen/Lab/Labtest_book';
+import { Chatbot } from '../Screen/Doctor/Chatbot';
+
+import { Medicine } from '../Screen/Medicine/Medicine';
+import { Med_details } from '../Screen/Medicine/Med_details';
+import { Device } from '../Screen/Device/Device';
+import { Device_details } from '../Screen/Device/Device_details';
+import { Devicepro_details } from '../Screen/Device/Devicepro_details';
+import Careplan_show from '../Screen/Careplan/Careplan_show';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -50,13 +57,13 @@ const Nav_Stack = () => {
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Nav_Tabbar} />
-      <Stack.Screen name="Product" component={Product} />
       <Stack.Screen name="Brand" component={Brand} />
       <Stack.Screen name="Brand_details" component={Brand_details} />
       <Stack.Screen name="Careplan" component={Careplan} />
       <Stack.Screen name="Careplan_details1" component={Careplan_details1} />
       <Stack.Screen name="Careplan_details2" component={Careplan_details2} />
       <Stack.Screen name="Careplan_details3" component={Careplan_details3} />
+      <Stack.Screen name='Careplan_show' component={Careplan_show}/>
       <Stack.Screen name="Drawer_main" component={Drawer_main} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Contact" component={Contact} />
@@ -78,6 +85,8 @@ const Nav_Stack = () => {
         component={Payment}
         options={{headerShown: true}}
       />
+      <Stack.Screen name='Medicine' component={Medicine}/>
+      <Stack.Screen name='Med_details' component={Med_details}/>
       <Stack.Screen name="Empty_cart" component={Empty_cart} />
       <Stack.Screen name="Myorder" component={Myorder} />
       <Stack.Screen name="Brand_footer" component={Brand_footer} />
@@ -87,8 +96,7 @@ const Nav_Stack = () => {
         component={History}
         options={{headerShown: true}}
       />
-      <Stack.Screen name="Med_details1" component={Med_details1} />
-      <Stack.Screen name="Medicine1" component={Medicine1} />
+      
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="MyCart" component={MyCart} />
       <Stack.Screen
@@ -104,6 +112,12 @@ const Nav_Stack = () => {
       <Stack.Screen name="Lab_details" component={Lab_details} />
       <Stack.Screen name="Labpro_details" component={Labpro_details} />
       <Stack.Screen name="Labtest_book" component={Labtest_book} />
+      <Stack.Screen name="Chatbot" component={Chatbot}/>
+      <Stack.Screen name='Device' component={Device}/>
+      <Stack.Screen name='Device_details' component={Device_details}/>
+      <Stack.Screen name='Devicepro_details' component={Devicepro_details}/>
+
+
     </Stack.Navigator>
   );
 };
