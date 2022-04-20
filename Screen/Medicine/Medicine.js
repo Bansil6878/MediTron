@@ -58,7 +58,7 @@ export function Medicine({name, rupees, images, onPress,Quantity,star,}) {
 }
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'white',
+      backgroundColor: 'white',
     borderRadius: 16,
     shadowOpacity: 0.2,
     shadowRadius: 4,
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     width: 150,
     height: 130,
+    borderRadius:10
   },
   searchbar:{
     marginTop:10,

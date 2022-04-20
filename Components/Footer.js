@@ -21,11 +21,13 @@ export default Footer;
 const styles = StyleSheet.create({
   container: {
     margin: 20,
+    marginBottom:60,
     marginLeft: -5,
     backgroundColor: '#e6e6e6',
     height: 200,
     width: 400,
     marginHorizontal: 15,
     borderRadius: 5,
+    marginTop:-40
   },
 });

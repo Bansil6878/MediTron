@@ -24,9 +24,9 @@ const Login = () => {
       .then(userdetails => {
         const user = userdetails.user;
         console.log(user.email);
-        navigation.replace('Contact');
+        navigation.replace('Home');
       })
-      .catch(e => alert(e));
+      .catch(e => alert('Invaild email or Password'));
   };
 
   useEffect(() => {
@@ -40,6 +40,7 @@ const Login = () => {
 
   return (
     <View>
+  
       <ImageBackground
         source={require('../../assets/images/register/register_Back.png')}
         style={styles.image}

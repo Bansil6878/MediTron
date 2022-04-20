@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 
 const Careplan_show = () => {
@@ -7,13 +8,20 @@ const Careplan_show = () => {
 
   return (
     <View>
-      <View>
+      <View style={{flexDirection: 'row'}}>
+        <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7, marginLeft: 10}}
+          onPress={() => navigation.navigate('Home')}
+        />
         <Text
           style={{
             fontSize: 20,
             fontWeight: 'bold',
             marginLeft: 10,
-            marginTop: 10,
+            marginTop: 5,
           }}>
           My Care Plan
         </Text>
@@ -37,7 +45,7 @@ const Careplan_show = () => {
 
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Careplan_details')}>
+          onPress={() => navigation.navigate('Home')}>
           <Text style={styles.btnStyle}>Select Now</Text>
         </TouchableOpacity>
       </View>
@@ -56,8 +64,10 @@ const styles = StyleSheet.create({
   },
   btnStyle: {
     backgroundColor: '#99d6ff',
-    width: 160,
+    width: 130,
     marginTop: 40,
-    marginHorizontal: 100,
+    textAlign: 'center',
+    marginLeft: 110,
+    borderRadius: 10,
   },
 });
