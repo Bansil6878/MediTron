@@ -7,10 +7,10 @@ import {
   ScrollView,
   Modal,
 } from 'react-native';
-import React,{useState,useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import { Badge }  from 'react-native-paper';  
-import { CartContext } from  '../CartContext';
+import {Badge} from 'react-native-paper';
+import {CartContext} from '../CartContext';
 import Brand from '../Screen/Brand_pages/Brand';
 import Careplan from '../Screen/Careplan/Careplan';
 import Footer from '../Components/Footer';
@@ -21,32 +21,31 @@ import Dropdown from './Dropdown';
 import Trending from '../Screen/Trending/Trending';
 import Slider from '../Screen/Slider/Slider';
 
-
-
 const Home = () => {
   const navigation = useNavigation();
 
-const {getItemsCount} =useContext(CartContext);
-
+  const {getItemsCount} = useContext(CartContext);
 
   return (
-    <ScrollView>
-   
-
-      <View>
-        <View style={{flexDirection:'row'}}>
-          <Profile/>
-          <Dropdown/>
+    <View >
+        <View style={{flexDirection: 'row',marginBottom:10,marginTop:-15}}>
+          <Profile />
+          <Dropdown />
           <AntDesign
-          name="shoppingcart"
-          size={30}
-          color="gray"
-          style={{marginTop:42,marginLeft:105}}
-          onPress={() => navigation.navigate('MyCart')}
-        />
-        <Badge style={{marginLeft:-10,marginBottom:30,marginLeft:-15 }}>{getItemsCount()}</Badge>
+            name="shoppingcart"
+            size={30}
+            color="gray"
+            style={{marginTop: 42, marginLeft: 105}}
+            onPress={() => navigation.navigate('MyCart')}
+          />
+          <Badge style={{marginLeft: -10, marginBottom: 30, marginLeft: -15}}>
+            {getItemsCount()}
+          </Badge>
         </View>
-      <Divider/>
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View>
+      
+        <Divider />
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity onPress={() => navigation.navigate('Med_details')}>
             <Image
@@ -72,7 +71,8 @@ const {getItemsCount} =useContext(CartContext);
             <Text style={{textAlign: 'center', marginTop: -7}}>Lab Test</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Device_details')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Device_details')}>
             <Image
               style={styles.imgStyle}
               source={require('../assets/images/product/product.png')}
@@ -81,15 +81,14 @@ const {getItemsCount} =useContext(CartContext);
           </TouchableOpacity>
         </View>
 
-       
-
- <Slider/>
+        <Slider />
         <Brand />
         <Careplan />
         <Trending />
         <Footer />
       </View>
     </ScrollView>
+    </View>
   );
 };
 

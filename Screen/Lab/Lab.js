@@ -12,6 +12,7 @@ export function Lab({name, rupees, images, onPress,Quantity,star,}) {
       flexDirection: 'row',
       backgroundColor: '#fff',
       marginVertical: 9,
+      justifyContent:'space-between',
       padding: 12,
       marginHorizontal: 15,
       shadowColor: '#000',
@@ -38,6 +39,7 @@ export function Lab({name, rupees, images, onPress,Quantity,star,}) {
                 style={{
                   fontSize: 19,
                   fontWeight: 'bold',
+                  width:120
                 }}>
                 {name}
               </Text>
@@ -88,8 +90,8 @@ const styles = StyleSheet.create({
   },
   imgStyle: {
     resizeMode: 'contain',
-    width: 150,
-    height: 130,
+    width: 100,
+    height: 100,
   },
   searchbar:{
     marginTop:10,

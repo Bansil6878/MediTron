@@ -44,11 +44,11 @@ const Myorder = () => {
       });
   };
 
-  function remove(item) {
+  function remove(item){
     navigation.navigate('Home')
-    removeAll(item.id);
-   
+    removeAll(item.id); 
   }
+
   function myStatus1() {
     const d = new Date();
     setTotal1(d.toLocaleDateString());

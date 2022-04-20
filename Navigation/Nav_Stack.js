@@ -27,7 +27,6 @@ import Empty_cart from '../Screen/Cart/Empty_cart';
 import Myorder from '../Screen/Order/Myorder';
 import Brand_footer from '../Components/Brand_footer';
 import History from '../Screen/Profile/History';
-
 import {Details} from '../Screen/Medicine/Details';
 import {MyCart} from '../Screen/Cart/MyCart';
 import Consult_details from '../Screen/Doctor/Consult_details';
@@ -40,7 +39,6 @@ import {Lab_details} from '../Screen/Lab/Lab_details';
 import {Labpro_details} from '../Screen/Lab/Labpro_details';
 import {Labtest_book} from '../Screen/Lab/Labtest_book';
 import { Chatbot } from '../Screen/Doctor/Chatbot';
-
 import { Medicine } from '../Screen/Medicine/Medicine';
 import { Med_details } from '../Screen/Medicine/Med_details';
 import { Device } from '../Screen/Device/Device';

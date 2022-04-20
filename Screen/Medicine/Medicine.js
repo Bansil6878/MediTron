@@ -23,6 +23,7 @@ export function Medicine({name, rupees, images, onPress,Quantity,star,}) {
       shadowRadius: 3.84,
       elevation: 5,
       padding: 10,
+    
     }}>
       <TouchableOpacity  onPress={onPress}>
         <Image source={images} style={styles.imgStyle} />
@@ -38,6 +39,7 @@ export function Medicine({name, rupees, images, onPress,Quantity,star,}) {
                 style={{
                   fontSize: 19,
                   fontWeight: 'bold',
+                  width:120,
                 }}>
                 {name}
               </Text>

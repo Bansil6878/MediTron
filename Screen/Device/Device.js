@@ -38,6 +38,7 @@ export function Device({name, rupees, images, onPress,Quantity,star,}) {
                 style={{
                   fontSize: 19,
                   fontWeight: 'bold',
+                  width:110
                 }}>
                 {name}
               </Text>

@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     width: 310,
     padding: 9,
     color: 'black',
-    marginTop:20
+    marginTop:20,
   },
   poster: {
     width: 340,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     marginHorizontal: 8,
     marginTop: '60%',
-    height: 300,
+    height: 317,
   },
   imgStyle: {
     height: 700,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     borderColor: '#84cfc5',
     width: 100,
     textAlign: 'center',
-    marginTop:20,
+    marginTop:30,
     marginLeft:110
   },
 });

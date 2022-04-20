@@ -18,10 +18,7 @@ export function CartProvider(props) {
 
    function removeAll(id)
 {
-
-  setItems([]);
-  
-
+  setItems([]); 
 }
 
 
