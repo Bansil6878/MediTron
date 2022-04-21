@@ -45,7 +45,7 @@ import { Device } from '../Screen/Device/Device';
 import { Device_details } from '../Screen/Device/Device_details';
 import { Devicepro_details } from '../Screen/Device/Devicepro_details';
 import Careplan_show from '../Screen/Careplan/Careplan_show';
-import Image from '../Screen/Image';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -115,7 +115,7 @@ const Nav_Stack = () => {
       <Stack.Screen name='Device' component={Device}/>
       <Stack.Screen name='Device_details' component={Device_details}/>
       <Stack.Screen name='Devicepro_details' component={Devicepro_details}/>
-      <Stack.Screen name='Image' component={Image}/>
+    
 
 
     </Stack.Navigator>

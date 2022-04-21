@@ -1,10 +1,11 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity,Image} from 'react-native';
 import React, { useState } from 'react';
 import ImagePicker from 'react-native-image-crop-picker';
 
-const Image = () => {
 
+const Images = () => {
 
+const [image,setImage]=useState('https://placeimg.com/140/140/any');
 
 const takePhoto = ()=>{
     ImagePicker.openCamera({
@@ -13,18 +14,19 @@ const takePhoto = ()=>{
         cropping: true,
       }).then(image => {
         console.log(image);
+        setImage(image.path)
       
       });
 }
 
 const choosePhoto = ()=>{
     ImagePicker.openPicker({
-        width: 300,
-        height: 400,
+        width: 500,
+        height: 600,
         cropping: true
       }).then(image => {
         console.log(image);
-       
+       setImage(image.path)
       });
 }
 
@@ -33,19 +35,22 @@ const choosePhoto = ()=>{
     <View>
 
 
-
+<View style={{marginTop:50}}>
       <TouchableOpacity>
         <Text style={styles.btn} onPress={takePhoto}>Take Photo</Text>
       </TouchableOpacity>
+<Image style={styles.image} source={{uri:image}} />
 
       <TouchableOpacity>
         <Text style={styles.btn} onPress={choosePhoto}>Choose Photo</Text>
       </TouchableOpacity>
+</View>    
+    
     </View>
   );
 };
 
-export default Image;
+export default Images;
 
 const styles = StyleSheet.create({
   btn: {
@@ -64,5 +69,9 @@ const styles = StyleSheet.create({
     height: 400,
     margin: 100,
 
+  },
+  image:{
+    height:100,
+    width:100
   }
 });

@@ -62,8 +62,8 @@ const Drawer_main = () => {
 
     <TouchableOpacity>
       <View style={{flexDirection: 'row', margin: 20}}>
-        <AntDesign name="user" size={24} color='black' onPress={()=>navigation.navigate('Profile')} />
-        <Text style={{marginLeft: 10, marginTop: 3}}  onPress={()=>navigation.navigate('Profile')}>My Account</Text>
+        <AntDesign name="user" size={24} color='black' onPress={()=>navigation.navigate('Contact_details')} />
+        <Text style={{marginLeft: 10, marginTop: 3}}  onPress={()=>navigation.navigate('Contact_details')}>My Account</Text>
       </View>
       </TouchableOpacity>
 

@@ -5,8 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Contact_details from '../Screen/Login/Contact_details'
 import Home from '../Screen/Home';
 import Search from '../Screen/Search';
-// import { Chatbot } from '../Screen/Doctor/Chatbot';
-import Image from '../Screen/Image';
+import { Chatbot } from '../Screen/Doctor/Chatbot';
 
 
 const Tab = createBottomTabNavigator();
@@ -17,7 +16,7 @@ const Nav_Tabbar = () => {
         <Tab.Screen name="Home" component={Home}  options={{tabBarIcon: ({color}) => <AntDesign name="home" size={24} color={color} /> }}/>
         <Tab.Screen name="Profile" component={Contact_details}  options={{tabBarIcon: ({color}) => <AntDesign name="user" size={24} color={color} /> }}/>
         <Tab.Screen name="Serch" component={Search}  options={{tabBarIcon: ({color}) => <AntDesign name="search1" size={24} color={color} /> }}/>
-        <Tab.Screen name="VideoCall" component={Image}  options={{tabBarIcon: ({color}) => <AntDesign name="setting" size={24} color={color} /> }}/>
+        <Tab.Screen name="VideoCall" component={Chatbot}  options={{tabBarIcon: ({color}) => <AntDesign name="setting" size={24} color={color} /> }}/>
         </Tab.Navigator>
   )
 }

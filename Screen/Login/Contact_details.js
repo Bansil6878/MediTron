@@ -4,17 +4,16 @@ import {
   View,
   ImageBackground,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const Contact_details = () => {
-
-const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const [data, setData] = useState(null);
-  
 
   useEffect(() => {
     get();
@@ -39,14 +38,22 @@ const navigation = useNavigation();
           <ImageBackground
             source={require('../../assets/images/profile/background.png')}
             style={styles.imgStyle}>
-            <View style={styles.poster}>
+            <View style={{marginLeft: 10, marginTop: 100}}>
+              <ImageBackground
+                style={styles.image}
+                source={{uri: data.Picture}}
+              />
               <Text style={styles.textStyle}>ID: Medi{data.MediID}</Text>
               <Text style={styles.textStyle}>Name: {data.Name}</Text>
               <Text style={styles.textStyle}>Address: {data.Address}</Text>
               <Text style={styles.textStyle}>Pincode :{data.Pincode}</Text>
               <Text style={styles.textStyle}>Contact: {data.Contact}</Text>
               <TouchableOpacity>
-                <Text style={styles.btnStyle} onPress={()=>navigation.navigate('Contact')}>Edit details</Text>
+                <Text
+                  style={styles.btnStyle}
+                  onPress={() => navigation.navigate('Contact')}>
+                  Edit details
+                </Text>
               </TouchableOpacity>
             </View>
           </ImageBackground>
@@ -68,7 +75,7 @@ const styles = StyleSheet.create({
     width: 310,
     padding: 9,
     color: 'black',
-    marginTop:20,
+    marginTop: 20,
   },
   poster: {
     width: 340,
@@ -89,7 +96,14 @@ const styles = StyleSheet.create({
     borderColor: '#84cfc5',
     width: 100,
     textAlign: 'center',
-    marginTop:30,
-    marginLeft:110
+    marginTop: 30,
+    marginLeft: 110,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    marginTop: 15,
+    marginLeft: 120,
+    borderRadius: 7,
   },
 });
