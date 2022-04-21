@@ -9,7 +9,6 @@ import {
 import React, {useEffect, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 
-
 const History = () => {
   const [data, setdata] = useState(null);
 
@@ -23,6 +22,7 @@ const History = () => {
     var snapshot = await firestore().collection('AddToCart').get();
 
     snapshot.forEach(doc => {
+    // console.log(doc.data().items.length)
       for (var i = 0; i < doc.data().items.length; i++) {
         list.push(doc.data().items[i]);
       }
@@ -41,12 +41,15 @@ const History = () => {
         <View key={index} style={styles.container}>
           <Image source={product.images} style={styles.img} />
 
-          <View style={{flexDirection: 'column',marginLeft:30,marginTop:20}}>
-            <Text style={{fontSize:18,fontWeight:'bold',width:110}}>{product.name}</Text>
+          <View
+            style={{flexDirection: 'column', marginLeft: 30, marginTop: 20}}>
+            <Text style={{fontSize: 18, fontWeight: 'bold', width: 110}}>
+              {product.name}
+            </Text>
             <Text>Quantity: {item.Quantity}</Text>
             <Text>star: {product.star}</Text>
-            <Text style={{fontWeight:'bold'}}>Price: ₹ {product.rupees}</Text>
-            <Text style={{fontWeight:'bold',marginTop:5}}>{item.date}</Text>
+            <Text style={{fontWeight: 'bold'}}>Price: ₹ {product.rupees}</Text>
+            <Text style={{fontWeight: 'bold', marginTop: 5}}>{item.date}</Text>
           </View>
         </View>
       </>
@@ -60,8 +63,6 @@ const History = () => {
         renderItem={showdata}
         keyExtractor={index => index.toString()}
       />
-
-
     </View>
   );
 };
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
   },
 
   img: {
-    resizeMode:'contain' ,
+    resizeMode: 'contain',
     width: 130,
     height: 130,
   },

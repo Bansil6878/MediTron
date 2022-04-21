@@ -201,6 +201,8 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-analytics'
 
+     implementation project(':react-native-google-pay')
+
     
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules

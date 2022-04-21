@@ -22,11 +22,12 @@ const navigation= useNavigation();
   const[loading,setLoading] = useState(false);
 
   const order_cash = () => {
+  
     setLoading(true);
 
 
     setTimeout(() => {
-      navigation.navigate('Myorder');
+      navigation.navigate('Payment_details');
       setLoading(false);
     }, 2000);
   }

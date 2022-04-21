@@ -17,8 +17,9 @@ import Contact_details from '../Screen/Login/Contact_details';
 import Doc from '../Screen/Doctor/Doc';
 import Doc_details from '../Screen/Doctor/Doc_details';
 import Dropdown from '../Screen/Dropdown';
-import Trending from '../Screen/Trending/Trending';
-import Trending_details from '../Screen/Trending/Trending_details';
+import { Trending } from '../Screen/Trending/Trending';
+import { Trending_details} from '../Screen/Trending/Trending_details';
+import { Trendingpro_details } from '../Screen/Trending/Trendingpro_details';
 import Nav_Tabbar from './Nav_Tabbar';
 import Search from '../Screen/Search';
 import Slider from '../Screen/Slider/Slider';
@@ -45,6 +46,7 @@ import { Device } from '../Screen/Device/Device';
 import { Device_details } from '../Screen/Device/Device_details';
 import { Devicepro_details } from '../Screen/Device/Devicepro_details';
 import Careplan_show from '../Screen/Careplan/Careplan_show';
+import Payment_details from '../Screen/Order/Payment_details';
 
 
 
@@ -75,8 +77,6 @@ const Nav_Stack = () => {
         options={{headerShown: true}}
       />
       <Stack.Screen name="Dropdown" component={Dropdown} />
-      <Stack.Screen name="Trending" component={Trending} />
-      <Stack.Screen name="Trending_details" component={Trending_details} />
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="Slider" component={Slider} />
       <Stack.Screen
@@ -115,6 +115,10 @@ const Nav_Stack = () => {
       <Stack.Screen name='Device' component={Device}/>
       <Stack.Screen name='Device_details' component={Device_details}/>
       <Stack.Screen name='Devicepro_details' component={Devicepro_details}/>
+      <Stack.Screen name='Payment_details' component={Payment_details}/>
+      <Stack.Screen name='Trending' component={Trending}/>
+      <Stack.Screen name='Trending_details' component={Trending_details}/>
+      <Stack.Screen name='Trendingpro_details' component={Trendingpro_details}/>
     
 
 

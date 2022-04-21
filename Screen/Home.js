@@ -18,8 +18,8 @@ import Profile from '../Screen/Profile/Profile';
 import Divider from '../Components/Divider';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Dropdown from './Dropdown';
-import Trending from '../Screen/Trending/Trending';
 import Slider from '../Screen/Slider/Slider';
+import { Trending_details } from './Trending/Trending_details';
 
 const Home = () => {
   const navigation = useNavigation();
@@ -84,7 +84,7 @@ const Home = () => {
         <Slider />
         <Brand />
         <Careplan />
-        <Trending />
+        <Trending_details />
         <Footer />
       </View>
     </ScrollView>
