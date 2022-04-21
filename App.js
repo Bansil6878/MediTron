@@ -4,8 +4,9 @@ import { NavigationContainer  } from '@react-navigation/native';
 import 'react-native-gesture-handler';
 import Nav_Stack from './Navigation/Nav_Stack';
 import { CartProvider } from './CartContext';
+import {LogBox} from 'react-native'
 
-
+LogBox.ignoreAllLogs(true)
 
 const App = () => {
   return (
