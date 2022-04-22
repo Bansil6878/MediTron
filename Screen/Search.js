@@ -14,15 +14,16 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 const Serch = () => {
   const [data, setData] = useState(medicine);
 
-  const searchdata = (text) => {
-    if(text == ''){
-        setData(medicine);
-    }else{
-        const newdata = medicine.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
-        setData(newdata);
+  const searchdata = text => {
+    if (text == '') {
+      setData(medicine);
+    } else {
+      const newdata = medicine.filter(item =>
+        item.name.toLowerCase().includes(text.toLowerCase()),
+      );
+      setData(newdata);
     }
-}
-
+  };
 
   const med = ({item, index}) => {
     return (

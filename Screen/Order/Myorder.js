@@ -3,7 +3,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
-import { CartContext } from '../../CartContext';
+import {CartContext} from '../../CartContext';
 
 const Myorder = () => {
   const navigation = useNavigation();
@@ -17,7 +17,7 @@ const Myorder = () => {
   const [total3, setTotal3] = useState();
   const [total4, setTotal4] = useState();
 
-  const {removeAll}=useContext(CartContext);
+  const {removeAll} = useContext(CartContext);
 
   useEffect(() => {
     get();
@@ -44,9 +44,9 @@ const Myorder = () => {
       });
   };
 
-  function remove(item){
-    navigation.navigate('Home')
-    removeAll(item.id); 
+  function remove(item) {
+    navigation.navigate('Home');
+    removeAll(item.id);
   }
 
   function myStatus1() {
@@ -137,7 +137,9 @@ const Myorder = () => {
           </View>
         </View>
         <View style={{marginLeft: 120, marginTop: 30}}>
-          <Text style={styles.btn} onPress={remove} >Home</Text>
+          <Text style={styles.btn} onPress={remove}>
+            Home
+          </Text>
         </View>
       </View>
     </>

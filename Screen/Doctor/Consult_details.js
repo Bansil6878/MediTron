@@ -19,10 +19,7 @@ const Consult_details = () => {
           marginHorizontal: 10,
         }}>
         <Pressable onPress={() => updateSet('flex')} style={{marginLeft: 10}}>
-          <Text
-            >
-            UpComing
-          </Text>
+          <Text>UpComing</Text>
         </Pressable>
 
         <Pressable onPress={() => updateSet1('none')}>
@@ -62,7 +59,6 @@ const Consult_details = () => {
         </Text>
       </View>
 
-
       <View style={{display: set2}}>
         <Image
           source={require('../../assets/images/doctor/consult.png')}
@@ -88,7 +84,7 @@ const styles = StyleSheet.create({
   },
   Pressable_text: {
     fontSize: 16,
-},
+  },
   img: {
     width: 150,
     height: 150,

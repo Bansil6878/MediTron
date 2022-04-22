@@ -44,8 +44,7 @@ const Careplan_show = () => {
       </View>
 
       <View>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Text style={styles.btnStyle}>Select Now</Text>
         </TouchableOpacity>
       </View>

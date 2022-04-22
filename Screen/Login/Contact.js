@@ -12,12 +12,12 @@ import React, {useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
 import ImagePicker from 'react-native-image-crop-picker';
-import bg from "../../assets/images/profile/meditron.png"
+import bg from '../../assets/images/profile/meditron.png';
 
 const Contact = () => {
   const navigation = useNavigation();
 
-  const [image, setImage] = useState(bg);
+  const [image, setImage] = useState('https://placeimg.com/140/140/any');
 
   const takePhoto = () => {
     ImagePicker.openCamera({
@@ -71,8 +71,8 @@ const Contact = () => {
         <ImageBackground
           source={require('../../assets/images/profile/background.png')}
           style={styles.imgStyle}>
-          <View style={{marginLeft: 14, marginTop: 100,}}>
-            <Image style={styles.image} source={{uri:image}} />
+          <View style={{marginLeft: 14, marginTop: 100}}>
+            <Image style={styles.image} source={{uri: image}} />
             <TouchableOpacity>
               <Text style={styles.btnStyle} onPress={takePhoto}>
                 Take Photo

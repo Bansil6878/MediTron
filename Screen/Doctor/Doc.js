@@ -5,24 +5,23 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
-  FlatList 
+  FlatList,
 } from 'react-native';
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { useNavigation } from '@react-navigation/native';
-
+import {useNavigation} from '@react-navigation/native';
+import Doc_slider from '../Slider/Doc_slider';
 
 const Doc = () => {
-
-
-    const navigation=useNavigation();
+  const navigation = useNavigation();
 
   return (
     <ScrollView>
       <View>
-        <View style={{marginTop: 220}}>
+        <Doc_slider />
+        <View style={{marginTop:-15}}>
           <Text
             style={{
               fontSize: 19,
@@ -70,7 +69,7 @@ const Doc = () => {
           </View>
         </View>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Doc_details')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Doc_details')}>
           <Text style={styles.btnStyle}>Consult now</Text>
         </TouchableOpacity>
 
@@ -101,11 +100,13 @@ const Doc = () => {
             <Text style={styles.txtStyle}>Dark Patches on Skin</Text>
             <Text style={styles.txtStyle}>Acne/Pimples</Text>
             <Text style={styles.txtStyle}>Missed Period</Text>
-            <Text style={styles.txtStyle} onPress={()=>navigation.navigate('Doc_details')}>Many More !!</Text>
+            <Text
+              style={styles.txtStyle}
+              onPress={() => navigation.navigate('Doc_details')}>
+              Many More !!
+            </Text>
           </View>
         </View>
-
-       
 
         <View>
           <Text
@@ -130,7 +131,6 @@ const Doc = () => {
                 fontSize: 22,
                 fontWeight: 'bold',
               }}>
-            
               200+
             </Text>
             <Text style={{marginTop: 85, marginLeft: -50}}>
@@ -150,7 +150,6 @@ const Doc = () => {
                 fontSize: 22,
                 fontWeight: 'bold',
               }}>
-              
               220K+
             </Text>
             <Text style={{marginTop: 85, marginLeft: -65}}>
@@ -170,7 +169,6 @@ const Doc = () => {
                 fontSize: 22,
                 fontWeight: 'bold',
               }}>
-       
               27+
             </Text>
             <Text style={{marginTop: 85, marginLeft: -38}}>Specialities</Text>
@@ -202,23 +200,15 @@ const Doc = () => {
           </Text>
 
           <View style={{flexDirection: 'row'}}>
-          
-              <Text style={{marginTop: 20, fontSize: 15}}>
-                "i booked a apppointment on the app for my mother, and the
-                doctor was really helpfull!!! The doctor has clear my doubts,
-                and question. We got peace of mind ven from home, just like
-                family doctor. Thank you Dr. Himanshu"
-              </Text>
-              <Text style={{marginTop:130,marginLeft:-293}}>Rahul</Text>
-              <Text style={{marginTop:145,marginLeft:-35}}>28 yrs</Text>
-
-           
+            <Text style={{marginTop: 20, fontSize: 15}}>
+              "i booked a apppointment on the app for my mother, and the doctor
+              was really helpfull!!! The doctor has clear my doubts, and
+              question. We got peace of mind ven from home, just like family
+              doctor. Thank you Dr. Himanshu"
+            </Text>
+            <Text style={{marginTop: 130, marginLeft: -293}}>Rahul</Text>
+            <Text style={{marginTop: 145, marginLeft: -35}}>28 yrs</Text>
           </View>
-              
- 
-       
-       
-       
         </View>
       </View>
     </ScrollView>

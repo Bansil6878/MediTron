@@ -28,7 +28,9 @@ const Doc_details = () => {
             Bill summary
           </Text>
           <Text style={{marginLeft: 10, marginTop: 10}}>Consultation fee</Text>
-          <Text style={{marginLeft: 300, marginTop: -20,marginBottom:5}}>₹: 350</Text>
+          <Text style={{marginLeft: 300, marginTop: -20, marginBottom: 5}}>
+            ₹: 350
+          </Text>
           <Divider />
           <Text style={{marginLeft: 10, fontSize: 17}}>To be paid</Text>
           <Text style={{marginLeft: 290, marginTop: -20, fontSize: 17}}>
@@ -46,7 +48,7 @@ const Doc_details = () => {
             width: 340,
             marginHorizontal: 10,
             marginTop: 10,
-            marginBottom:5
+            marginBottom: 5,
           }}>
           <View style={{marginLeft: 15}}>
             <Text style={styles.txt}>Total Amount:</Text>

@@ -12,7 +12,13 @@ const Careplan_details3 = () => {
       <ScrollView>
         <View style={{marginTop: -15}}>
           <View style={{marginTop: 15, flexDirection: 'row'}}>
-            <AntDesign name="arrowleft"  size={24} color='gray' style={{marginTop:12}} onPress={()=>navigation.navigate("Home")}/>
+            <AntDesign
+              name="arrowleft"
+              size={24}
+              color="gray"
+              style={{marginTop: 12}}
+              onPress={() => navigation.navigate('Home')}
+            />
             <Text
               style={{
                 fontSize: 20,
@@ -72,7 +78,7 @@ const Careplan_details3 = () => {
             </Text>
 
             <View style={styles.container}>
-              <AntDesign name="tag" size={24} color='gray'/>
+              <AntDesign name="tag" size={24} color="gray" />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>
                   Save Extra 3% on every order
@@ -85,7 +91,7 @@ const Careplan_details3 = () => {
             </View>
 
             <View style={styles.container}>
-              <Entypo name="lab-flask" size={24} color='gray' />
+              <Entypo name="lab-flask" size={24} color="gray" />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>Free Two Time Lab Test</Text>
                 <Text style={styles.txtStyle}>
@@ -96,7 +102,7 @@ const Careplan_details3 = () => {
             </View>
 
             <View style={styles.container}>
-              <Fontisto name="truck" size={24} color='gray' />
+              <Fontisto name="truck" size={24} color="gray" />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>No Shippping Charges</Text>
                 <Text style={styles.txtStyle}>
@@ -108,7 +114,7 @@ const Careplan_details3 = () => {
             </View>
 
             <View style={styles.container}>
-              <Fontisto name="doctor" size={24} color='gray' />
+              <Fontisto name="doctor" size={24} color="gray" />
               <View style={{flexDirection: 'column'}}>
                 <Text style={styles.textStyle}>
                   Free Three Time Consultation

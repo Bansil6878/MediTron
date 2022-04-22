@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
   ImageBackground,
   Image,
-  ScrollView
+  ScrollView,
 } from 'react-native';
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 
@@ -30,51 +30,49 @@ const Login = () => {
   };
 
   useEffect(() => {
-    const unsubscribe = auth().onAuthStateChanged ( user => {
+    const unsubscribe = auth().onAuthStateChanged(user => {
       if (user) {
-        navigation.replace('Contact')
+        navigation.replace('Contact');
       }
-    })
+    });
     return unsubscribe;
-  },[]);
+  }, []);
 
   return (
     <View>
-  
       <ImageBackground
         source={require('../../assets/images/register/register_Back.png')}
         style={styles.image}
-        />
-
-        <ScrollView>
-      <Image
-        source={require('../../assets/images/register/register.png')}
-        style={styles.imgStyle}
       />
 
-      <View style={styles.poster}>
-        <TextInput
-          style={styles.txtInputStyles}
-          placeholder="Enter Your Email"
-          placeholderTextColor="White"
-          value={email}
-          onChangeText={text => setEmail(text)}
+      <ScrollView>
+        <Image
+          source={require('../../assets/images/register/register.png')}
+          style={styles.imgStyle}
         />
 
+        <View style={styles.poster}>
+          <TextInput
+            style={styles.txtInputStyles}
+            placeholder="Enter Your Email"
+            placeholderTextColor="White"
+            value={email}
+            onChangeText={text => setEmail(text)}
+          />
 
-        <TextInput
-          style={styles.txtInputStyles}
-          placeholder="Enter Your Password"
-          value={password}
-          onChangeText={text => setPassword(text)}
-          secureTextEntry
-        />
+          <TextInput
+            style={styles.txtInputStyles}
+            placeholder="Enter Your Password"
+            value={password}
+            onChangeText={text => setPassword(text)}
+            secureTextEntry
+          />
 
-        <TouchableOpacity onPress={add} >
-          <Text style={styles.btnStyle}>Submit</Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+          <TouchableOpacity onPress={add}>
+            <Text style={styles.btnStyle}>Submit</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   );
 };

@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, ScrollView,ActivityIndicator,TextInput} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  ActivityIndicator,
+  TextInput,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import Divider from '../../Components/Divider';
@@ -8,38 +15,27 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 
-
-
 const Payment = ({route}) => {
-
-const navigation= useNavigation();
+  const navigation = useNavigation();
 
   const [value, setValue] = useState(null);
- 
 
-  const { total } = route.params;
+  const {total} = route.params;
 
-  const[loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const order_cash = () => {
-  
     setLoading(true);
-
 
     setTimeout(() => {
       navigation.navigate('Payment_details');
       setLoading(false);
     }, 2000);
-  }
-
-
- 
+  };
 
   useEffect(() => {
     get();
   }, []);
-
-  
 
   const get = async () => {
     await firestore()
@@ -52,7 +48,6 @@ const navigation= useNavigation();
         }
       });
   };
-
 
   return (
     <>
@@ -104,9 +99,11 @@ const navigation= useNavigation();
                 color="black"
                 style={{marginLeft: 10, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}
-              onPress={()=>order_cash()}>
-                Upi</Text>
+              <Text
+                style={{margin: 15, marginLeft: 10}}
+                onPress={() => order_cash()}>
+                Upi
+              </Text>
             </View>
             <Divider />
 
@@ -117,8 +114,9 @@ const navigation= useNavigation();
                 color="black"
                 style={{marginLeft: 10, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}
-              onPress={()=>order_cash()}>
+              <Text
+                style={{margin: 15, marginLeft: 10}}
+                onPress={() => order_cash()}>
                 Mastercard,Visa,Rupay,Maestro,Amex
               </Text>
             </View>
@@ -131,9 +129,11 @@ const navigation= useNavigation();
                 color="blue"
                 style={{marginLeft: 10, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}
-                onPress={()=>order_cash()}
-              >Net Banking</Text>
+              <Text
+                style={{margin: 15, marginLeft: 10}}
+                onPress={() => order_cash()}>
+                Net Banking
+              </Text>
             </View>
             <Divider />
 
@@ -144,18 +144,15 @@ const navigation= useNavigation();
                 color="green"
                 style={{marginLeft: 6, marginTop: 10}}
               />
-              <Text style={{margin: 15, marginLeft: 10}}
-                onPress={()=>order_cash()}
-              > Cash On Delivery</Text>
+              <Text
+                style={{margin: 15, marginLeft: 10}}
+                onPress={() => order_cash()}>
+                {' '}
+                Cash On Delivery
+              </Text>
             </View>
             <Divider />
           </View>
-
-
-      
-  
-
-
 
           <View style={{backgroundColor: 'white', marginTop: 20}}>
             <Text
@@ -169,13 +166,13 @@ const navigation= useNavigation();
             </Text>
             <Divider />
 
-
-
             <View style={{flexDirection: 'row'}}>
               <Text style={{fontSize: 16, marginLeft: 10, marginTop: 10}}>
                 Price
               </Text>
-             <Text style={{marginTop:12,marginLeft:260,fontSize:16}}>{total}</Text> 
+              <Text style={{marginTop: 12, marginLeft: 260, fontSize: 16}}>
+                {total}
+              </Text>
             </View>
 
             <View style={{flexDirection: 'row', marginBottom: 10}}>
@@ -185,17 +182,11 @@ const navigation= useNavigation();
               <Text style={{marginLeft: 176, fontSize: 16, marginTop: 10}}>
                 ₹: 0
               </Text>
-
-                        </View>
-
-       
+            </View>
 
             <Divider />
 
-
-
-
-<View style={{flexDirection: 'row'}}>
+            <View style={{flexDirection: 'row'}}>
               <Text style={{fontSize: 16, marginLeft: 10, marginTop: 10}}>
                 Amount Payable
               </Text>
@@ -203,9 +194,6 @@ const navigation= useNavigation();
                 ₹: {total}
               </Text>
             </View>
-   
-         
-         
           </View>
 
           <View
@@ -226,10 +214,21 @@ const navigation= useNavigation();
             </Text>
           </View>
 
-          <View style={{position:'absolute',alignItems:'center',justifyContent:'center',width:'90%',marginTop:90}}>
-          <ActivityIndicator size="large" color='blue'  animating={loading} style={{marginTop:210}}/>
-         </View>
-
+          <View
+            style={{
+              position: 'absolute',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '90%',
+              marginTop: 90,
+            }}>
+            <ActivityIndicator
+              size="large"
+              color="blue"
+              animating={loading}
+              style={{marginTop: 210}}
+            />
+          </View>
         </View>
       </ScrollView>
     </>

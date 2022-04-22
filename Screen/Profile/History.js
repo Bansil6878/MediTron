@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  FlatList,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import {View, Text, FlatList, Image, StyleSheet} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 
@@ -22,7 +15,7 @@ const History = () => {
     var snapshot = await firestore().collection('AddToCart').get();
 
     snapshot.forEach(doc => {
-    // console.log(doc.data().items.length)
+      // console.log(doc.data().items.length)
       for (var i = 0; i < doc.data().items.length; i++) {
         list.push(doc.data().items[i]);
       }

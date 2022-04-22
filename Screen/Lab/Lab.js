@@ -1,59 +1,54 @@
 import React from 'react';
 import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-export function Lab({name, rupees, images, onPress,Quantity,star,}) {
+export function Lab({name, rupees, images, onPress, Quantity, star}) {
   return (
-
     <View>
-   
-
-
-    <View   style={{
-      flexDirection: 'row',
-      backgroundColor: '#fff',
-      marginVertical: 9,
-      justifyContent:'space-between',
-      padding: 12,
-      marginHorizontal: 15,
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      elevation: 5,
-      padding: 10,
-    }}>
-      <TouchableOpacity  onPress={onPress}>
-        <Image source={images} style={styles.imgStyle} />
-      </TouchableOpacity>
-
       <View
-              style={{
-                justifyContent: 'flex-end',
-                alignItems: 'flex-start',
-                marginLeft: 35,
-              }}>
-              <Text
-                style={{
-                  fontSize: 19,
-                  fontWeight: 'bold',
-                  width:120
-                }}>
-                {name}
-              </Text>
-              <Text style={styles.textStyle}>Quantity: {Quantity}</Text>
-              <Text style={styles.textStyle}>Rating: {star}</Text>
-              <Text style={styles.textStyle}>₹: {rupees}</Text>
-              <TouchableOpacity>
-                <Text style={styles.btnStyle}>See more!</Text>
-              </TouchableOpacity>
-            </View>
-       
+        style={{
+          flexDirection: 'row',
+          backgroundColor: '#fff',
+          marginVertical: 9,
+          justifyContent: 'space-between',
+          padding: 12,
+          marginHorizontal: 15,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+          elevation: 5,
+          padding: 10,
+        }}>
+        <TouchableOpacity onPress={onPress}>
+          <Image source={images} style={styles.imgStyle} />
+        </TouchableOpacity>
+
+        <View
+          style={{
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+            marginLeft: 35,
+          }}>
+          <Text
+            style={{
+              fontSize: 19,
+              fontWeight: 'bold',
+              width: 120,
+            }}>
+            {name}
+          </Text>
+          <Text style={styles.textStyle}>Quantity: {Quantity}</Text>
+          <Text style={styles.textStyle}>Rating: {star}</Text>
+          <Text style={styles.textStyle}>₹: {rupees}</Text>
+          <TouchableOpacity>
+            <Text style={styles.btnStyle}>See more!</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
-    </View>
-  
   );
 }
 const styles = StyleSheet.create({
@@ -93,10 +88,10 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
-  searchbar:{
-    marginTop:10,
-    width:330,
-    marginHorizontal:15
+  searchbar: {
+    marginTop: 10,
+    width: 330,
+    marginHorizontal: 15,
   },
   btnStyle: {
     padding: 7,

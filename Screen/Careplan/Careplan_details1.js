@@ -5,9 +5,9 @@ import {
   Image,
   ScrollView,
   FlatList,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -16,53 +16,45 @@ import {careplan_data1} from '../../assets/data/data';
 import {useNavigation} from '@react-navigation/native';
 
 const Careplan_details1 = () => {
-
-const[element,seElement]=useState([]);
+  const [element, seElement] = useState([]);
 
   const Name = element.name;
-  const Images=element.images;
-  const Benefits=element.benifit;
-  const Price=element.price;
-  const Description=element.des;
+  const Images = element.images;
+  const Benefits = element.benifit;
+  const Price = element.price;
+  const Description = element.des;
 
+  const navigation = useNavigation();
 
-  const navigation=useNavigation();
-
- 
-
-  
-  const add = async() => {
-
+  const add = async () => {
     // console.log(Description);
     await firestore()
-    .collection('AddToCart')
-    .add({
-      CareplanName:Name,
-      Description:Description,
-      Price:Price,
-      // Image:Images,
-      Benefits:Benefits,
-    })
-     .then(
-      alert('item added'),
-      console.log('item added'),
-      navigation.navigate('Payment'),
-    )
-    .catch((e)=>alert(e))
-  }
-
-
+      .collection('AddToCart')
+      .add({
+        CareplanName: Name,
+        Description: Description,
+        Price: Price,
+        // Image:Images,
+        Benefits: Benefits,
+      })
+      .then(
+        alert('item added'),
+        console.log('item added'),
+        navigation.navigate('Payment'),
+      )
+      .catch(e => alert(e));
+  };
 
   const care = ({item}) => {
-
     seElement(item);
     return (
       <>
-        <View >
-    <Image source={item.image} style={styles.imgStyle} />
-    
-    <View style={{flexDirection:'row',marginTop:20}}>
-       <Text style={{
+        <View>
+          <Image source={item.image} style={styles.imgStyle} />
+
+          <View style={{flexDirection: 'row', marginTop: 20}}>
+            <Text
+              style={{
                 backgroundColor: '#994d00',
                 color: 'white',
                 marginTop: 15,
@@ -71,12 +63,21 @@ const[element,seElement]=useState([]);
                 marginLeft: 10,
                 borderBottomRightRadius: 15,
                 textAlign: 'left',
-              }}>{item.name}</Text>
-       <Text style={{fontSize:18,fontWeight:'bold',marginTop:10,marginLeft:40}}>{item.price}</Text>
-    </View>    
+              }}>
+              {item.name}
+            </Text>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                marginTop: 10,
+                marginLeft: 40,
+              }}>
+              {item.price}
+            </Text>
+          </View>
 
-    
-    <Text
+          <Text
             style={{
               marginTop: 30,
               fontWeight: 'bold',
@@ -88,7 +89,6 @@ const[element,seElement]=useState([]);
           <Text style={{marginTop: 20, marginLeft: 10}}>
             Save for thing that makes you happy
           </Text>
-
 
           <View>
             <Text
@@ -153,8 +153,6 @@ const[element,seElement]=useState([]);
             </Text>
           </View>
         </View>
-        
-      
       </>
     );
   };

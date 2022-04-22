@@ -1,42 +1,38 @@
 import React, {useEffect, useState} from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
-import { Medicine } from '../Medicine/Medicine';
-import MEDICINES, { getMedicines } from '../../assets/medicine/medicine_data';
+import {View, Text, FlatList, StyleSheet} from 'react-native';
+import {Medicine} from '../Medicine/Medicine';
+import MEDICINES, {getMedicines} from '../../assets/medicine/medicine_data';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { Searchbar } from 'react-native-paper';
+import {Searchbar} from 'react-native-paper';
 
-
-
-export function Med_details ({navigation}) {
-
-  
+export function Med_details({navigation}) {
   function renderProduct({item: medicine}) {
- 
-  return (
-    <Medicine {...medicine} 
-    
-    onPress={() => {
-      navigation.navigate('Details', {
-        productId: medicine.id,
-      });
-    }}
-    />
+    return (
+      <Medicine
+        {...medicine}
+        onPress={() => {
+          navigation.navigate('Details', {
+            productId: medicine.id,
+          });
+        }}
+      />
     );
   }
-  
+
   const [products, setProducts] = useState([]);
 
-  const [data,setData] = useState(MEDICINES);
+  const [data, setData] = useState(MEDICINES);
 
-    const searchdata = (text) => {
-        if(text == ''){
-            setData(MEDICINES);
-        }else{
-            const newdata = MEDICINES.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
-            setData(newdata);
-        }
+  const searchdata = text => {
+    if (text == '') {
+      setData(MEDICINES);
+    } else {
+      const newdata = MEDICINES.filter(item =>
+        item.name.toLowerCase().includes(text.toLowerCase()),
+      );
+      setData(newdata);
     }
-  
+  };
 
   useEffect(() => {
     setProducts(getMedicines());
@@ -44,46 +40,43 @@ export function Med_details ({navigation}) {
 
   return (
     <>
-    <View style={{marginTop: 4, flexDirection: 'row'}}>
-    <AntDesign
-      name="arrowleft"
-      size={24}
-      color="gray"
-      style={{marginTop: 7,marginLeft:10}}
-      onPress={() => navigation.navigate('Home')}
-    /> 
+      <View style={{marginTop: 4, flexDirection: 'row'}}>
+        <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7, marginLeft: 10}}
+          onPress={() => navigation.navigate('Home')}
+        />
 
-     <Text
-      style={{
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginLeft: 5,
-        marginTop: 5,
-        marginLeft: 10,
-      }}>
-      Medicine
-    </Text>
-    </View>
-    
-    <Searchbar
-                placeholder="Search"
-                onChangeText={(txt)=> {
-                    searchdata(txt)
-                }}
-                placeholderTextColor='black'
-                style={styles.searchbar}
-                /> 
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginLeft: 5,
+            marginTop: 5,
+            marginLeft: 10,
+          }}>
+          Medicine
+        </Text>
+      </View>
 
+      <Searchbar
+        placeholder="Search"
+        onChangeText={txt => {
+          searchdata(txt);
+        }}
+        placeholderTextColor="black"
+        style={styles.searchbar}
+      />
 
-    <FlatList
-      style={styles.Med_details}
-      contentContainerStyle={styles.productsListContainer}
-      keyExtractor={(item) => item.id.toString()}
-    
-      data={data}
-
-      renderItem={renderProduct}
-    />
+      <FlatList
+        style={styles.Med_details}
+        contentContainerStyle={styles.productsListContainer}
+        keyExtractor={item => item.id.toString()}
+        data={data}
+        renderItem={renderProduct}
+      />
     </>
   );
 }
@@ -97,10 +90,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   searchbar: {
-  width:315,
-  marginLeft:20,
-  marginTop:5
-
-
+    width: 315,
+    marginLeft: 20,
+    marginTop: 5,
   },
 });

@@ -10,26 +10,19 @@ import React, {useState} from 'react';
 
 const images = [
   {
-    img: require('../../assets/images/offer/1.png'),
+    img: require('../../assets/images/offer/5.png'),
   },
 
   {
-    img: require('../../assets/images/offer/2.png'),
+    img: require('../../assets/images/offer/7.png'),
   },
 
   {
-    img: require('../../assets/images/offer/3.png'),
-  },
-
-  {
-    img: require('../../assets/images/offer/4.png'),
+    img: require('../../assets/images/offer/6.png'),
   },
 ];
 
-const WIDTH = Dimensions.get('window').width;
-const HEIGHT = Dimensions.get('window').height;
-
-const Slider = () => {
+const Doc_slider = () => {
   const [img, setImg] = useState(0);
   onChange = nativeEvent => {
     if (nativeEvent) {
@@ -81,12 +74,13 @@ const Slider = () => {
     </View>
   );
 };
-export default Slider;
+export default Doc_slider;
 
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 8,
-    marginTop: -10,
+    marginTop:-20,
+    
   },
   img: {
     width: 340,
