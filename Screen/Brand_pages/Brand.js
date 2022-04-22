@@ -7,7 +7,7 @@ const Brand = () => {
 
   return (
     <View
-      style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 450}}>
+      style={{backgroundColor: '#ffffff', marginHorizontal: 10, height: 450,marginTop:-15}}>
       <Text style={styles.txtStyle}>Featured brand</Text>
       <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
         <TouchableOpacity

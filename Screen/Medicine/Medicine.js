@@ -9,6 +9,7 @@ export function Medicine({name, rupees, images, onPress, Quantity, star}) {
           flexDirection: 'row',
           backgroundColor: '#fff',
           marginVertical: 9,
+          borderRadius:10,
           padding: 12,
           marginHorizontal: 15,
           shadowColor: '#000',

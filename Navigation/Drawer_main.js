@@ -148,8 +148,8 @@ export default Drawer_main;
 const styles = StyleSheet.create({
   imgStyle: {
     marginLeft: 7,
-    height: 80,
-    width: 80,
+    height: 60,
+    width: 60,
     marginTop: 35,
     borderRadius: 17,
     marginBottom: 10,

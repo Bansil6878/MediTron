@@ -14,8 +14,12 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
+import {GooglePay} from 'react-native-google-pay';
+
+const allowedCardNetworks = ['VISA', 'MASTERCARD'];
 
 const Payment = ({route}) => {
+
   const navigation = useNavigation();
 
   const [value, setValue] = useState(null);
@@ -25,10 +29,60 @@ const Payment = ({route}) => {
   const [loading, setLoading] = useState(false);
 
   const order_cash = () => {
-    setLoading(true);
+    setLoading(true)
+    
+
+ 
+  const allowedCardAuthMethods = ['PAN_ONLY', 'CRYPTOGRAM_3DS'];
+
+  const requestData = {
+    cardPaymentMethod: {
+      tokenizationSpecification: {
+        type: 'PAYMENT_GATEWAY',
+        // stripe (see Example):
+        gateway: 'stripe',
+        gatewayMerchantId: '',
+        stripe: {
+          publishableKey: 'pk_test_TYooMQauvdEDq54NiTphI7jx',
+          version: '2018-11-08',
+        },
+        // other:
+        gateway: 'example',
+        gatewayMerchantId: 'exampleGatewayMerchantId',
+      },
+      allowedCardNetworks,
+      allowedCardAuthMethods,
+    },
+    transaction: {
+      totalPrice: '10',
+      totalPriceStatus: 'FINAL',
+      currencyCode: 'USD',
+    },
+    merchantName: 'Example Merchant',
+  };
+
+  // Set the environment before the payment request
+  GooglePay.setEnvironment(GooglePay.ENVIRONMENT_TEST);
+
+  // Check if Google Pay is available
+  GooglePay.isReadyToPay(allowedCardNetworks, allowedCardAuthMethods).then(
+    ready => {
+      if (ready) {
+        // Request payment token
+        GooglePay.requestPayment(requestData)
+          .then(token => {
+            // Send a token to your payment gateway
+            console.log(token);
+          })
+          .catch(error => console.log(error.code, error.message));
+      }
+    },
+  );
+
+
+
 
     setTimeout(() => {
-      navigation.navigate('Payment_details');
       setLoading(false);
     }, 2000);
   };
@@ -147,8 +201,7 @@ const Payment = ({route}) => {
               <Text
                 style={{margin: 15, marginLeft: 10}}
                 onPress={() => order_cash()}>
-                {' '}
-                Cash On Delivery
+                  Cash On Delivery
               </Text>
             </View>
             <Divider />

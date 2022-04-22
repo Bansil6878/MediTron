@@ -20,6 +20,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Dropdown from './Dropdown';
 import Slider from '../Screen/Slider/Slider';
 import {Trending_details} from './Trending/Trending_details';
+import Careplan_slider from './Slider/Careplan_slider';
 
 const Home = () => {
   const navigation = useNavigation();

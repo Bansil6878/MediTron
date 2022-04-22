@@ -20,6 +20,7 @@ export function Device({name, rupees, images, onPress, Quantity, star}) {
           shadowRadius: 3.84,
           elevation: 5,
           padding: 10,
+          borderRadius:10
         }}>
         <TouchableOpacity onPress={onPress}>
           <Image source={images} style={styles.imgStyle} />

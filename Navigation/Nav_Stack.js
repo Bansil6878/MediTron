@@ -46,8 +46,8 @@ import {Device} from '../Screen/Device/Device';
 import {Device_details} from '../Screen/Device/Device_details';
 import {Devicepro_details} from '../Screen/Device/Devicepro_details';
 import Careplan_show from '../Screen/Careplan/Careplan_show';
-import Payment_details from '../Screen/Order/Payment_details';
 import Doc_slider from '../Screen/Slider/Doc_slider.js';
+import Careplan_slider from '../Screen/Slider/Careplan_slider';
 
 const Stack = createNativeStackNavigator();
 
@@ -114,7 +114,6 @@ const Nav_Stack = () => {
       <Stack.Screen name="Device" component={Device} />
       <Stack.Screen name="Device_details" component={Device_details} />
       <Stack.Screen name="Devicepro_details" component={Devicepro_details} />
-      <Stack.Screen name="Payment_details" component={Payment_details} />
       <Stack.Screen name="Trending" component={Trending} />
       <Stack.Screen name="Trending_details" component={Trending_details} />
       <Stack.Screen
@@ -122,6 +121,7 @@ const Nav_Stack = () => {
         component={Trendingpro_details}
       />
       <Stack.Screen name="Doc_slider" component={Doc_slider} />
+      <Stack.Screen name='Careplan_slider' component={Careplan_slider}/>
     </Stack.Navigator>
   );
 };

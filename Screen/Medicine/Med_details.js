@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   searchbar: {
-    width: 315,
+    width: 319,
     marginLeft: 20,
     marginTop: 5,
   },

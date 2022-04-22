@@ -59,7 +59,7 @@ export function Device_details({navigation}) {
             marginTop: 5,
             marginLeft: 10,
           }}>
-          Medicine
+          Health care Device
         </Text>
       </View>
 
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   searchbar: {
-    width: 315,
+    width: 320,
     marginLeft: 20,
     marginTop: 5,
   },

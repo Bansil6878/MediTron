@@ -86,7 +86,7 @@ export default Slider;
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 8,
-    marginTop: -10,
+    marginTop: -20,
   },
   img: {
     width: 340,

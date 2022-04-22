@@ -19,6 +19,7 @@ export function Trending({name, rupees, images, onPress, Quantity, star}) {
           shadowOpacity: 0.25,
           shadowRadius: 10,
           elevation: 5,
+          borderRadius:10,
 
           marginBottom: 30,
         }}>
@@ -36,7 +37,7 @@ export function Trending({name, rupees, images, onPress, Quantity, star}) {
             style={{
               fontSize: 19,
               fontWeight: 'bold',
-              width: 120,
+              width: 115,
             }}>
             {name}
           </Text>
