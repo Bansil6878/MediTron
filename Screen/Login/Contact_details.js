@@ -16,8 +16,8 @@ const Contact_details = () => {
 
   const [data, setData] = useState(null);
 
-  const {user} = useContext(CartContext); 
-console.log(user.uid);
+//   const {user} = useContext(CartContext); 
+// console.log(user.uid);
 
   useEffect(() => {
     get();
@@ -26,7 +26,7 @@ console.log(user.uid);
   const get = async () => {
     await firestore()
       .collection('Users')
-      .doc(user.uid)
+      .doc("contet details")
       .get()
       .then(snapShot => {
         if (snapShot.exists) {

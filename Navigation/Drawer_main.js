@@ -13,6 +13,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Divider from '../Components/Divider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const Drawer_main = () => {
   const navigation = useNavigation();
@@ -32,14 +33,14 @@ const Drawer_main = () => {
 
       <Divider />
 
-      <View style={{flexDirection: 'row', margin: 20}}>
-        <AntDesign name="gift" size={24} color="black" />
+      {/* <View style={{flexDirection: 'row', margin: 20}}>
+        <AntDesign name="shoppingcart" size={24} color="black" />
         <Text
           style={{marginLeft: 10, marginTop: 5}}
-          onPress={() => navigation.navigate('Myorder')}>
-          MY Orders
+          onPress={() => navigation.navigate('MyCart')}>
+          MY Cart
         </Text>
-      </View>
+      </View> */}
 
       <View style={{flexDirection: 'row', margin: 20}}>
         <AntDesign
@@ -66,6 +67,21 @@ const Drawer_main = () => {
           style={{marginLeft: 10, marginTop: 3}}
           onPress={() => navigation.navigate('Careplan_show')}>
           My Care Plan
+        </Text>
+      </View>
+
+      
+      <View style={{flexDirection: 'row', margin: 20}}>
+        <Entypo
+          name="lab-flask"
+          size={24}
+          color="black"
+          onPress={() => navigation.navigate('Lab_details')}
+        />
+        <Text
+          style={{marginLeft: 10, marginTop: 3}}
+          onPress={() => navigation.navigate('Lab_details')}>
+          Lab test
         </Text>
       </View>
 

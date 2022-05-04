@@ -91,7 +91,7 @@ const Doc = () => {
           </View>
         </View>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Doc_details')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Chatbot')}>
           <Text style={styles.btnStyle}>Consult now</Text>
         </TouchableOpacity>
 
@@ -124,7 +124,7 @@ const Doc = () => {
             <Text style={styles.txtStyle}>Missed Period</Text>
             <Text
               style={styles.txtStyle}
-              onPress={() => navigation.navigate('Doc_details')}>
+              >
               Many More !!
             </Text>
           </View>

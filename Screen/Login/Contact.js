@@ -19,7 +19,7 @@ import {CartContext} from '../../CartContext';
 
 const Contact = () => {
   const navigation = useNavigation();
-  const {user} = useContext(CartContext); 
+  // const {user} = useContext(CartContext); 
   
   const [image, setImage] = useState('https://placeimg.com/140/140/any');
   
@@ -53,7 +53,7 @@ const Contact = () => {
   const add = async () => {
     await firestore()
       .collection('Users')
-      .doc(user.uid)
+      .doc("contet details")
       .set({
         MediID: number,
         Name: name,

@@ -57,7 +57,7 @@ export function Labpro_details({route}) {
           </Text>
 
           <View style={{flexDirection: 'row'}}>
-            <Text style={{marginTop: 30, marginLeft: 120}}>
+            <Text style={{marginTop: 30, marginLeft: 20}}>
               ₹: {product.rupees}
             </Text>
           </View>
