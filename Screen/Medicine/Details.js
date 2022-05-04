@@ -40,7 +40,7 @@ export function Details({route}) {
           size={24}
           color="gray"
           style={{marginTop: 7}}
-          onPress={() => navigation.navigate('Medicine')}
+          onPress={() => navigation.navigate('Med_details')}
         />
         <View style={{justifyContent: 'center', marginLeft: 6}}>
           <Image style={styles.imgStyle} source={product.images} />
@@ -61,7 +61,7 @@ export function Details({route}) {
             </Text>
 
             <Text style={{marginTop: 30, marginLeft: 100}}>
-              {' '}
+              
               ₹: {product.rupees}
             </Text>
           </View>

@@ -90,7 +90,7 @@ const Drawer_main = () => {
           <Ionicons name="chatbubbles-outline" size={24} color="black" />
           <Text
             style={{marginLeft: 10, marginTop: 3}}
-            onPress={() => navigation.navigate('Consult_details')}>
+            onPress={() => navigation.navigate('Doc')}>
             My Consult
           </Text>
         </View>

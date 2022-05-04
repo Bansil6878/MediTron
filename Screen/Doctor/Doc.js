@@ -12,6 +12,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useNavigation} from '@react-navigation/native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 import Doc_slider from '../Slider/Doc_slider';
 
 const Doc = () => {
@@ -19,6 +21,26 @@ const Doc = () => {
 
   return (
     <ScrollView>
+      <View style={{flexDirection:'row'}}>
+      <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7, marginLeft: 10}}
+          onPress={() => navigation.navigate('Home')}
+        />
+        
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginLeft: 5,
+            marginTop: 5,
+            marginLeft: 10,
+          }}>
+          Doctor Consult
+        </Text>
+        </View>
       <View>
         <Doc_slider />
         <View style={{marginTop:-15}}>
@@ -194,22 +216,7 @@ const Doc = () => {
           </View>
         </View>
 
-        <View style={{width: 300, marginLeft: 10, marginTop: 20}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
-            See what our users are saying about their experience
-          </Text>
-
-          <View style={{flexDirection: 'row'}}>
-            <Text style={{marginTop: 20, fontSize: 15}}>
-              "i booked a apppointment on the app for my mother, and the doctor
-              was really helpfull!!! The doctor has clear my doubts, and
-              question. We got peace of mind ven from home, just like family
-              doctor. Thank you Dr. Himanshu"
-            </Text>
-            <Text style={{marginTop: 130, marginLeft: -293}}>Rahul</Text>
-            <Text style={{marginTop: 145, marginLeft: -35}}>28 yrs</Text>
-          </View>
-        </View>
+        
       </View>
     </ScrollView>
   );

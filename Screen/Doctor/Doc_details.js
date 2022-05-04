@@ -2,10 +2,35 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import Divider from '../../Components/Divider';
 import {doctor} from '../assets/data/data';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/native';
+
 
 const Doc_details = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView>
+        <View style={{flexDirection:'row'}}>
+      <AntDesign
+          name="arrowleft"
+          size={24}
+          color="gray"
+          style={{marginTop: 7, marginLeft: 10}}
+          onPress={() => navigation.navigate('Doc')}
+        />
+        
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginLeft: 5,
+            marginTop: 5,
+            marginLeft: 10,
+          }}>
+          Doctor Consult
+        </Text>
+        </View>
       <View>
         <View
           style={{
@@ -56,7 +81,7 @@ const Doc_details = () => {
           </View>
 
           <View style={{marginTop: -30, marginLeft: 220}}>
-            <Text style={styles.txt}>Proceed to pay</Text>
+            <Text style={styles.txt} onPress={()=>navigation.navigate('Chatbot')}>Proceed to pay</Text>
           </View>
         </View>
       </View>

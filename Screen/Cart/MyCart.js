@@ -84,7 +84,7 @@ export function MyCart({navigation}) {
     return (
       <>
         <View>
-          <View
+          {/* <View
             style={{
               backgroundColor: 'white',
               marginTop: 20,
@@ -110,7 +110,7 @@ export function MyCart({navigation}) {
                 height: 30,
               }}
             />
-          </View>
+          </View> */}
           <View
             style={{
               borderRadius: 20,

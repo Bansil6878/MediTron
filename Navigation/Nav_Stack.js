@@ -69,11 +69,11 @@ const Nav_Stack = () => {
       <Stack.Screen name="Contact" component={Contact} />
       <Stack.Screen name="Divider" component={Divider} />
       <Stack.Screen name="Contact_details" component={Contact_details} />
-      <Stack.Screen name="Doc" component={Doc} options={{headerShown: true}} />
+      <Stack.Screen name="Doc" component={Doc}  />
       <Stack.Screen
         name="Doc_details"
         component={Doc_details}
-        options={{headerShown: true}}
+        
       />
       <Stack.Screen name="Dropdown" component={Dropdown} />
       <Stack.Screen name="Search" component={Search} />
