@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ImageBackground,
   Image,
+  ScrollView
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
@@ -31,7 +32,7 @@ const Register = () => {
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged(user => {
       if (user) {
-        navigation.replace('Home');
+        navigation.replace('Contact');
       }
     });
     return unsubscribe;
@@ -39,22 +40,25 @@ const Register = () => {
 
   return (
     <View>
+
       <ImageBackground
         source={require('../../assets/images/register/register_Back.png')}
         style={styles.image}
-      />
+        />
 
+        <ScrollView>
       <Image
         source={require('../../assets/images/register/register.png')}
         style={styles.imgStyle}
-      />
+        />
 
       <View style={styles.poster}>
         <TextInput
           style={styles.txtInputStyles}
           placeholder="Enter Your Email"
           value={email}
-          onChangeText={text => setEmail(text)}
+          onChangeText={text => setEmail(text) }
+          
         />
 
         <TextInput
@@ -93,6 +97,7 @@ const Register = () => {
           </Text>
         </TouchableOpacity>
       </View>
+              </ScrollView>
     </View>
   );
 };

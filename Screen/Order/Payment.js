@@ -6,7 +6,7 @@ import {
   ActivityIndicator,
   TextInput,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect,useContext} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import Divider from '../../Components/Divider';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -15,10 +15,14 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 import {GooglePay} from 'react-native-google-pay';
+import {CartContext} from '../../CartContext';
+
 
 const allowedCardNetworks = ['VISA', 'MASTERCARD'];
 
 const Payment = ({route}) => {
+  const {user} = useContext(CartContext); 
+
 
   const navigation = useNavigation();
 
@@ -94,7 +98,7 @@ const Payment = ({route}) => {
   const get = async () => {
     await firestore()
       .collection('Users')
-      .doc('Contact_details')
+      .doc(user.uid)
       .get()
       .then(snapShot => {
         if (snapShot.exists) {

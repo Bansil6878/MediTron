@@ -8,17 +8,21 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
 import ImagePicker from 'react-native-image-crop-picker';
 import bg from '../../assets/images/profile/meditron.png';
+import {CartContext} from '../../CartContext';
+
+
 
 const Contact = () => {
   const navigation = useNavigation();
-
+  const {user} = useContext(CartContext); 
+  
   const [image, setImage] = useState('https://placeimg.com/140/140/any');
-
+  
   const takePhoto = () => {
     ImagePicker.openCamera({
       width: 300,
@@ -49,7 +53,7 @@ const Contact = () => {
   const add = async () => {
     await firestore()
       .collection('Users')
-      .doc('Contact_details')
+      .doc(user.uid)
       .set({
         MediID: number,
         Name: name,

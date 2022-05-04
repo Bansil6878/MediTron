@@ -1,14 +1,22 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import { getMedicine } from './assets/medicine/medicine_data';
 import {getBrand_data} from './assets/brand_data/brand_data'
 import { getLab_data } from './assets/lab_data/lab_data';
 import { getDevice_data } from './assets/product_data/device_data';
 import { getTrending_data } from './assets/trending_data/trending_data';
+import auth from '@react-native-firebase/auth';
 
 export const CartContext = createContext();
 export function CartProvider(props) {
   const [items, setItems] = useState([]);
   
+  const [user,setUser] =useState()
+  
+  useEffect(async() =>{
+    setUser(auth().currentUser)
+  },[])
+  
+
   
   function removeItemToCart(id)
   {
@@ -193,7 +201,7 @@ export function CartProvider(props) {
 
   return (
     <CartContext.Provider 
-      value={{items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, removeAll,increaseItemQuantity,decreaseItemQuantity,addItemToCart1, addItemToCart2,addItemToCart3,addItemToCart4}}>
+      value={{user,items,setItems, getItemsCount, addItemToCart, getTotalPrice, removeItemToCart, removeAll,increaseItemQuantity,decreaseItemQuantity,addItemToCart1, addItemToCart2,addItemToCart3,addItemToCart4}}>
       {props.children}
     </CartContext.Provider>
   );

@@ -54,8 +54,10 @@ const Stack = createNativeStackNavigator();
 const Nav_Stack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Register" component={Register} />
+      <Stack.Screen name="Register" component={Register} /> 
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Contact" component={Contact} />
+      <Stack.Screen name="Contact_details" component={Contact_details} />
       <Stack.Screen name="Home" component={Nav_Tabbar} />
       <Stack.Screen name="Brand" component={Brand} />
       <Stack.Screen name="Brand_details" component={Brand_details} />
@@ -66,14 +68,11 @@ const Nav_Stack = () => {
       <Stack.Screen name="Careplan_show" component={Careplan_show} />
       <Stack.Screen name="Drawer_main" component={Drawer_main} />
       <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Contact" component={Contact} />
       <Stack.Screen name="Divider" component={Divider} />
-      <Stack.Screen name="Contact_details" component={Contact_details} />
       <Stack.Screen name="Doc" component={Doc}  />
       <Stack.Screen
         name="Doc_details"
         component={Doc_details}
-        
       />
       <Stack.Screen name="Dropdown" component={Dropdown} />
       <Stack.Screen name="Search" component={Search} />
@@ -88,13 +87,11 @@ const Nav_Stack = () => {
       <Stack.Screen name="Empty_cart" component={Empty_cart} />
       <Stack.Screen name="Myorder" component={Myorder} />
       <Stack.Screen name="Brand_footer" component={Brand_footer} />
-
       <Stack.Screen
         name="History"
         component={History}
         options={{headerShown: true}}
       />
-
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="MyCart" component={MyCart} />
       <Stack.Screen

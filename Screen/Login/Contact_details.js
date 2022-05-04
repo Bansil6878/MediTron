@@ -6,14 +6,18 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState,useContext} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
+import {CartContext} from '../../CartContext';
 
 const Contact_details = () => {
   const navigation = useNavigation();
 
   const [data, setData] = useState(null);
+
+  const {user} = useContext(CartContext); 
+console.log(user.uid);
 
   useEffect(() => {
     get();
@@ -22,7 +26,7 @@ const Contact_details = () => {
   const get = async () => {
     await firestore()
       .collection('Users')
-      .doc('Contact_details')
+      .doc(user.uid)
       .get()
       .then(snapShot => {
         if (snapShot.exists) {
